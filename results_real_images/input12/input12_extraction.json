@@ -1,0 +1,729 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Seller",
+        "to": "Business Party",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Buyer",
+        "to": "Business Party",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Euro",
+        "to": "Currency",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "USD",
+        "to": "Currency",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "OrderId",
+        "to": "Order",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasId",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "Order",
+        "to": "Item",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasItems",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Buyer",
+        "to": "Order",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "billTo",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "Order",
+        "to": "Address",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "deliverTo",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "Address",
+        "to": "City",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasCity",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "Country",
+        "to": "Business Party",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasCountry",
+        "confidence": "high"
+      },
+      {
+        "id": "a11",
+        "from": "Currency",
+        "to": "Country",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasCurrency",
+        "confidence": "high"
+      },
+      {
+        "id": "a12",
+        "from": "Business Party",
+        "to": "Address",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasAddress",
+        "confidence": "high"
+      },
+      {
+        "id": "a13",
+        "from": "Item",
+        "to": "Price",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasPrice",
+        "confidence": "high"
+      },
+      {
+        "id": "a14",
+        "from": "Item",
+        "to": "Id",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasId",
+        "confidence": "high"
+      },
+      {
+        "id": "a15",
+        "from": "Item",
+        "to": "Name",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasName",
+        "confidence": "high"
+      },
+      {
+        "id": "a16",
+        "from": "Address",
+        "to": "Street",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasStreet",
+        "confidence": "high"
+      },
+      {
+        "id": "a17",
+        "from": "Address",
+        "to": "ZipCode",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasZipCode",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram follows a consistent pattern using hollow-triangle arrowheads for subclass relationships and solid-triangle arrowheads for properties. Each arrow is clearly labeled with the property or relationship it represents."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Business Party",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Seller",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Buyer",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Address",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Order",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Item",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Currency",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "Euro",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "USD",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "City",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "Country",
+        "description": ""
+      },
+      {
+        "id": "c12",
+        "name": "Price",
+        "description": ""
+      },
+      {
+        "id": "c13",
+        "name": "OrderId",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasAddress"
+      },
+      {
+        "id": "op2",
+        "name": "hasCity"
+      },
+      {
+        "id": "op3",
+        "name": "deliverTo"
+      },
+      {
+        "id": "op4",
+        "name": "hasSeller"
+      },
+      {
+        "id": "op5",
+        "name": "billTo"
+      },
+      {
+        "id": "op6",
+        "name": "hasItems"
+      },
+      {
+        "id": "op7",
+        "name": "hasId"
+      },
+      {
+        "id": "op8",
+        "name": "hasCurrency"
+      },
+      {
+        "id": "op9",
+        "name": "hasCountry"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [
+      {
+        "id": "av1",
+        "value": "hasStreet",
+        "property": "",
+        "domain_class": "Address",
+        "datatype": "string"
+      },
+      {
+        "id": "av2",
+        "value": "hasZipCode",
+        "property": "",
+        "domain_class": "Address",
+        "datatype": "int"
+      },
+      {
+        "id": "av3",
+        "value": "hasName",
+        "property": "",
+        "domain_class": "Item",
+        "datatype": "string"
+      }
+    ],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Seller",
+        "to": "Business Party",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Business Party",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Buyer",
+        "to": "Business Party",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Business Party",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Euro",
+        "to": "Currency",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Currency",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "USD",
+        "to": "Currency",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Currency",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Business Party",
+        "to": "Address",
+        "label": "hasAddress",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Address",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Address",
+        "to": "City",
+        "label": "hasCity",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "City",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Order",
+        "to": "Address",
+        "label": "deliverTo",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Address",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Order",
+        "to": "Seller",
+        "label": "hasSeller",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Seller",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "Buyer",
+        "to": "Order",
+        "label": "billTo",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Order",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "Order",
+        "to": "Item",
+        "label": "hasItems",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Item",
+        "confidence": "high"
+      },
+      {
+        "id": "e11",
+        "from": "OrderId",
+        "to": "Order",
+        "label": "hasId",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Order",
+        "confidence": "high"
+      },
+      {
+        "id": "e12",
+        "from": "Country",
+        "to": "Business Party",
+        "label": "hasCountry",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Business Party",
+        "confidence": "high"
+      },
+      {
+        "id": "e13",
+        "from": "Currency",
+        "to": "Price",
+        "label": "",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Price",
+        "confidence": "high"
+      },
+      {
+        "id": "e14",
+        "from": "Currency",
+        "to": "Business Party",
+        "label": "hasCurrency",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Business Party",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "Address",
+      "to": "Seller",
+      "label": "hasSeller",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Seller",
+      "visual_evidence": "The line is solid black, starts from the Address node and ends with a normal arrowhead pointing to the Seller node."
+    },
+    {
+      "id": "me2",
+      "from": "Address",
+      "to": "Business Party",
+      "label": "hasAddress",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Business Party",
+      "visual_evidence": "The line is solid black, begins at the Address node and ends with a normal arrowhead touching the Business Party node."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Business Party",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Seller",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Buyer",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Address",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Order",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Item",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Currency",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "Euro",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "USD",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "City",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "Country",
+        "description": ""
+      },
+      {
+        "id": "c12",
+        "name": "Price",
+        "description": ""
+      },
+      {
+        "id": "c13",
+        "name": "OrderId",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasAddress"
+      },
+      {
+        "id": "op2",
+        "name": "hasCity"
+      },
+      {
+        "id": "op3",
+        "name": "deliverTo"
+      },
+      {
+        "id": "op4",
+        "name": "hasSeller"
+      },
+      {
+        "id": "op5",
+        "name": "billTo"
+      },
+      {
+        "id": "op6",
+        "name": "hasItems"
+      },
+      {
+        "id": "op7",
+        "name": "hasId"
+      },
+      {
+        "id": "op8",
+        "name": "hasCurrency"
+      },
+      {
+        "id": "op9",
+        "name": "hasCountry"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [
+      {
+        "id": "av1",
+        "value": "hasStreet",
+        "property": "",
+        "domain_class": "Address",
+        "datatype": "string"
+      },
+      {
+        "id": "av2",
+        "value": "hasZipCode",
+        "property": "",
+        "domain_class": "Address",
+        "datatype": "int"
+      },
+      {
+        "id": "av3",
+        "value": "hasName",
+        "property": "",
+        "domain_class": "Item",
+        "datatype": "string"
+      }
+    ],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Seller",
+        "to": "Business Party",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e2",
+        "from": "Buyer",
+        "to": "Business Party",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e3",
+        "from": "Euro",
+        "to": "Currency",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e4",
+        "from": "USD",
+        "to": "Currency",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e5",
+        "from": "Business Party",
+        "to": "Address",
+        "label": "hasAddress",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Address",
+        "to": "City",
+        "label": "hasCity",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Order",
+        "to": "Address",
+        "label": "deliverTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Order",
+        "to": "Seller",
+        "label": "hasSeller",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e9",
+        "from": "Buyer",
+        "to": "Order",
+        "label": "billTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e10",
+        "from": "Order",
+        "to": "Item",
+        "label": "hasItems",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e11",
+        "from": "OrderId",
+        "to": "Order",
+        "label": "hasId",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e12",
+        "from": "Country",
+        "to": "Business Party",
+        "label": "hasCountry",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e13",
+        "from": "Currency",
+        "to": "Price",
+        "label": "",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e14",
+        "from": "Currency",
+        "to": "Business Party",
+        "label": "hasCurrency",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me1",
+        "from": "Address",
+        "to": "Seller",
+        "label": "hasSeller",
+        "edge_type": "objectProperty"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

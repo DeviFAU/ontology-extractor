@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/ontology#sensorValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">sensorValue</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#roomNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">roomNumber</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Room"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Sensor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Sensor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#containsSensor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">containsSensor</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Room"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#HumiditySensor"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Sensor"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Room"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasFloor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasFloor</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Building"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Floor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#HumiditySensor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">HumiditySensor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Sensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#HVACUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">HVACUnit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Actuator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#TemperatureSensor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">TemperatureSensor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Sensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasRoom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasRoom</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Floor"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Room"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#inZone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">inZone</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Zone"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#OccupancyZone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#room101">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/ontology#Room"/>
+    <rdfs:label xml:lang="en">room101</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Actuator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Actuator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#floor1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/ontology#Floor"/>
+    <rdfs:label xml:lang="en">floor1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#tempSensor1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/ontology#TemperatureSensor"/>
+    <rdfs:label xml:lang="en">tempSensor1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#buildingA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/ontology#Building"/>
+    <rdfs:label xml:lang="en">buildingA</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hvac1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/ontology#HVACUnit"/>
+    <rdfs:label xml:lang="en">hvac1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#feedsDataTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">feedsDataTo</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#LightController"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Actuator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#LightController">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">LightController</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Actuator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#OccupancyZone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">OccupancyZone</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Zone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#controlledBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">controlledBy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Floor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Floor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Building">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Building</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Zone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Zone</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Room">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Room</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#OccupancyZone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>

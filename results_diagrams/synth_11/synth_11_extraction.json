@@ -1,0 +1,868 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "buildingA",
+        "to": "Building",
+        "line_style": "dashed",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "buildingA",
+        "to": "floor1",
+        "line_style": "dashed",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "hasFloor",
+        "confidence": "medium"
+      },
+      {
+        "id": "a3",
+        "from": "floor1",
+        "to": "Floor",
+        "line_style": "dashed",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "floor1",
+        "to": "room101",
+        "line_style": "dashed",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "hasRoom",
+        "confidence": "medium"
+      },
+      {
+        "id": "a5",
+        "from": "room101",
+        "to": "Room",
+        "line_style": "dashed",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "room101",
+        "to": "tempSensor1",
+        "line_style": "dashed",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "containsSensor",
+        "confidence": "medium"
+      },
+      {
+        "id": "a7",
+        "from": "tempSensor1",
+        "to": "TemperatureSensor",
+        "line_style": "dashed",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "room101",
+        "to": "hvac1",
+        "line_style": "dashed",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "controlledBy",
+        "confidence": "medium"
+      },
+      {
+        "id": "a9",
+        "from": "hvac1",
+        "to": "HVACUnit",
+        "line_style": "dashed",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "OccupancyZone",
+        "to": "Zone",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a11",
+        "from": "Zone",
+        "to": "Room",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "inZone",
+        "confidence": "medium"
+      },
+      {
+        "id": "a12",
+        "from": "HumiditySensor",
+        "to": "Sensor",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a13",
+        "from": "LightController",
+        "to": "Actuator",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a14",
+        "from": "TemperatureSensor",
+        "to": "Sensor",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a15",
+        "from": "HVACUnit",
+        "to": "Actuator",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a16",
+        "from": "Sensor",
+        "to": "roomNumber",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "dataProperty",
+        "label": "sensorValue",
+        "confidence": "medium"
+      },
+      {
+        "id": "a17",
+        "from": "HumiditySensor",
+        "to": "Sensor",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a18",
+        "from": "Room",
+        "to": "HumiditySensor",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "containsSensor",
+        "confidence": "medium"
+      },
+      {
+        "id": "a19",
+        "from": "LightController",
+        "to": "HVACUnit",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "feedsDataTo",
+        "confidence": "medium"
+      },
+      {
+        "id": "a20",
+        "from": "HVACUnit",
+        "to": "Sensor",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "controlledBy",
+        "confidence": "medium"
+      }
+    ],
+    "diagram_notes": "The diagram uses both dotted and solid lines. The usage of hollow-triangle for 'subClassOf' is consistent. Dotted lines denote 'rdf:type'. Solid arrows generally denote object properties or data properties."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Building",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Floor",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Room",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "OccupancyZone",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Zone",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Sensor",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "HumiditySensor",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "TemperatureSensor",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "Actuator",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "LightController",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "HVACUnit",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasFloor"
+      },
+      {
+        "id": "op2",
+        "name": "hasRoom"
+      },
+      {
+        "id": "op3",
+        "name": "containsSensor"
+      },
+      {
+        "id": "op4",
+        "name": "controlledBy"
+      },
+      {
+        "id": "op5",
+        "name": "inZone"
+      },
+      {
+        "id": "op6",
+        "name": "feedsDataTo"
+      }
+    ],
+    "instances": [
+      {
+        "id": "i1",
+        "name": "buildingA",
+        "type_class": "Building"
+      },
+      {
+        "id": "i2",
+        "name": "floor1",
+        "type_class": "Floor"
+      },
+      {
+        "id": "i3",
+        "name": "room101",
+        "type_class": "Room"
+      },
+      {
+        "id": "i4",
+        "name": "tempSensor1",
+        "type_class": "TemperatureSensor"
+      },
+      {
+        "id": "i5",
+        "name": "hvac1",
+        "type_class": "HVACUnit"
+      }
+    ],
+    "attribute_values": [
+      {
+        "id": "av1",
+        "value": "string",
+        "property": "roomNumber",
+        "domain_class": "Room",
+        "datatype": "xsd:string"
+      },
+      {
+        "id": "av2",
+        "value": "double",
+        "property": "sensorValue",
+        "domain_class": "Sensor",
+        "datatype": "xsd:double"
+      }
+    ],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "OccupancyZone",
+        "to": "Zone",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Zone",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "HumiditySensor",
+        "to": "Sensor",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Sensor",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "LightController",
+        "to": "Actuator",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Actuator",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "TemperatureSensor",
+        "to": "Sensor",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Sensor",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "HVACUnit",
+        "to": "Actuator",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Actuator",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Building",
+        "to": "Floor",
+        "label": "hasFloor",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Floor",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Floor",
+        "to": "Room",
+        "label": "hasRoom",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Room",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Room",
+        "to": "Sensor",
+        "label": "containsSensor",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Sensor",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "Zone",
+        "to": "OccupancyZone",
+        "label": "inZone",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "OccupancyZone",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "LightController",
+        "to": "Actuator",
+        "label": "feedsDataTo",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Actuator",
+        "confidence": "high"
+      },
+      {
+        "id": "e11",
+        "from": "room101",
+        "to": "Room",
+        "label": "",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "Room",
+        "confidence": "high"
+      },
+      {
+        "id": "e12",
+        "from": "floor1",
+        "to": "Floor",
+        "label": "",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "Floor",
+        "confidence": "high"
+      },
+      {
+        "id": "e13",
+        "from": "buildingA",
+        "to": "Building",
+        "label": "",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "Building",
+        "confidence": "high"
+      },
+      {
+        "id": "e14",
+        "from": "tempSensor1",
+        "to": "TemperatureSensor",
+        "label": "",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "TemperatureSensor",
+        "confidence": "high"
+      },
+      {
+        "id": "e15",
+        "from": "hvac1",
+        "to": "HVACUnit",
+        "label": "",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "HVACUnit",
+        "confidence": "high"
+      },
+      {
+        "id": "e16",
+        "from": "room101",
+        "to": "tempSensor1",
+        "label": "containsSensor",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "tempSensor1",
+        "confidence": "high"
+      },
+      {
+        "id": "e17",
+        "from": "floor1",
+        "to": "room101",
+        "label": "hasRoom",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "room101",
+        "confidence": "high"
+      },
+      {
+        "id": "e18",
+        "from": "buildingA",
+        "to": "floor1",
+        "label": "hasFloor",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "floor1",
+        "confidence": "high"
+      },
+      {
+        "id": "e19",
+        "from": "tempSensor1",
+        "to": "hvac1",
+        "label": "controlledBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "hvac1",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Room",
+        "property": "roomNumber",
+        "datatype": "xsd:string"
+      },
+      {
+        "class": "Sensor",
+        "property": "sensorValue",
+        "datatype": "xsd:double"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "Room",
+      "to": "OccupancyZone",
+      "label": "",
+      "edge_type": "subClassOf",
+      "arrowhead_at": "OccupancyZone",
+      "visual_evidence": "The line is solid black and the hollow triangle arrowhead is located at the OccupancyZone node."
+    },
+    {
+      "id": "me2",
+      "from": "HumiditySensor",
+      "to": "Room",
+      "label": "containsSensor",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Room",
+      "visual_evidence": "The line is solid black with an arrowhead touching the Room node."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [
+      {
+        "name": "buildingA",
+        "type_class": "Building",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "floor1",
+        "type_class": "Floor",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "room101",
+        "type_class": "Room",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "tempSensor1",
+        "type_class": "TemperatureSensor",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "hvac1",
+        "type_class": "HVACUnit",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      }
+    ],
+    "reclassified_nodes": [],
+    "no_instances_present": false
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Building",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Floor",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Room",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "OccupancyZone",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Zone",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Sensor",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "HumiditySensor",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "TemperatureSensor",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "Actuator",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "LightController",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "HVACUnit",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasFloor"
+      },
+      {
+        "id": "op2",
+        "name": "hasRoom"
+      },
+      {
+        "id": "op3",
+        "name": "containsSensor"
+      },
+      {
+        "id": "op4",
+        "name": "controlledBy"
+      },
+      {
+        "id": "op5",
+        "name": "inZone"
+      },
+      {
+        "id": "op6",
+        "name": "feedsDataTo"
+      }
+    ],
+    "instances": [
+      {
+        "name": "buildingA",
+        "type_class": "Building"
+      },
+      {
+        "name": "floor1",
+        "type_class": "Floor"
+      },
+      {
+        "name": "room101",
+        "type_class": "Room"
+      },
+      {
+        "name": "tempSensor1",
+        "type_class": "TemperatureSensor"
+      },
+      {
+        "name": "hvac1",
+        "type_class": "HVACUnit"
+      }
+    ],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "OccupancyZone",
+        "to": "Zone",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e2",
+        "from": "HumiditySensor",
+        "to": "Sensor",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e3",
+        "from": "LightController",
+        "to": "Actuator",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e4",
+        "from": "TemperatureSensor",
+        "to": "Sensor",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e5",
+        "from": "HVACUnit",
+        "to": "Actuator",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e6",
+        "from": "Building",
+        "to": "Floor",
+        "label": "hasFloor",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Floor",
+        "to": "Room",
+        "label": "hasRoom",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Room",
+        "to": "Sensor",
+        "label": "containsSensor",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e9",
+        "from": "Zone",
+        "to": "OccupancyZone",
+        "label": "inZone",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e10",
+        "from": "LightController",
+        "to": "Actuator",
+        "label": "feedsDataTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e11",
+        "from": "room101",
+        "to": "Room",
+        "label": "",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e12",
+        "from": "floor1",
+        "to": "Floor",
+        "label": "",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e13",
+        "from": "buildingA",
+        "to": "Building",
+        "label": "",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e14",
+        "from": "tempSensor1",
+        "to": "TemperatureSensor",
+        "label": "",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e15",
+        "from": "hvac1",
+        "to": "HVACUnit",
+        "label": "",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e16",
+        "from": "room101",
+        "to": "tempSensor1",
+        "label": "containsSensor",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e17",
+        "from": "floor1",
+        "to": "room101",
+        "label": "hasRoom",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e18",
+        "from": "buildingA",
+        "to": "floor1",
+        "label": "hasFloor",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e19",
+        "from": "tempSensor1",
+        "to": "hvac1",
+        "label": "controlledBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me1",
+        "from": "Room",
+        "to": "OccupancyZone",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "me2",
+        "from": "HumiditySensor",
+        "to": "Room",
+        "label": "containsSensor",
+        "edge_type": "objectProperty"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Room",
+        "property": "roomNumber",
+        "datatype": "xsd:string"
+      },
+      {
+        "class": "Sensor",
+        "property": "sensorValue",
+        "datatype": "xsd:double"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

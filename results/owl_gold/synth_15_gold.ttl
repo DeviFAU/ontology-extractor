@@ -1,0 +1,125 @@
+@prefix ns1: <http://example.org/music#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/music> a owl:Ontology .
+
+ns1:SoloArtist a owl:Class ;
+    rdfs:label "SoloArtist"@en ;
+    rdfs:subClassOf ns1:Artist .
+
+ns1:abbeyRoad a ns1:Album,
+        owl:NamedIndividual ;
+    rdfs:label "abbeyRoad"@en ;
+    ns1:albumTitle "Abbey Road"^^xsd:string ;
+    ns1:releaseYear 1969 .
+
+ns1:albumTitle a owl:DatatypeProperty ;
+    rdfs:label "albumTitle"@en ;
+    rdfs:domain ns1:Album ;
+    rdfs:range xsd:string .
+
+ns1:beatles a ns1:Band,
+        owl:NamedIndividual ;
+    rdfs:label "beatles"@en .
+
+ns1:comeTogther a ns1:Song,
+        owl:NamedIndividual ;
+    rdfs:label "comeTogther"@en ;
+    ns1:songTitle "Come Together"^^xsd:string .
+
+ns1:duration a owl:DatatypeProperty ;
+    rdfs:label "duration"@en ;
+    rdfs:domain ns1:Song ;
+    rdfs:range xsd:double .
+
+ns1:emiRecords a ns1:RecordLabel,
+        owl:NamedIndividual ;
+    rdfs:label "emiRecords"@en .
+
+ns1:hasGenre a owl:ObjectProperty ;
+    rdfs:label "hasGenre"@en ;
+    rdfs:domain ns1:Album ;
+    rdfs:range ns1:Genre .
+
+ns1:onAlbum a owl:ObjectProperty ;
+    rdfs:label "onAlbum"@en ;
+    rdfs:domain ns1:Song ;
+    rdfs:range ns1:Album .
+
+ns1:performedBy a owl:ObjectProperty ;
+    rdfs:label "performedBy"@en ;
+    rdfs:domain ns1:Song ;
+    rdfs:range ns1:Artist .
+
+ns1:plays a owl:ObjectProperty ;
+    rdfs:label "plays"@en ;
+    rdfs:domain ns1:Artist ;
+    rdfs:range ns1:Instrument .
+
+ns1:producedBy a owl:ObjectProperty ;
+    rdfs:label "producedBy"@en ;
+    rdfs:domain ns1:Album ;
+    rdfs:range ns1:Producer .
+
+ns1:recordedAt a owl:ObjectProperty ;
+    rdfs:label "recordedAt"@en ;
+    rdfs:domain ns1:Album ;
+    rdfs:range ns1:Studio .
+
+ns1:releaseYear a owl:DatatypeProperty ;
+    rdfs:label "releaseYear"@en ;
+    rdfs:domain ns1:Album ;
+    rdfs:range xsd:integer .
+
+ns1:releasedBy a owl:ObjectProperty ;
+    rdfs:label "releasedBy"@en ;
+    rdfs:domain ns1:Album ;
+    rdfs:range ns1:RecordLabel .
+
+ns1:rock a ns1:Genre,
+        owl:NamedIndividual ;
+    rdfs:label "rock"@en .
+
+ns1:songTitle a owl:DatatypeProperty ;
+    rdfs:label "songTitle"@en ;
+    rdfs:domain ns1:Song ;
+    rdfs:range xsd:string .
+
+ns1:wonAward a owl:ObjectProperty ;
+    rdfs:label "wonAward"@en ;
+    rdfs:domain ns1:Album ;
+    rdfs:range ns1:Award .
+
+ns1:Award a owl:Class ;
+    rdfs:label "Award"@en .
+
+ns1:Band a owl:Class ;
+    rdfs:label "Band"@en ;
+    rdfs:subClassOf ns1:Artist .
+
+ns1:Instrument a owl:Class ;
+    rdfs:label "Instrument"@en .
+
+ns1:Producer a owl:Class ;
+    rdfs:label "Producer"@en .
+
+ns1:Studio a owl:Class ;
+    rdfs:label "Studio"@en .
+
+ns1:Genre a owl:Class ;
+    rdfs:label "Genre"@en .
+
+ns1:RecordLabel a owl:Class ;
+    rdfs:label "RecordLabel"@en .
+
+ns1:Artist a owl:Class ;
+    rdfs:label "Artist"@en .
+
+ns1:Song a owl:Class ;
+    rdfs:label "Song"@en .
+
+ns1:Album a owl:Class ;
+    rdfs:label "Album"@en .
+

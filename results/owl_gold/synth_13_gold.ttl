@@ -1,0 +1,106 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/org> a owl:Ontology .
+
+<http://example.org/org#Engineer> a owl:Class ;
+    rdfs:label "Engineer"@en ;
+    rdfs:subClassOf <http://example.org/org#Employee> .
+
+<http://example.org/org#Startup> a owl:Class ;
+    rdfs:label "Startup"@en ;
+    rdfs:subClassOf <http://example.org/org#Company> .
+
+<http://example.org/org#attends> a owl:ObjectProperty ;
+    rdfs:label "attends"@en ;
+    rdfs:domain <http://example.org/org#Employee> ;
+    rdfs:range <http://example.org/org#Meeting> .
+
+<http://example.org/org#employeeID> a owl:DatatypeProperty ;
+    rdfs:label "employeeID"@en ;
+    rdfs:domain <http://example.org/org#Employee> ;
+    rdfs:range xsd:string .
+
+<http://example.org/org#employs> a owl:ObjectProperty ;
+    rdfs:label "employs"@en ;
+    rdfs:domain <http://example.org/org#Department> ;
+    rdfs:range <http://example.org/org#Employee> .
+
+<http://example.org/org#hasDepartment> a owl:ObjectProperty ;
+    rdfs:label "hasDepartment"@en ;
+    rdfs:domain <http://example.org/org#Company> ;
+    rdfs:range <http://example.org/org#Department> .
+
+<http://example.org/org#hasSkill> a owl:ObjectProperty ;
+    rdfs:label "hasSkill"@en ;
+    rdfs:domain <http://example.org/org#Employee> ;
+    rdfs:range <http://example.org/org#Skill> .
+
+<http://example.org/org#locatedAt> a owl:ObjectProperty ;
+    rdfs:label "locatedAt"@en ;
+    rdfs:domain <http://example.org/org#Department> ;
+    rdfs:range <http://example.org/org#Office> .
+
+<http://example.org/org#manages> a owl:ObjectProperty ;
+    rdfs:label "manages"@en ;
+    rdfs:domain <http://example.org/org#Manager> ;
+    rdfs:range <http://example.org/org#Department> .
+
+<http://example.org/org#projectName> a owl:DatatypeProperty ;
+    rdfs:label "projectName"@en ;
+    rdfs:domain <http://example.org/org#Project> ;
+    rdfs:range xsd:string .
+
+<http://example.org/org#salary> a owl:DatatypeProperty ;
+    rdfs:label "salary"@en ;
+    rdfs:domain <http://example.org/org#Employee> ;
+    rdfs:range xsd:double .
+
+<http://example.org/org#startDate> a owl:DatatypeProperty ;
+    rdfs:label "startDate"@en ;
+    rdfs:domain <http://example.org/org#Project> ;
+    rdfs:range xsd:date .
+
+<http://example.org/org#uses> a owl:ObjectProperty ;
+    rdfs:label "uses"@en ;
+    rdfs:domain <http://example.org/org#Project> ;
+    rdfs:range <http://example.org/org#Technology> .
+
+<http://example.org/org#worksOn> a owl:ObjectProperty ;
+    rdfs:label "worksOn"@en ;
+    rdfs:domain <http://example.org/org#Employee> ;
+    rdfs:range <http://example.org/org#Project> .
+
+<http://example.org/org#Manager> a owl:Class ;
+    rdfs:label "Manager"@en ;
+    rdfs:subClassOf <http://example.org/org#Employee> .
+
+<http://example.org/org#Meeting> a owl:Class ;
+    rdfs:label "Meeting"@en .
+
+<http://example.org/org#Office> a owl:Class ;
+    rdfs:label "Office"@en .
+
+<http://example.org/org#Organization> a owl:Class ;
+    rdfs:label "Organization"@en .
+
+<http://example.org/org#Skill> a owl:Class ;
+    rdfs:label "Skill"@en .
+
+<http://example.org/org#Technology> a owl:Class ;
+    rdfs:label "Technology"@en .
+
+<http://example.org/org#Company> a owl:Class ;
+    rdfs:label "Company"@en ;
+    rdfs:subClassOf <http://example.org/org#Organization> .
+
+<http://example.org/org#Department> a owl:Class ;
+    rdfs:label "Department"@en .
+
+<http://example.org/org#Project> a owl:Class ;
+    rdfs:label "Project"@en .
+
+<http://example.org/org#Employee> a owl:Class ;
+    rdfs:label "Employee"@en .
+

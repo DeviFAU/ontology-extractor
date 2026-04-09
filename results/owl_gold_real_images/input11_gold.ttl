@@ -1,0 +1,51 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#hasAuthor> a owl:DatatypeProperty ;
+    rdfs:label "hasAuthor"@en ;
+    rdfs:domain <http://example.org/ontology#BOOK> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasBuyer> a owl:ObjectProperty ;
+    rdfs:label "hasBuyer"@en ;
+    rdfs:domain <http://example.org/ontology#BOOK> ;
+    rdfs:range <http://example.org/ontology#PERSON> .
+
+<http://example.org/ontology#hasCustomer> a owl:ObjectProperty ;
+    rdfs:label "hasCustomer"@en ;
+    rdfs:domain <http://example.org/ontology#SHOP> ;
+    rdfs:range <http://example.org/ontology#PERSON> .
+
+<http://example.org/ontology#hasName> a owl:DatatypeProperty ;
+    rdfs:label "hasName"@en ;
+    rdfs:domain <http://example.org/ontology#PERSON>,
+        <http://example.org/ontology#SHOP> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasStock> a owl:ObjectProperty ;
+    rdfs:label "hasStock"@en ;
+    rdfs:domain <http://example.org/ontology#SHOP> ;
+    rdfs:range <http://example.org/ontology#BOOK> .
+
+<http://example.org/ontology#hasTitle> a owl:DatatypeProperty ;
+    rdfs:label "hasTitle"@en ;
+    rdfs:domain <http://example.org/ontology#BOOK> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasType> a owl:DatatypeProperty ;
+    rdfs:label "hasType"@en ;
+    rdfs:domain <http://example.org/ontology#SHOP> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#PERSON> a owl:Class ;
+    rdfs:label "PERSON"@en .
+
+<http://example.org/ontology#BOOK> a owl:Class ;
+    rdfs:label "BOOK"@en .
+
+<http://example.org/ontology#SHOP> a owl:Class ;
+    rdfs:label "SHOP"@en .
+

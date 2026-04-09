@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/fullowl#License">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">License</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#Bicycle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Bicycle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:subClassOf rdf:nodeID="N5e99cb04d28949aea895077bd210b96b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#weight">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">weight</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#Vehicle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Vehicle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#modelYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">modelYear</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#hasLicense">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasLicense</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/fullowl#Driver"/>
+    <rdfs:range rdf:resource="http://example.org/fullowl#License"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#Manufacturer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Manufacturer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#hasEngine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasEngine</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.org/fullowl#Engine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#Wheel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Wheel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#hasBattery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasBattery</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/fullowl#ElectricVehicle"/>
+    <rdfs:range rdf:resource="http://example.org/fullowl#Battery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#Car">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Car</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:subClassOf rdf:nodeID="Nf6b8f818737148b99e4d9323c458aa84"/>
+    <owl:disjointWith rdf:resource="http://example.org/fullowl#Truck"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#maxSpeed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">maxSpeed</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#Engine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Engine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#hasWheel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasWheel</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.org/fullowl#Wheel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#Truck">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Truck</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/fullowl#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#Battery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Battery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#Driver">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Driver</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#ElectricVehicle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">ElectricVehicle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:subClassOf rdf:nodeID="N7c954d8937e241b7acbc28e1a58547a9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e99cb04d28949aea895077bd210b96b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/fullowl#hasWheel"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7c954d8937e241b7acbc28e1a58547a9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/fullowl#hasBattery"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/fullowl#Battery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#madeBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">madeBy</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.org/fullowl#Manufacturer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#drivesOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">drivesOn</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.org/fullowl#Road"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf6b8f818737148b99e4d9323c458aa84">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/fullowl#hasWheel"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#drivenBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">drivenBy</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/fullowl#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.org/fullowl#Driver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/fullowl#Road">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Road</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

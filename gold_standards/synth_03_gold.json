@@ -1,0 +1,63 @@
+{
+  "id": "synth_03",
+  "name": "Domain Range OWL",
+  "complexity": "simple",
+  "diagram_type": "OWL",
+  "description": "Tests domain/range edge type extraction",
+  "base_uri": "http://example.org/domrange#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Author"
+    },
+    {
+      "name": "Book"
+    },
+    {
+      "name": "Publisher"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "writes",
+      "domain": "Author",
+      "range": "Book"
+    },
+    {
+      "name": "publishes",
+      "domain": "Publisher",
+      "range": "Book"
+    }
+  ],
+  "data_properties": [],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "writes",
+      "to": "Author",
+      "label": "rdfs:domain",
+      "edge_type": "domain"
+    },
+    {
+      "from": "writes",
+      "to": "Book",
+      "label": "rdfs:range",
+      "edge_type": "range"
+    },
+    {
+      "from": "publishes",
+      "to": "Publisher",
+      "label": "rdfs:domain",
+      "edge_type": "domain"
+    },
+    {
+      "from": "publishes",
+      "to": "Book",
+      "label": "rdfs:range",
+      "edge_type": "range"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/animals#Dog">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Dog</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/animals#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/animals#Bird">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Bird</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/animals#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/animals#Cat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Cat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/animals#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/animals">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/animals#Animal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Animal</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

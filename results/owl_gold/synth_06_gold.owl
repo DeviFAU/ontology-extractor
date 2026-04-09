@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/university#belongsTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">belongsTo</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university#Course"/>
+    <rdfs:range rdf:resource="http://example.org/university#Department"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#hasName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">hasName</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#teaches">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">teaches</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university#Professor"/>
+    <rdfs:range rdf:resource="http://example.org/university#Course"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#University">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">University</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#partOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">partOf</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university#Department"/>
+    <rdfs:range rdf:resource="http://example.org/university#University"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#Student">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Student</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/university#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#Professor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Professor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/university#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#enrolledIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">enrolledIn</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university#Student"/>
+    <rdfs:range rdf:resource="http://example.org/university#Course"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#Department">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Department</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#Course">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Course</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#courseCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">courseCode</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university#Course"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university#hasID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">hasID</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university#Student"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>

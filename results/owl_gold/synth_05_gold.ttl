@@ -1,0 +1,22 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/inverse> a owl:Ontology .
+
+<http://example.org/inverse#hasChild> a owl:ObjectProperty ;
+    rdfs:label "hasChild"@en ;
+    rdfs:domain <http://example.org/inverse#Parent> ;
+    rdfs:range <http://example.org/inverse#Child> ;
+    owl:inverseOf <http://example.org/inverse#hasParent> .
+
+<http://example.org/inverse#hasParent> a owl:ObjectProperty ;
+    rdfs:label "hasParent"@en ;
+    rdfs:domain <http://example.org/inverse#Child> ;
+    rdfs:range <http://example.org/inverse#Parent> .
+
+<http://example.org/inverse#Child> a owl:Class ;
+    rdfs:label "Child"@en .
+
+<http://example.org/inverse#Parent> a owl:Class ;
+    rdfs:label "Parent"@en .
+

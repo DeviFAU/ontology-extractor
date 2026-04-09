@@ -1,0 +1,1038 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Stake Holder",
+        "to": "Context",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "has-a",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Context",
+        "to": "Situation",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "has-part",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Decision Maker",
+        "to": "Stake Holder",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Affected Party",
+        "to": "Stake Holder",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "Situation",
+        "to": "Stake Holder Factors",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "other",
+        "label": "has-Interaction",
+        "confidence": "medium"
+      },
+      {
+        "id": "a6",
+        "from": "Situation",
+        "to": "Framing Specific Situation",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "has-relevance",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Stake Holder Factors",
+        "to": "Framed Decision Problem",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "other",
+        "label": "collectively-triggers",
+        "confidence": "medium"
+      },
+      {
+        "id": "a8",
+        "from": "Framed Decision Problem",
+        "to": "Framing Specific Situation",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "provides-Focus",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "Framed Decision Problem",
+        "to": "Framing Specific Stake Holder Factors",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "frames",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "Framing Specific Stake Holder Factors",
+        "to": "Framing Specific Situation",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "provides-Focus",
+        "confidence": "high"
+      },
+      {
+        "id": "a11",
+        "from": "Framing Specific Stake Holder Factors",
+        "to": "Consequence",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "sets-Relevance",
+        "confidence": "high"
+      },
+      {
+        "id": "a12",
+        "from": "Framing Specific Stake Holder Factors",
+        "to": "Criteria",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "establishes",
+        "confidence": "high"
+      },
+      {
+        "id": "a13",
+        "from": "Framing Specific Situation",
+        "to": "Alternative",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "defines-possible",
+        "confidence": "high"
+      },
+      {
+        "id": "a14",
+        "from": "Framing Specific Situation",
+        "to": "Decision",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "specifies",
+        "confidence": "high"
+      },
+      {
+        "id": "a15",
+        "from": "Alternative",
+        "to": "Consequence",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "defines",
+        "confidence": "high"
+      },
+      {
+        "id": "a16",
+        "from": "Alternative",
+        "to": "Future Event",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "has-Influence",
+        "confidence": "high"
+      },
+      {
+        "id": "a17",
+        "from": "Consequence",
+        "to": "Outcome",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "has-Effect",
+        "confidence": "high"
+      },
+      {
+        "id": "a18",
+        "from": "Outcome",
+        "to": "Utility Structure",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "sets",
+        "confidence": "high"
+      },
+      {
+        "id": "a19",
+        "from": "Consequence",
+        "to": "Criteria",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "sets-Attributes",
+        "confidence": "high"
+      },
+      {
+        "id": "a20",
+        "from": "Criteria",
+        "to": "Utility Structure",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "establishes-Utility-Factors",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram is structured into three levels: Context Level, Framing Level, and Decision Level, each with distinct roles. Arrowhead styles predominantly use chevrons and hollow triangles."
+  },
+  "pass1": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "class1",
+        "name": "Context",
+        "description": ""
+      },
+      {
+        "id": "class2",
+        "name": "Stake Holder",
+        "description": ""
+      },
+      {
+        "id": "class3",
+        "name": "Decision Maker",
+        "description": ""
+      },
+      {
+        "id": "class4",
+        "name": "Affected Party",
+        "description": ""
+      },
+      {
+        "id": "class5",
+        "name": "Situation",
+        "description": ""
+      },
+      {
+        "id": "class6",
+        "name": "Stake Holder Factors",
+        "description": ""
+      },
+      {
+        "id": "class7",
+        "name": "Framing Specific Situation",
+        "description": ""
+      },
+      {
+        "id": "class8",
+        "name": "Framed Decision Problem",
+        "description": ""
+      },
+      {
+        "id": "class9",
+        "name": "Framing Specific Stake Holder Factors",
+        "description": ""
+      },
+      {
+        "id": "class10",
+        "name": "Decision",
+        "description": ""
+      },
+      {
+        "id": "class11",
+        "name": "Alternative",
+        "description": ""
+      },
+      {
+        "id": "class12",
+        "name": "Future Event",
+        "description": ""
+      },
+      {
+        "id": "class13",
+        "name": "Outcome",
+        "description": ""
+      },
+      {
+        "id": "class14",
+        "name": "Consequence",
+        "description": ""
+      },
+      {
+        "id": "class15",
+        "name": "Criteria",
+        "description": ""
+      },
+      {
+        "id": "class16",
+        "name": "Utility Structure",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "has-part",
+        "note": ""
+      },
+      {
+        "id": "op2",
+        "name": "has-Interaction",
+        "note": ""
+      },
+      {
+        "id": "op3",
+        "name": "has-relevance",
+        "note": ""
+      },
+      {
+        "id": "op4",
+        "name": "collectively-triggers",
+        "note": ""
+      },
+      {
+        "id": "op5",
+        "name": "frames",
+        "note": ""
+      },
+      {
+        "id": "op6",
+        "name": "provides-Focus",
+        "note": ""
+      },
+      {
+        "id": "op7",
+        "name": "specifies",
+        "note": ""
+      },
+      {
+        "id": "op8",
+        "name": "bounds",
+        "note": ""
+      },
+      {
+        "id": "op9",
+        "name": "defines",
+        "note": ""
+      },
+      {
+        "id": "op10",
+        "name": "has-influence",
+        "note": ""
+      },
+      {
+        "id": "op11",
+        "name": "sets-Attributes",
+        "note": ""
+      },
+      {
+        "id": "op12",
+        "name": "has-Effect",
+        "note": ""
+      },
+      {
+        "id": "op13",
+        "name": "establishes",
+        "note": ""
+      },
+      {
+        "id": "op14",
+        "name": "sets-Relevance",
+        "note": ""
+      },
+      {
+        "id": "op15",
+        "name": "utility-Input",
+        "note": ""
+      },
+      {
+        "id": "op16",
+        "name": "establishes-Utility-Factors",
+        "note": ""
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Stake Holder",
+        "to": "Context",
+        "label": "has-a",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Context",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Decision Maker",
+        "to": "Stake Holder",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Stake Holder",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Affected Party",
+        "to": "Stake Holder",
+        "label": "",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Stake Holder",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Situation",
+        "to": "Stake Holder Factors",
+        "label": "has-Interaction",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Stake Holder Factors",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Stake Holder Factors",
+        "to": "Framed Decision Problem",
+        "label": "collectively-triggers",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Framed Decision Problem",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Situation",
+        "to": "Framed Decision Problem",
+        "label": "frames",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Framed Decision Problem",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Framed Decision Problem",
+        "to": "Framing Specific Situation",
+        "label": "provides-Focus",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Framing Specific Situation",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Framed Decision Problem",
+        "to": "Framing Specific Stake Holder Factors",
+        "label": "provides-Focus",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Framing Specific Stake Holder Factors",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "Framing Specific Situation",
+        "to": "Decision",
+        "label": "specifies",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Decision",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "Decision",
+        "to": "Alternative",
+        "label": "bounds",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Alternative",
+        "confidence": "high"
+      },
+      {
+        "id": "e11",
+        "from": "Framing Specific Stake Holder Factors",
+        "to": "Criteria",
+        "label": "establishes",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Criteria",
+        "confidence": "high"
+      },
+      {
+        "id": "e12",
+        "from": "Alternative",
+        "to": "Consequence",
+        "label": "sets-Attributes",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Consequence",
+        "confidence": "high"
+      },
+      {
+        "id": "e13",
+        "from": "Consequence",
+        "to": "Criteria",
+        "label": "has-Effect",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Criteria",
+        "confidence": "high"
+      },
+      {
+        "id": "e14",
+        "from": "Criteria",
+        "to": "Utility Structure",
+        "label": "utility-Input",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Utility Structure",
+        "confidence": "high"
+      },
+      {
+        "id": "e15",
+        "from": "Utility Structure",
+        "to": "Decision",
+        "label": "sets",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Decision",
+        "confidence": "high"
+      },
+      {
+        "id": "e16",
+        "from": "Alternative",
+        "to": "Future Event",
+        "label": "defines",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Future Event",
+        "confidence": "high"
+      },
+      {
+        "id": "e17",
+        "from": "Framing Specific Stake Holder Factors",
+        "to": "Consequence",
+        "label": "sets-Relevance",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Consequence",
+        "confidence": "high"
+      },
+      {
+        "id": "e18",
+        "from": "Criteria",
+        "to": "Utility Structure",
+        "label": "establishes-Utility-Factors",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Utility Structure",
+        "confidence": "high"
+      },
+      {
+        "id": "e19",
+        "from": "Decision",
+        "to": "Outcome",
+        "label": "defines",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Outcome",
+        "confidence": "high"
+      },
+      {
+        "id": "e20",
+        "from": "Outcome",
+        "to": "Future Event",
+        "label": "has-Influence",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Future Event",
+        "confidence": "high"
+      },
+      {
+        "id": "e21",
+        "from": "Alternative",
+        "to": "Outcome",
+        "label": "has-Influence",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Outcome",
+        "confidence": "high"
+      },
+      {
+        "id": "e22",
+        "from": "Decision",
+        "to": "Consequence",
+        "label": "defines",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Consequence",
+        "confidence": "high"
+      },
+      {
+        "id": "e23",
+        "from": "Alternative",
+        "to": "Alternative",
+        "label": "defines-possible",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Alternative",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [
+    {
+      "id": "e5",
+      "from": "Framed Decision Problem",
+      "to": "Stake Holder Factors",
+      "label": "collectively-triggers",
+      "edge_type": "objectProperty",
+      "direction_changed": true,
+      "correction_note": "Dashed black arrow with arrowhead touching 'Stake Holder Factors'"
+    },
+    {
+      "id": "e15",
+      "from": "Decision",
+      "to": "Utility Structure",
+      "label": "sets",
+      "edge_type": "objectProperty",
+      "direction_changed": true,
+      "correction_note": "Solid black arrow with arrowhead touching 'Utility Structure'"
+    }
+  ],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "Situation",
+      "to": "Framing Specific Situation",
+      "label": "has-relevance",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Framing Specific Situation",
+      "visual_evidence": "Dashed black line with arrowhead touching 'Framing Specific Situation'"
+    },
+    {
+      "id": "me2",
+      "from": "Stake Holder",
+      "to": "Framing Specific Stake Holder Factors",
+      "label": "has-relevance",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Framing Specific Stake Holder Factors",
+      "visual_evidence": "Dashed black line with arrowhead touching 'Framing Specific Stake Holder Factors'"
+    },
+    {
+      "id": "me3",
+      "from": "Framing Specific Situation",
+      "to": "Alternative",
+      "label": "bounds",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Alternative",
+      "visual_evidence": "Solid black line with arrowhead touching 'Alternative'"
+    },
+    {
+      "id": "me4",
+      "from": "Framing Specific Stake Holder Factors",
+      "to": "Consequence",
+      "label": "establishes",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Consequence",
+      "visual_evidence": "Solid black line with arrowhead touching 'Consequence'"
+    },
+    {
+      "id": "me5",
+      "from": "Decision",
+      "to": "Decision Maker",
+      "label": "has-influence",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Decision Maker",
+      "visual_evidence": "Dashed black line with arrowhead pointing to 'Decision Maker'"
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [
+      {
+        "from": "Stake Holder",
+        "to": "Decision Maker",
+        "label": "has-influence",
+        "edge_type": "objectProperty",
+        "visual_evidence": "Arrow from Stake Holder to Decision Maker with label 'has-influence'"
+      }
+    ],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "minor gaps",
+    "notes": "One missing edge was identified."
+  },
+  "final": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "class1",
+        "name": "Context",
+        "description": ""
+      },
+      {
+        "id": "class2",
+        "name": "Stake Holder",
+        "description": ""
+      },
+      {
+        "id": "class3",
+        "name": "Decision Maker",
+        "description": ""
+      },
+      {
+        "id": "class4",
+        "name": "Affected Party",
+        "description": ""
+      },
+      {
+        "id": "class5",
+        "name": "Situation",
+        "description": ""
+      },
+      {
+        "id": "class6",
+        "name": "Stake Holder Factors",
+        "description": ""
+      },
+      {
+        "id": "class7",
+        "name": "Framing Specific Situation",
+        "description": ""
+      },
+      {
+        "id": "class8",
+        "name": "Framed Decision Problem",
+        "description": ""
+      },
+      {
+        "id": "class9",
+        "name": "Framing Specific Stake Holder Factors",
+        "description": ""
+      },
+      {
+        "id": "class10",
+        "name": "Decision",
+        "description": ""
+      },
+      {
+        "id": "class11",
+        "name": "Alternative",
+        "description": ""
+      },
+      {
+        "id": "class12",
+        "name": "Future Event",
+        "description": ""
+      },
+      {
+        "id": "class13",
+        "name": "Outcome",
+        "description": ""
+      },
+      {
+        "id": "class14",
+        "name": "Consequence",
+        "description": ""
+      },
+      {
+        "id": "class15",
+        "name": "Criteria",
+        "description": ""
+      },
+      {
+        "id": "class16",
+        "name": "Utility Structure",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "has-part",
+        "note": ""
+      },
+      {
+        "id": "op2",
+        "name": "has-Interaction",
+        "note": ""
+      },
+      {
+        "id": "op3",
+        "name": "has-relevance",
+        "note": ""
+      },
+      {
+        "id": "op4",
+        "name": "collectively-triggers",
+        "note": ""
+      },
+      {
+        "id": "op5",
+        "name": "frames",
+        "note": ""
+      },
+      {
+        "id": "op6",
+        "name": "provides-Focus",
+        "note": ""
+      },
+      {
+        "id": "op7",
+        "name": "specifies",
+        "note": ""
+      },
+      {
+        "id": "op8",
+        "name": "bounds",
+        "note": ""
+      },
+      {
+        "id": "op9",
+        "name": "defines",
+        "note": ""
+      },
+      {
+        "id": "op10",
+        "name": "has-influence",
+        "note": ""
+      },
+      {
+        "id": "op11",
+        "name": "sets-Attributes",
+        "note": ""
+      },
+      {
+        "id": "op12",
+        "name": "has-Effect",
+        "note": ""
+      },
+      {
+        "id": "op13",
+        "name": "establishes",
+        "note": ""
+      },
+      {
+        "id": "op14",
+        "name": "sets-Relevance",
+        "note": ""
+      },
+      {
+        "id": "op15",
+        "name": "utility-Input",
+        "note": ""
+      },
+      {
+        "id": "op16",
+        "name": "establishes-Utility-Factors",
+        "note": ""
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Stake Holder",
+        "to": "Context",
+        "label": "has-a",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e2",
+        "from": "Decision Maker",
+        "to": "Stake Holder",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e3",
+        "from": "Affected Party",
+        "to": "Stake Holder",
+        "label": "",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e4",
+        "from": "Situation",
+        "to": "Stake Holder Factors",
+        "label": "has-Interaction",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "Framed Decision Problem",
+        "to": "Stake Holder Factors",
+        "label": "collectively-triggers",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Situation",
+        "to": "Framed Decision Problem",
+        "label": "frames",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Framed Decision Problem",
+        "to": "Framing Specific Situation",
+        "label": "provides-Focus",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Framed Decision Problem",
+        "to": "Framing Specific Stake Holder Factors",
+        "label": "provides-Focus",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e9",
+        "from": "Framing Specific Situation",
+        "to": "Decision",
+        "label": "specifies",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e10",
+        "from": "Decision",
+        "to": "Alternative",
+        "label": "bounds",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e11",
+        "from": "Framing Specific Stake Holder Factors",
+        "to": "Criteria",
+        "label": "establishes",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e12",
+        "from": "Alternative",
+        "to": "Consequence",
+        "label": "sets-Attributes",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e13",
+        "from": "Consequence",
+        "to": "Criteria",
+        "label": "has-Effect",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e14",
+        "from": "Criteria",
+        "to": "Utility Structure",
+        "label": "utility-Input",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e15",
+        "from": "Decision",
+        "to": "Utility Structure",
+        "label": "sets",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e16",
+        "from": "Alternative",
+        "to": "Future Event",
+        "label": "defines",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e17",
+        "from": "Framing Specific Stake Holder Factors",
+        "to": "Consequence",
+        "label": "sets-Relevance",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e18",
+        "from": "Criteria",
+        "to": "Utility Structure",
+        "label": "establishes-Utility-Factors",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e19",
+        "from": "Decision",
+        "to": "Outcome",
+        "label": "defines",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e20",
+        "from": "Outcome",
+        "to": "Future Event",
+        "label": "has-Influence",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e21",
+        "from": "Alternative",
+        "to": "Outcome",
+        "label": "has-Influence",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e22",
+        "from": "Decision",
+        "to": "Consequence",
+        "label": "defines",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e23",
+        "from": "Alternative",
+        "to": "Alternative",
+        "label": "defines-possible",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me1",
+        "from": "Situation",
+        "to": "Framing Specific Situation",
+        "label": "has-relevance",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me2",
+        "from": "Stake Holder",
+        "to": "Framing Specific Stake Holder Factors",
+        "label": "has-relevance",
+        "edge_type": "objectProperty"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "minor gaps",
+    "completeness_notes": "One missing edge was identified."
+  }
+}

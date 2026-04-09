@@ -1,0 +1,389 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Student",
+        "to": "Person",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Professor",
+        "to": "Person",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Student",
+        "to": "Course",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "enrolledIn",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Professor",
+        "to": "Course",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "teaches",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "Course",
+        "to": "Department",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "belongsTo",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "Department",
+        "to": "University",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "partOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Student",
+        "to": "xsd:integer",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasID",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "Person",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasName",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "Course",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "courseCode",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "This ontology diagram includes subclasses, object properties, and data properties, with a clear hierarchical structure."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Person",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Student",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Professor",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Course",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Department",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "University",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "enrolledIn"
+      },
+      {
+        "id": "op2",
+        "name": "teaches"
+      },
+      {
+        "id": "op3",
+        "name": "belongsTo"
+      },
+      {
+        "id": "op4",
+        "name": "partOf"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Student",
+        "to": "Person",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Person",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Professor",
+        "to": "Person",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Person",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Student",
+        "to": "Course",
+        "label": "enrolledIn",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Course",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Professor",
+        "to": "Course",
+        "label": "teaches",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Course",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Course",
+        "to": "Department",
+        "label": "belongsTo",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Department",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Department",
+        "to": "University",
+        "label": "partOf",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "University",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Person",
+        "to": "xsd:string",
+        "label": "hasName",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Student",
+        "to": "xsd:integer",
+        "label": "hasID",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:integer",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "Course",
+        "to": "xsd:string",
+        "label": "courseCode",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Person",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Student",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Professor",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Course",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Department",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "University",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "enrolledIn"
+      },
+      {
+        "id": "op2",
+        "name": "teaches"
+      },
+      {
+        "id": "op3",
+        "name": "belongsTo"
+      },
+      {
+        "id": "op4",
+        "name": "partOf"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Student",
+        "to": "Person",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e2",
+        "from": "Professor",
+        "to": "Person",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e3",
+        "from": "Student",
+        "to": "Course",
+        "label": "enrolledIn",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e4",
+        "from": "Professor",
+        "to": "Course",
+        "label": "teaches",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "Course",
+        "to": "Department",
+        "label": "belongsTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Department",
+        "to": "University",
+        "label": "partOf",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Person",
+        "to": "xsd:string",
+        "label": "hasName",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Student",
+        "to": "xsd:integer",
+        "label": "hasID",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e9",
+        "from": "Course",
+        "to": "xsd:string",
+        "label": "courseCode",
+        "edge_type": "dataProperty"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

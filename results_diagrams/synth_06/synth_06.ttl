@@ -1,0 +1,61 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#belongsTo> a owl:ObjectProperty ;
+    rdfs:label "belongsTo"@en ;
+    rdfs:domain <http://example.org/ontology#Course> ;
+    rdfs:range <http://example.org/ontology#Department> .
+
+<http://example.org/ontology#courseCode> a owl:DatatypeProperty ;
+    rdfs:label "courseCode"@en ;
+    rdfs:domain <http://example.org/ontology#Course> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#enrolledIn> a owl:ObjectProperty ;
+    rdfs:label "enrolledIn"@en ;
+    rdfs:domain <http://example.org/ontology#Student> ;
+    rdfs:range <http://example.org/ontology#Course> .
+
+<http://example.org/ontology#hasID> a owl:DatatypeProperty ;
+    rdfs:label "hasID"@en ;
+    rdfs:domain <http://example.org/ontology#Student> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/ontology#hasName> a owl:DatatypeProperty ;
+    rdfs:label "hasName"@en ;
+    rdfs:domain <http://example.org/ontology#Person> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#partOf> a owl:ObjectProperty ;
+    rdfs:label "partOf"@en ;
+    rdfs:domain <http://example.org/ontology#Department> ;
+    rdfs:range <http://example.org/ontology#University> .
+
+<http://example.org/ontology#teaches> a owl:ObjectProperty ;
+    rdfs:label "teaches"@en ;
+    rdfs:domain <http://example.org/ontology#Professor> ;
+    rdfs:range <http://example.org/ontology#Course> .
+
+<http://example.org/ontology#Professor> a owl:Class ;
+    rdfs:label "Professor"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Person> .
+
+<http://example.org/ontology#University> a owl:Class ;
+    rdfs:label "University"@en .
+
+<http://example.org/ontology#Department> a owl:Class ;
+    rdfs:label "Department"@en .
+
+<http://example.org/ontology#Student> a owl:Class ;
+    rdfs:label "Student"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Person> .
+
+<http://example.org/ontology#Person> a owl:Class ;
+    rdfs:label "Person"@en .
+
+<http://example.org/ontology#Course> a owl:Class ;
+    rdfs:label "Course"@en .
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:bpo="https://w3id.org/bpo#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:schema1="http://schema.org/"
+>
+  <rdf:Description rdf:about="http://example.org/ontology#UEuro">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+    <rdfs:label xml:lang="en">UEuro</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Ucm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+    <rdfs:label xml:lang="en">Ucm</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/maxValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">maxValue</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/bpo#RangedAttribute"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/PropertyValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">PropertyValue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bpo#hasAttribute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasAttribute</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/bpo#Component"/>
+    <rdfs:range rdf:resource="https://w3id.org/bpo#Attribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">value</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/bpo#Attribute"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bpo#permittedStepSize">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">permittedStepSize</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/bpo#RangedAttribute"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">unit</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/bpo#Attribute"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/minValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">minValue</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/bpo#RangedAttribute"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bpo#Component">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Component</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PropertyValue"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/seas/Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#AttributeHeight">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bpo#RangedAttribute"/>
+    <rdfs:label xml:lang="en">AttributeHeight</rdfs:label>
+    <schema1:value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">120.0</schema1:value>
+    <schema1:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">120.0</schema1:minValue>
+    <bpo:permittedStepSize rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.0</bpo:permittedStepSize>
+    <schema1:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">160.0</schema1:maxValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bpo#RangedAttribute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">RangedAttribute</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/seas/Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#AttributePrice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bpo#Attribute"/>
+    <rdfs:label xml:lang="en">AttributePrice</rdfs:label>
+    <schema1:value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</schema1:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/Unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Unit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bpo#Attribute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Attribute</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PropertyValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/seas/Property">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Property</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#chair1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bpo#Component"/>
+    <rdfs:label xml:lang="en">chair1</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

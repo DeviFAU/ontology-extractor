@@ -1,0 +1,154 @@
+{
+  "id": "input11",
+  "name": "Bookshop ER Diagram",
+  "complexity": "simple",
+  "diagram_type": "ER",
+  "description": "ER-style diagram with legend: Entity=orange oval, Attribute=green rect, Relationship=arrow. Entities: SHOP, BOOK, PERSON. Object relations: hasStock, hasCustomer, hasBuyer. Attribute boxes show example values: books, Waterstones, War and Peace, Leo Tolstoy, Rachel.",
+  "base_uri": "http://example.org/ontology#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "SHOP"
+    },
+    {
+      "name": "BOOK"
+    },
+    {
+      "name": "PERSON"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "hasStock",
+      "domain": "SHOP",
+      "range": "BOOK"
+    },
+    {
+      "name": "hasCustomer",
+      "domain": "SHOP",
+      "range": "PERSON"
+    },
+    {
+      "name": "hasBuyer",
+      "domain": "BOOK",
+      "range": "PERSON"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "hasType",
+      "domain": "SHOP",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "hasName",
+      "domain": "SHOP",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "hasTitle",
+      "domain": "BOOK",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "hasAuthor",
+      "domain": "BOOK",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "hasName",
+      "domain": "PERSON",
+      "range": "xsd:string",
+      "datatype": "string"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [
+    {
+      "value": "books",
+      "property": "hasType",
+      "domain_class": "SHOP",
+      "datatype": "string"
+    },
+    {
+      "value": "Waterstones",
+      "property": "hasName",
+      "domain_class": "SHOP",
+      "datatype": "string"
+    },
+    {
+      "value": "War and Peace",
+      "property": "hasTitle",
+      "domain_class": "BOOK",
+      "datatype": "string"
+    },
+    {
+      "value": "Leo Tolstoy",
+      "property": "hasAuthor",
+      "domain_class": "BOOK",
+      "datatype": "string"
+    },
+    {
+      "value": "Rachel",
+      "property": "hasName",
+      "domain_class": "PERSON",
+      "datatype": "string"
+    }
+  ],
+  "edges": [
+    {
+      "from": "SHOP",
+      "to": "BOOK",
+      "label": "hasStock",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "SHOP",
+      "to": "PERSON",
+      "label": "hasCustomer",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "BOOK",
+      "to": "PERSON",
+      "label": "hasBuyer",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "SHOP",
+      "to": "xsd:string",
+      "label": "hasType",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "SHOP",
+      "to": "xsd:string",
+      "label": "hasName",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "BOOK",
+      "to": "xsd:string",
+      "label": "hasTitle",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "BOOK",
+      "to": "xsd:string",
+      "label": "hasAuthor",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "PERSON",
+      "to": "xsd:string",
+      "label": "hasName",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

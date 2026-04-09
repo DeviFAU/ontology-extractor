@@ -1,0 +1,204 @@
+{
+  "id": "synth_14",
+  "name": "Experiment Hub",
+  "complexity": "complex",
+  "diagram_type": "informal",
+  "description": "Tests hub-and-spoke layout with one central node and many radiating edges",
+  "base_uri": "http://example.org/experiment#",
+  "namespace_prefixes": {
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "classes": [
+    {
+      "name": "Experiment"
+    },
+    {
+      "name": "Researcher"
+    },
+    {
+      "name": "Dataset"
+    },
+    {
+      "name": "Protocol"
+    },
+    {
+      "name": "Instrument"
+    },
+    {
+      "name": "Sample"
+    },
+    {
+      "name": "Result"
+    },
+    {
+      "name": "Publication"
+    },
+    {
+      "name": "Lab"
+    },
+    {
+      "name": "FundingSource"
+    },
+    {
+      "name": "Software"
+    },
+    {
+      "name": "Parameter"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "conductedBy",
+      "domain": "Experiment",
+      "range": "Researcher"
+    },
+    {
+      "name": "usesDataset",
+      "domain": "Experiment",
+      "range": "Dataset"
+    },
+    {
+      "name": "followsProtocol",
+      "domain": "Experiment",
+      "range": "Protocol"
+    },
+    {
+      "name": "usesInstrument",
+      "domain": "Experiment",
+      "range": "Instrument"
+    },
+    {
+      "name": "analysesSample",
+      "domain": "Experiment",
+      "range": "Sample"
+    },
+    {
+      "name": "producesResult",
+      "domain": "Experiment",
+      "range": "Result"
+    },
+    {
+      "name": "publishedIn",
+      "domain": "Result",
+      "range": "Publication"
+    },
+    {
+      "name": "performedAt",
+      "domain": "Experiment",
+      "range": "Lab"
+    },
+    {
+      "name": "fundedBy",
+      "domain": "Experiment",
+      "range": "FundingSource"
+    },
+    {
+      "name": "usesSoftware",
+      "domain": "Experiment",
+      "range": "Software"
+    },
+    {
+      "name": "hasParameter",
+      "domain": "Experiment",
+      "range": "Parameter"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "experimentDate",
+      "domain": "Experiment",
+      "range": "xsd:date",
+      "datatype": "date"
+    },
+    {
+      "name": "experimentName",
+      "domain": "Experiment",
+      "range": "xsd:string",
+      "datatype": "string"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Experiment",
+      "to": "Researcher",
+      "label": "conductedBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Dataset",
+      "label": "usesDataset",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Protocol",
+      "label": "followsProtocol",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Instrument",
+      "label": "usesInstrument",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Sample",
+      "label": "analysesSample",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Result",
+      "label": "producesResult",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Result",
+      "to": "Publication",
+      "label": "publishedIn",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Lab",
+      "label": "performedAt",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "FundingSource",
+      "label": "fundedBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Software",
+      "label": "usesSoftware",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Parameter",
+      "label": "hasParameter",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "xsd:date",
+      "label": "experimentDate",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "xsd:string",
+      "label": "experimentName",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

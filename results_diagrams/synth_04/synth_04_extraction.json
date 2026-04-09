@@ -1,0 +1,323 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "berlin",
+        "to": "City",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "berlin",
+        "to": "germany",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "locatedIn",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "munich",
+        "to": "germany",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "locatedIn",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "munich",
+        "to": "City",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "germany",
+        "to": "Country",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram uses dashed lines with solid arrowheads to indicate rdf:type relationships, signifying instances of a class. Solid lines with solid arrowheads indicate objectProperties, showing location relationships."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "City",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Country",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "locatedIn",
+        "note": "Relates a city to a country"
+      }
+    ],
+    "instances": [
+      {
+        "id": "i1",
+        "name": "berlin",
+        "type_class": "City"
+      },
+      {
+        "id": "i2",
+        "name": "munich",
+        "type_class": "City"
+      },
+      {
+        "id": "i3",
+        "name": "germany",
+        "type_class": "Country"
+      }
+    ],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "berlin",
+        "to": "City",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "City",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "munich",
+        "to": "City",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "City",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "germany",
+        "to": "Country",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "Country",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "berlin",
+        "to": "germany",
+        "label": "locatedIn",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "germany",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "munich",
+        "to": "germany",
+        "label": "locatedIn",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "germany",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "berlin",
+      "to": "germany",
+      "label": "rdf:type",
+      "edge_type": "instanceOf",
+      "arrowhead_at": "germany",
+      "visual_evidence": "Dashed line extending left to right from berlin node, hollow triangle arrowhead at germany node."
+    },
+    {
+      "id": "me2",
+      "from": "munich",
+      "to": "germany",
+      "label": "rdf:type",
+      "edge_type": "instanceOf",
+      "arrowhead_at": "germany",
+      "visual_evidence": "Dashed line extending from munich node to germany node, hollow triangle arrowhead at germany node."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [
+      {
+        "name": "berlin",
+        "type_class": "City",
+        "visual_cue": "oval with rdf:type arrow"
+      },
+      {
+        "name": "munich",
+        "type_class": "City",
+        "visual_cue": "oval with rdf:type arrow"
+      },
+      {
+        "name": "germany",
+        "type_class": "Country",
+        "visual_cue": "oval with rdf:type arrow"
+      }
+    ],
+    "reclassified_nodes": [],
+    "no_instances_present": false
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [
+      {
+        "from": "berlin",
+        "to": "City",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "visual_evidence": "Dashed arrow from 'berlin' to 'City'"
+      },
+      {
+        "from": "munich",
+        "to": "City",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "visual_evidence": "Dashed arrow from 'munich' to 'City'"
+      },
+      {
+        "from": "germany",
+        "to": "Country",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "visual_evidence": "Dashed arrow from 'germany' to 'Country'"
+      }
+    ],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "minor gaps",
+    "notes": "Additional 'rdf:type' edges captured in instances section."
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "City",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Country",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "locatedIn",
+        "note": "Relates a city to a country"
+      }
+    ],
+    "instances": [
+      {
+        "name": "berlin",
+        "type_class": "City"
+      },
+      {
+        "name": "munich",
+        "type_class": "City"
+      },
+      {
+        "name": "germany",
+        "type_class": "Country"
+      }
+    ],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "berlin",
+        "to": "City",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e2",
+        "from": "munich",
+        "to": "City",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e3",
+        "from": "germany",
+        "to": "Country",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e4",
+        "from": "berlin",
+        "to": "germany",
+        "label": "locatedIn",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "munich",
+        "to": "germany",
+        "label": "locatedIn",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me1",
+        "from": "berlin",
+        "to": "germany",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "me2",
+        "from": "munich",
+        "to": "germany",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "minor gaps",
+    "completeness_notes": "Additional 'rdf:type' edges captured in instances section."
+  }
+}

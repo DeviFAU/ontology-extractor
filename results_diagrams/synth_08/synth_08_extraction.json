@@ -1,0 +1,363 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "prov:Entity",
+        "to": "prov:Activity",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "prov:wasGeneratedBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "prov:Entity",
+        "to": "prov:Entity",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "prov:wasDerivedFrom",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "prov:Activity",
+        "to": "prov:Entity",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "prov:used",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "prov:Activity",
+        "to": "prov:Agent",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "prov:wasAssociatedWith",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "xsd:dateTime",
+        "to": "prov:Activity",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "prov:endedAtTime",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "xsd:dateTime",
+        "to": "prov:Activity",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "prov:startedAtTime",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "prov:Agent",
+        "to": "prov:Plan",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "prov:hadPlan",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram represents a provenance model using solid and dashed lines with solid-triangle arrows indicating relationships and properties between different nodes."
+  },
+  "pass1": {
+    "diagram_type": "PROV-O",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "prov:Entity",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "prov:Activity",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "prov:Agent",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "prov:Plan",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "prov:wasDerivedFrom"
+      },
+      {
+        "id": "op2",
+        "name": "prov:used"
+      },
+      {
+        "id": "op3",
+        "name": "prov:wasGeneratedBy"
+      },
+      {
+        "id": "op4",
+        "name": "prov:wasAssociatedWith"
+      },
+      {
+        "id": "op5",
+        "name": "prov:hadPlan"
+      },
+      {
+        "id": "op6",
+        "name": "prov:startedAtTime"
+      },
+      {
+        "id": "op7",
+        "name": "prov:endedAtTime"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "prov:Entity",
+        "to": "prov:Entity",
+        "label": "prov:wasDerivedFrom",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Entity",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "prov:Entity",
+        "to": "prov:Activity",
+        "label": "prov:wasGeneratedBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Activity",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "prov:Activity",
+        "to": "prov:Entity",
+        "label": "prov:used",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Entity",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "prov:Activity",
+        "to": "prov:Agent",
+        "label": "prov:wasAssociatedWith",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Agent",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "prov:Agent",
+        "to": "prov:Plan",
+        "label": "prov:hadPlan",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Plan",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "xsd:dateTime",
+        "to": "prov:Activity",
+        "label": "prov:startedAtTime",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "prov:Activity",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "xsd:dateTime",
+        "to": "prov:Activity",
+        "label": "prov:endedAtTime",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "prov:Activity",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "prov: http://www.w3.org/ns/prov#",
+    "ambiguities": []
+  },
+  "pass2_corrections": [
+    {
+      "id": "e6",
+      "from": "prov:Activity",
+      "to": "xsd:dateTime",
+      "label": "prov:startedAtTime",
+      "edge_type": "dataProperty",
+      "direction_changed": true,
+      "correction_note": "The dashed arrow is black with a V-shaped arrowhead touching xsd:dateTime."
+    },
+    {
+      "id": "e7",
+      "from": "prov:Activity",
+      "to": "xsd:dateTime",
+      "label": "prov:endedAtTime",
+      "edge_type": "dataProperty",
+      "direction_changed": true,
+      "correction_note": "The dashed arrow is black with a V-shaped arrowhead touching xsd:dateTime."
+    }
+  ],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "prov:Entity",
+      "to": "prov:Activity",
+      "label": "prov:wasGeneratedBy",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "prov:Entity",
+      "visual_evidence": "The solid black arrow with a V-shaped arrowhead touches prov:Entity."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "prov: http://www.w3.org/ns/prov#, xsd: http://www.w3.org/2001/XMLSchema#",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "PROV-O",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "prov:Entity",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "prov:Activity",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "prov:Agent",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "prov:Plan",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "prov:wasDerivedFrom"
+      },
+      {
+        "id": "op2",
+        "name": "prov:used"
+      },
+      {
+        "id": "op3",
+        "name": "prov:wasGeneratedBy"
+      },
+      {
+        "id": "op4",
+        "name": "prov:wasAssociatedWith"
+      },
+      {
+        "id": "op5",
+        "name": "prov:hadPlan"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "prov:Entity",
+        "to": "prov:Entity",
+        "label": "prov:wasDerivedFrom",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e2",
+        "from": "prov:Entity",
+        "to": "prov:Activity",
+        "label": "prov:wasGeneratedBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e3",
+        "from": "prov:Activity",
+        "to": "prov:Entity",
+        "label": "prov:used",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e4",
+        "from": "prov:Activity",
+        "to": "prov:Agent",
+        "label": "prov:wasAssociatedWith",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "prov:Agent",
+        "to": "prov:Plan",
+        "label": "prov:hadPlan",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "prov:Activity",
+        "to": "xsd:dateTime",
+        "label": "prov:startedAtTime",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e7",
+        "from": "prov:Activity",
+        "to": "xsd:dateTime",
+        "label": "prov:endedAtTime",
+        "edge_type": "dataProperty"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "prov: http://www.w3.org/ns/prov#",
+    "ambiguities": [],
+    "namespace_info": "prov: http://www.w3.org/ns/prov#, xsd: http://www.w3.org/2001/XMLSchema#",
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

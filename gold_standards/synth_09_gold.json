@@ -1,0 +1,140 @@
+{
+  "id": "synth_09",
+  "name": "Library System",
+  "complexity": "medium",
+  "diagram_type": "OWL",
+  "description": "Tests inverseOf, multiple subClassOf, and data properties together",
+  "base_uri": "http://example.org/library#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Work"
+    },
+    {
+      "name": "Book"
+    },
+    {
+      "name": "Article"
+    },
+    {
+      "name": "Person"
+    },
+    {
+      "name": "Author"
+    },
+    {
+      "name": "Genre"
+    },
+    {
+      "name": "Library"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "writtenBy",
+      "domain": "Work",
+      "range": "Author"
+    },
+    {
+      "name": "authored",
+      "domain": "Author",
+      "range": "Work"
+    },
+    {
+      "name": "hasGenre",
+      "domain": "Work",
+      "range": "Genre"
+    },
+    {
+      "name": "heldBy",
+      "domain": "Work",
+      "range": "Library"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "title",
+      "domain": "Work",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "isbn",
+      "domain": "Book",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "yearPublished",
+      "domain": "Work",
+      "range": "xsd:integer",
+      "datatype": "integer"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Book",
+      "to": "Work",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Article",
+      "to": "Work",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Author",
+      "to": "Person",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "writtenBy",
+      "to": "authored",
+      "label": "owl:inverseOf",
+      "edge_type": "inverseOf"
+    },
+    {
+      "from": "Work",
+      "to": "Author",
+      "label": "writtenBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Work",
+      "to": "Genre",
+      "label": "hasGenre",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Work",
+      "to": "Library",
+      "label": "heldBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Work",
+      "to": "xsd:string",
+      "label": "title",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Book",
+      "to": "xsd:string",
+      "label": "isbn",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Work",
+      "to": "xsd:integer",
+      "label": "yearPublished",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

@@ -1,0 +1,80 @@
+{
+  "id": "input7",
+  "name": "BPO Chair Instance with Ranged Attributes",
+  "complexity": "medium",
+  "diagram_type": "OWL",
+  "description": "BPO diagram showing chair1 instance with AttributePrice and AttributeHeight. Includes subClassOf hierarchy (bpo→schema/seas), rdf:type instance arrows, object relations, and datatype property value assertions.",
+  "base_uri": "http://example.org/ontology#",
+  "namespace_prefixes": {
+    "bpo":    "https://w3id.org/bpo#",
+    "schema": "http://schema.org/",
+    "seas":   "https://w3id.org/seas/",
+    "qudt":   "http://qudt.org/schema/qudt/",
+    "xsd":    "http://www.w3.org/2001/XMLSchema#"
+  },
+
+  "classes": [
+    { "name": "bpo:Attribute" },
+    { "name": "bpo:Component" },
+    { "name": "bpo:RangedAttribute" },
+    { "name": "schema:PropertyValue" },
+    { "name": "seas:Property" },
+    { "name": "qudt:Unit" }
+  ],
+
+  "object_properties": [
+    { "name": "bpo:hasAttribute", "domain": "bpo:Component",  "range": "bpo:Attribute" },
+    { "name": "qudt:unit",        "domain": "bpo:Attribute",  "range": "qudt:Unit"     }
+  ],
+
+  "data_properties": [
+    { "name": "schema:value",            "domain": "bpo:Attribute",       "range": "xsd:double", "datatype": "double" },
+    { "name": "schema:minValue",         "domain": "bpo:RangedAttribute", "range": "xsd:double", "datatype": "double" },
+    { "name": "schema:maxValue",         "domain": "bpo:RangedAttribute", "range": "xsd:double", "datatype": "double" },
+    { "name": "bpo:permittedStepSize",   "domain": "bpo:RangedAttribute", "range": "xsd:double", "datatype": "double" }
+  ],
+
+  "instances": [
+    { "name": "chair1",           "type_class": "bpo:Component"       },
+    { "name": "AttributePrice",   "type_class": "bpo:Attribute"       },
+    { "name": "AttributeHeight",  "type_class": "bpo:RangedAttribute" },
+    { "name": "UEuro",            "type_class": "qudt:Unit"           },
+    { "name": "Ucm",              "type_class": "qudt:Unit"           }
+  ],
+
+  "attribute_values": [],
+
+  "edges": [
+    { "from": "bpo:Attribute",      "to": "schema:PropertyValue", "label": "",                      "edge_type": "subClassOf"     },
+    { "from": "bpo:Component",      "to": "schema:PropertyValue", "label": "",                      "edge_type": "subClassOf"     },
+    { "from": "bpo:Component",      "to": "seas:Property",        "label": "",                      "edge_type": "subClassOf"     },
+    { "from": "bpo:RangedAttribute","to": "seas:Property",        "label": "",                      "edge_type": "subClassOf"     },
+
+    { "from": "AttributePrice",     "to": "bpo:Attribute",        "label": "rdf:type",              "edge_type": "instanceOf"     },
+    { "from": "chair1",             "to": "bpo:Component",        "label": "rdf:type",              "edge_type": "instanceOf"     },
+    { "from": "AttributeHeight",    "to": "bpo:RangedAttribute",  "label": "rdf:type",              "edge_type": "instanceOf"     },
+    { "from": "UEuro",              "to": "qudt:Unit",            "label": "rdf:type",              "edge_type": "instanceOf"     },
+    { "from": "Ucm",                "to": "qudt:Unit",            "label": "rdf:type",              "edge_type": "instanceOf"     },
+
+    { "from": "chair1",             "to": "AttributePrice",       "label": "bpo:hasAttribute",      "edge_type": "objectProperty" },
+    { "from": "chair1",             "to": "AttributeHeight",      "label": "bpo:hasAttribute",      "edge_type": "objectProperty" },
+    { "from": "AttributePrice",     "to": "UEuro",                "label": "qudt:unit",             "edge_type": "objectProperty" },
+    { "from": "AttributeHeight",    "to": "Ucm",                  "label": "qudt:unit",             "edge_type": "objectProperty" },
+
+    { "from": "AttributePrice",     "to": "xsd:double",           "label": "schema:value",          "edge_type": "dataProperty"   },
+    { "from": "AttributeHeight",    "to": "xsd:double",           "label": "schema:value",          "edge_type": "dataProperty"   },
+    { "from": "AttributeHeight",    "to": "xsd:double",           "label": "schema:minValue",       "edge_type": "dataProperty"   },
+    { "from": "AttributeHeight",    "to": "xsd:double",           "label": "bpo:permittedStepSize", "edge_type": "dataProperty"   },
+    { "from": "AttributeHeight",    "to": "xsd:double",           "label": "schema:maxValue",       "edge_type": "dataProperty"   }
+  ],
+
+  "restriction_axioms": [],
+
+  "data_assertions": [
+    { "individual": "AttributePrice",  "property": "schema:value",          "value": "80.0",  "datatype": "double" },
+    { "individual": "AttributeHeight", "property": "schema:value",          "value": "120.0", "datatype": "double" },
+    { "individual": "AttributeHeight", "property": "schema:minValue",       "value": "120.0", "datatype": "double" },
+    { "individual": "AttributeHeight", "property": "bpo:permittedStepSize", "value": "5.0",   "datatype": "double" },
+    { "individual": "AttributeHeight", "property": "schema:maxValue",       "value": "160.0", "datatype": "double" }
+  ]
+}

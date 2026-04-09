@@ -1,0 +1,105 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#buildingA> a <http://example.org/ontology#Building>,
+        owl:NamedIndividual ;
+    rdfs:label "buildingA"@en .
+
+<http://example.org/ontology#containsSensor> a owl:ObjectProperty ;
+    rdfs:label "containsSensor"@en ;
+    rdfs:domain <http://example.org/ontology#HumiditySensor>,
+        <http://example.org/ontology#Room> ;
+    rdfs:range <http://example.org/ontology#Room>,
+        <http://example.org/ontology#Sensor> .
+
+<http://example.org/ontology#controlledBy> a owl:ObjectProperty ;
+    rdfs:label "controlledBy"@en .
+
+<http://example.org/ontology#feedsDataTo> a owl:ObjectProperty ;
+    rdfs:label "feedsDataTo"@en ;
+    rdfs:domain <http://example.org/ontology#LightController> ;
+    rdfs:range <http://example.org/ontology#Actuator> .
+
+<http://example.org/ontology#floor1> a <http://example.org/ontology#Floor>,
+        owl:NamedIndividual ;
+    rdfs:label "floor1"@en .
+
+<http://example.org/ontology#hasFloor> a owl:ObjectProperty ;
+    rdfs:label "hasFloor"@en ;
+    rdfs:domain <http://example.org/ontology#Building> ;
+    rdfs:range <http://example.org/ontology#Floor> .
+
+<http://example.org/ontology#hasRoom> a owl:ObjectProperty ;
+    rdfs:label "hasRoom"@en ;
+    rdfs:domain <http://example.org/ontology#Floor> ;
+    rdfs:range <http://example.org/ontology#Room> .
+
+<http://example.org/ontology#hvac1> a <http://example.org/ontology#HVACUnit>,
+        owl:NamedIndividual ;
+    rdfs:label "hvac1"@en .
+
+<http://example.org/ontology#inZone> a owl:ObjectProperty ;
+    rdfs:label "inZone"@en ;
+    rdfs:domain <http://example.org/ontology#Zone> ;
+    rdfs:range <http://example.org/ontology#OccupancyZone> .
+
+<http://example.org/ontology#room101> a <http://example.org/ontology#Room>,
+        owl:NamedIndividual ;
+    rdfs:label "room101"@en .
+
+<http://example.org/ontology#roomNumber> a owl:DatatypeProperty ;
+    rdfs:label "roomNumber"@en ;
+    rdfs:domain <http://example.org/ontology#Room> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#sensorValue> a owl:DatatypeProperty ;
+    rdfs:label "sensorValue"@en ;
+    rdfs:domain <http://example.org/ontology#Sensor> ;
+    rdfs:range xsd:double .
+
+<http://example.org/ontology#tempSensor1> a <http://example.org/ontology#TemperatureSensor>,
+        owl:NamedIndividual ;
+    rdfs:label "tempSensor1"@en .
+
+<http://example.org/ontology#HVACUnit> a owl:Class ;
+    rdfs:label "HVACUnit"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Actuator> .
+
+<http://example.org/ontology#HumiditySensor> a owl:Class ;
+    rdfs:label "HumiditySensor"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Sensor> .
+
+<http://example.org/ontology#LightController> a owl:Class ;
+    rdfs:label "LightController"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Actuator> .
+
+<http://example.org/ontology#TemperatureSensor> a owl:Class ;
+    rdfs:label "TemperatureSensor"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Sensor> .
+
+<http://example.org/ontology#Building> a owl:Class ;
+    rdfs:label "Building"@en .
+
+<http://example.org/ontology#OccupancyZone> a owl:Class ;
+    rdfs:label "OccupancyZone"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Zone> .
+
+<http://example.org/ontology#Zone> a owl:Class ;
+    rdfs:label "Zone"@en .
+
+<http://example.org/ontology#Actuator> a owl:Class ;
+    rdfs:label "Actuator"@en .
+
+<http://example.org/ontology#Floor> a owl:Class ;
+    rdfs:label "Floor"@en .
+
+<http://example.org/ontology#Sensor> a owl:Class ;
+    rdfs:label "Sensor"@en .
+
+<http://example.org/ontology#Room> a owl:Class ;
+    rdfs:label "Room"@en ;
+    rdfs:subClassOf <http://example.org/ontology#OccupancyZone> .
+

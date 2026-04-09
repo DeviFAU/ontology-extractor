@@ -1,0 +1,243 @@
+{
+  "id": "input14",
+  "name": "Experiment Management Ontology",
+  "complexity": "medium",
+  "diagram_type": "OWL",
+  "description": "Experiment-centric ontology using prov-o and p-plan namespaces. Central class: Experiment (yellow box). Other classes in dashed cyan. xsd datatypes in yellow ovals. prov:wasAttributedTo: Experiment→Person, Publication→Author. p-plan:isSubPlanOfPlan: Experiment→Study, SOP→Plan. hasMaterial appears twice (Experiment→Sample, Experiment→Material). Data props: prov:generatedAtTime + modifiedAtTime on Experiment; name + description on SOP and File.",
+  "base_uri": "http://example.org/ontology#",
+  "namespace_prefixes": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "p-plan": "http://purl.org/net/p-plan#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "classes": [
+    {
+      "name": "Experiment"
+    },
+    {
+      "name": "Person"
+    },
+    {
+      "name": "Study"
+    },
+    {
+      "name": "Sample"
+    },
+    {
+      "name": "Entity"
+    },
+    {
+      "name": "Measurement"
+    },
+    {
+      "name": "Material"
+    },
+    {
+      "name": "Plan"
+    },
+    {
+      "name": "StandardOperatingProcedure"
+    },
+    {
+      "name": "File"
+    },
+    {
+      "name": "Publication"
+    },
+    {
+      "name": "Author"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "prov:wasAttributedTo",
+      "domain": "Experiment",
+      "range": "Person"
+    },
+    {
+      "name": "prov:wasAttributedTo",
+      "domain": "Publication",
+      "range": "Author"
+    },
+    {
+      "name": "p-plan:isSubPlanOfPlan",
+      "domain": "Experiment",
+      "range": "Study"
+    },
+    {
+      "name": "p-plan:isSubPlanOfPlan",
+      "domain": "StandardOperatingProcedure",
+      "range": "Plan"
+    },
+    {
+      "name": "hasMaterial",
+      "domain": "Experiment",
+      "range": "Sample"
+    },
+    {
+      "name": "hasMaterial",
+      "domain": "Experiment",
+      "range": "Material"
+    },
+    {
+      "name": "uses",
+      "domain": "Experiment",
+      "range": "Entity"
+    },
+    {
+      "name": "hasSetting",
+      "domain": "Experiment",
+      "range": "Measurement"
+    },
+    {
+      "name": "hasData",
+      "domain": "Experiment",
+      "range": "File"
+    },
+    {
+      "name": "p-plan:isVariableOfPlan",
+      "domain": "Experiment",
+      "range": "Publication"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "prov:generatedAtTime",
+      "domain": "Experiment",
+      "range": "xsd:dateTime",
+      "datatype": "dateTime"
+    },
+    {
+      "name": "prov:modifiedAtTime",
+      "domain": "Experiment",
+      "range": "xsd:dateTime",
+      "datatype": "dateTime"
+    },
+    {
+      "name": "name",
+      "domain": "StandardOperatingProcedure",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "description",
+      "domain": "StandardOperatingProcedure",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "name",
+      "domain": "File",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "description",
+      "domain": "File",
+      "range": "xsd:string",
+      "datatype": "string"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Experiment",
+      "to": "Person",
+      "label": "prov:wasAttributedTo",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Study",
+      "label": "p-plan:isSubPlanOfPlan",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Sample",
+      "label": "hasMaterial",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Entity",
+      "label": "uses",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Measurement",
+      "label": "hasSetting",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Material",
+      "label": "hasMaterial",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "File",
+      "label": "hasData",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "Publication",
+      "label": "p-plan:isVariableOfPlan",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Publication",
+      "to": "Author",
+      "label": "prov:wasAttributedTo",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "StandardOperatingProcedure",
+      "to": "Plan",
+      "label": "p-plan:isSubPlanOfPlan",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "xsd:dateTime",
+      "label": "prov:generatedAtTime",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Experiment",
+      "to": "xsd:dateTime",
+      "label": "prov:modifiedAtTime",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "StandardOperatingProcedure",
+      "to": "xsd:string",
+      "label": "name",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "StandardOperatingProcedure",
+      "to": "xsd:string",
+      "label": "description",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "File",
+      "to": "xsd:string",
+      "label": "name",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "File",
+      "to": "xsd:string",
+      "label": "description",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

@@ -1,0 +1,75 @@
+@prefix bpo: <https://w3id.org/bpo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix seas: <https://w3id.org/seas/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#Attribute_Height> a owl:NamedIndividual,
+        bpo:RangedAttribute ;
+    rdfs:label "Attribute Height"@en ;
+    schema1:maxValue 1.6e+02 ;
+    schema1:value 1.2e+02 ;
+    bpo:minValue 1.2e+02 ;
+    bpo:permittedStepSize 5e+00 .
+
+<http://example.org/ontology#Attribute_Price> a schema1:PropertyValue,
+        owl:NamedIndividual ;
+    rdfs:label "Attribute Price"@en ;
+    schema1:value 8e+01 .
+
+<http://example.org/ontology#UEuro> a qudt:Unit,
+        owl:NamedIndividual ;
+    rdfs:label "UEuro"@en .
+
+<http://example.org/ontology#Ucm> a qudt:Unit,
+        owl:NamedIndividual ;
+    rdfs:label "Ucm"@en .
+
+<http://example.org/ontology#chair1> a owl:NamedIndividual,
+        bpo:Component ;
+    rdfs:label "chair1"@en .
+
+qudt:unit a owl:ObjectProperty ;
+    rdfs:label "unit"@en .
+
+schema1:maxValue a owl:DatatypeProperty ;
+    rdfs:label "maxValue"@en .
+
+schema1:value a owl:DatatypeProperty ;
+    rdfs:label "value"@en .
+
+bpo:hasAttribute a owl:ObjectProperty ;
+    rdfs:label "hasAttribute"@en .
+
+bpo:minValue a owl:DatatypeProperty ;
+    rdfs:label "minValue"@en .
+
+bpo:permittedStepSize a owl:DatatypeProperty ;
+    rdfs:label "permittedStepSize"@en .
+
+schema1:PropertyValue a owl:Class ;
+    rdfs:label "PropertyValue"@en ;
+    rdfs:subClassOf bpo:Attribute,
+        seas:Property .
+
+bpo:Component a owl:Class ;
+    rdfs:label "Component"@en .
+
+bpo:RangedAttribute a owl:Class ;
+    rdfs:label "RangedAttribute"@en ;
+    rdfs:subClassOf bpo:Attribute .
+
+seas:Property a owl:Class ;
+    rdfs:label "Property"@en ;
+    rdfs:subClassOf bpo:Attribute .
+
+qudt:Unit a owl:Class ;
+    rdfs:label "Unit"@en .
+
+bpo:Attribute a owl:Class ;
+    rdfs:label "Attribute"@en .
+

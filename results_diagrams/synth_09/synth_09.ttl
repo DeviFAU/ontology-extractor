@@ -1,0 +1,64 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#Article> a owl:Class ;
+    rdfs:label "Article"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Work> .
+
+<http://example.org/ontology#hasGenre> a owl:ObjectProperty ;
+    rdfs:label "hasGenre"@en ;
+    rdfs:domain <http://example.org/ontology#Work> ;
+    rdfs:range <http://example.org/ontology#Genre> .
+
+<http://example.org/ontology#heldBy> a owl:ObjectProperty ;
+    rdfs:label "heldBy"@en ;
+    rdfs:domain <http://example.org/ontology#Work> ;
+    rdfs:range <http://example.org/ontology#Library> .
+
+<http://example.org/ontology#isbn> a owl:DatatypeProperty ;
+    rdfs:label "isbn"@en ;
+    rdfs:domain <http://example.org/ontology#Book> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#title> a owl:DatatypeProperty ;
+    rdfs:label "title"@en ;
+    rdfs:domain <http://example.org/ontology#Work> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#writtenBy> a owl:ObjectProperty ;
+    rdfs:label "writtenBy"@en ;
+    rdfs:domain <http://example.org/ontology#Work> ;
+    rdfs:range <http://example.org/ontology#Author> ;
+    owl:inverseOf <http://example.org/ontology#authored> .
+
+<http://example.org/ontology#yearPublished> a owl:DatatypeProperty ;
+    rdfs:label "yearPublished"@en ;
+    rdfs:domain <http://example.org/ontology#Work> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/ontology#Author> a owl:Class ;
+    rdfs:label "Author"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Person> .
+
+<http://example.org/ontology#Book> a owl:Class ;
+    rdfs:label "Book"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Work> .
+
+<http://example.org/ontology#Genre> a owl:Class ;
+    rdfs:label "Genre"@en .
+
+<http://example.org/ontology#Library> a owl:Class ;
+    rdfs:label "Library"@en .
+
+<http://example.org/ontology#Person> a owl:Class ;
+    rdfs:label "Person"@en .
+
+<http://example.org/ontology#authored> a owl:ObjectProperty ;
+    rdfs:label "authored"@en .
+
+<http://example.org/ontology#Work> a owl:Class ;
+    rdfs:label "Work"@en .
+

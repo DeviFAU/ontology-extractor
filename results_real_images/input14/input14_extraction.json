@@ -1,0 +1,685 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Person",
+        "to": "Experiment",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "prov:wasAttributedTo",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Entity",
+        "to": "Experiment",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "uses",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Experiment",
+        "to": "xsd:dateTime",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "prov:generatedAtTime,modifiedAtTime",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Study",
+        "to": "Experiment",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "p-plan:isSubPlanOfPlan",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "Sample",
+        "to": "Experiment",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasMaterial",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "Measurement",
+        "to": "Experiment",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasSetting",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Material",
+        "to": "Experiment",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasMaterial",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "Experiment",
+        "to": "Material",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "p-plan:isVariableOfPlan",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "Publication",
+        "to": "Experiment",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasData",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "Author",
+        "to": "Publication",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "prov:wasAttributedTo",
+        "confidence": "high"
+      },
+      {
+        "id": "a11",
+        "from": "Plan",
+        "to": "Experiment",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "p-plan:isSubPlanOfPlan",
+        "confidence": "high"
+      },
+      {
+        "id": "a12",
+        "from": "Standard Operating Procedure",
+        "to": "Plan",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "p-plan:isSubPlanOfPlan",
+        "confidence": "high"
+      },
+      {
+        "id": "a13",
+        "from": "Standard Operating Procedure",
+        "to": "xsd:string",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "name, description",
+        "confidence": "high"
+      },
+      {
+        "id": "a14",
+        "from": "File",
+        "to": "Experiment",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasData",
+        "confidence": "high"
+      },
+      {
+        "id": "a15",
+        "from": "File",
+        "to": "xsd:string",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "name, description",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram appears to illustrate a complex relationship map focused on the 'Experiment' class. All connections are either object or data properties with solid lines and solid arrowheads."
+  },
+  "pass1": {
+    "diagram_type": "PROV-O",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Experiment",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Study",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Person",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Sample",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Measurement",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Material",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Publication",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "Entity",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "Plan",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "Standard Operating Procedure",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "File",
+        "description": ""
+      },
+      {
+        "id": "c12",
+        "name": "Author",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "prov:wasAttributedTo"
+      },
+      {
+        "id": "op2",
+        "name": "uses"
+      },
+      {
+        "id": "op3",
+        "name": "prov:generatedAtTime"
+      },
+      {
+        "id": "op4",
+        "name": "p-plan:isSubPlanOfPlan"
+      },
+      {
+        "id": "op5",
+        "name": "hasMaterial"
+      },
+      {
+        "id": "op6",
+        "name": "hasSetting"
+      },
+      {
+        "id": "op7",
+        "name": "p-plan:hasData"
+      },
+      {
+        "id": "op8",
+        "name": "p-plan:isVariableOfPlan"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Experiment",
+        "to": "Study",
+        "label": "p-plan:isSubPlanOfPlan",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Study",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Experiment",
+        "to": "Person",
+        "label": "prov:wasAttributedTo",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Person",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Experiment",
+        "to": "Sample",
+        "label": "hasMaterial",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Sample",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Experiment",
+        "to": "Measurement",
+        "label": "hasMaterial",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Measurement",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Material",
+        "to": "Experiment",
+        "label": "hasMaterial",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Experiment",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Experiment",
+        "to": "Plan",
+        "label": "p-plan:isSubPlanOfPlan",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Plan",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Experiment",
+        "to": "File",
+        "label": "p-plan:hasData",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "File",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Experiment",
+        "to": "xsd:dateTime",
+        "label": "prov:generatedAtTime",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:dateTime",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "Entity",
+        "to": "Experiment",
+        "label": "uses",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Experiment",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "Author",
+        "to": "Publication",
+        "label": "prov:wasAttributedTo",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Publication",
+        "confidence": "high"
+      },
+      {
+        "id": "e11",
+        "from": "Standard Operating Procedure",
+        "to": "Plan",
+        "label": "p-plan:isSubPlanOfPlan",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Plan",
+        "confidence": "high"
+      },
+      {
+        "id": "e12",
+        "from": "Standard Operating Procedure",
+        "to": "xsd:string",
+        "label": "name",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e13",
+        "from": "File",
+        "to": "xsd:string",
+        "label": "name",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e14",
+        "from": "Experiment",
+        "to": "Material",
+        "label": "p-plan:isVariableOfPlan",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Material",
+        "confidence": "high"
+      },
+      {
+        "id": "e15",
+        "from": "Experiment",
+        "to": "Material",
+        "label": "hasSetting",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Material",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [
+    {
+      "id": "e9",
+      "from": "Experiment",
+      "to": "Entity",
+      "label": "uses",
+      "edge_type": "objectProperty",
+      "direction_changed": true,
+      "correction_note": "Black arrowhead is located at the Entity node"
+    }
+  ],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "Experiment",
+      "to": "Publication",
+      "label": "prov:wasAttributedTo",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Publication",
+      "visual_evidence": "Black line pointing from Experiment to Publication with arrowhead at Publication"
+    },
+    {
+      "id": "me2",
+      "from": "Experiment",
+      "to": "xsd:dateTime",
+      "label": "prov:modifiedAtTime",
+      "edge_type": "dataProperty",
+      "arrowhead_at": "xsd:dateTime",
+      "visual_evidence": "Black line pointing from Experiment to xsd:dateTime with arrowhead at xsd:dateTime"
+    },
+    {
+      "id": "me3",
+      "from": "File",
+      "to": "xsd:string",
+      "label": "description",
+      "edge_type": "dataProperty",
+      "arrowhead_at": "xsd:string",
+      "visual_evidence": "Black line pointing from File to xsd:string with arrowhead at xsd:string"
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "PROV-O",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Experiment",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Study",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Person",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Sample",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Measurement",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Material",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Publication",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "Entity",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "Plan",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "Standard Operating Procedure",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "File",
+        "description": ""
+      },
+      {
+        "id": "c12",
+        "name": "Author",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "prov:wasAttributedTo"
+      },
+      {
+        "id": "op2",
+        "name": "uses"
+      },
+      {
+        "id": "op4",
+        "name": "p-plan:isSubPlanOfPlan"
+      },
+      {
+        "id": "op5",
+        "name": "hasMaterial"
+      },
+      {
+        "id": "op6",
+        "name": "hasSetting"
+      },
+      {
+        "id": "op7",
+        "name": "p-plan:hasData"
+      },
+      {
+        "id": "op8",
+        "name": "p-plan:isVariableOfPlan"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Experiment",
+        "to": "Study",
+        "label": "p-plan:isSubPlanOfPlan",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e2",
+        "from": "Experiment",
+        "to": "Person",
+        "label": "prov:wasAttributedTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e3",
+        "from": "Experiment",
+        "to": "Sample",
+        "label": "hasMaterial",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e4",
+        "from": "Experiment",
+        "to": "Measurement",
+        "label": "hasMaterial",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "Material",
+        "to": "Experiment",
+        "label": "hasMaterial",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Experiment",
+        "to": "Plan",
+        "label": "p-plan:isSubPlanOfPlan",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Experiment",
+        "to": "File",
+        "label": "p-plan:hasData",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Experiment",
+        "to": "xsd:dateTime",
+        "label": "prov:generatedAtTime",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e9",
+        "from": "Experiment",
+        "to": "Entity",
+        "label": "uses",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e10",
+        "from": "Author",
+        "to": "Publication",
+        "label": "prov:wasAttributedTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e11",
+        "from": "Standard Operating Procedure",
+        "to": "Plan",
+        "label": "p-plan:isSubPlanOfPlan",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e12",
+        "from": "Standard Operating Procedure",
+        "to": "xsd:string",
+        "label": "name",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e13",
+        "from": "File",
+        "to": "xsd:string",
+        "label": "name",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e14",
+        "from": "Experiment",
+        "to": "Material",
+        "label": "p-plan:isVariableOfPlan",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e15",
+        "from": "Experiment",
+        "to": "Material",
+        "label": "hasSetting",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me1",
+        "from": "Experiment",
+        "to": "Publication",
+        "label": "prov:wasAttributedTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me2",
+        "from": "Experiment",
+        "to": "xsd:dateTime",
+        "label": "prov:modifiedAtTime",
+        "edge_type": "dataProperty"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

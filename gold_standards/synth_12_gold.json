@@ -1,0 +1,222 @@
+{
+  "id": "synth_12",
+  "name": "Full OWL Features",
+  "complexity": "complex",
+  "diagram_type": "OWL",
+  "description": "Tests complex OWL axioms: restrictions, equivalentClass, disjointWith",
+  "base_uri": "http://example.org/fullowl#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Vehicle"
+    },
+    {
+      "name": "Car"
+    },
+    {
+      "name": "Truck"
+    },
+    {
+      "name": "Bicycle"
+    },
+    {
+      "name": "ElectricVehicle"
+    },
+    {
+      "name": "Engine"
+    },
+    {
+      "name": "Battery"
+    },
+    {
+      "name": "Wheel"
+    },
+    {
+      "name": "Manufacturer"
+    },
+    {
+      "name": "Driver"
+    },
+    {
+      "name": "License"
+    },
+    {
+      "name": "Road"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "hasEngine",
+      "domain": "Vehicle",
+      "range": "Engine"
+    },
+    {
+      "name": "hasBattery",
+      "domain": "ElectricVehicle",
+      "range": "Battery"
+    },
+    {
+      "name": "hasWheel",
+      "domain": "Vehicle",
+      "range": "Wheel"
+    },
+    {
+      "name": "madeBy",
+      "domain": "Vehicle",
+      "range": "Manufacturer"
+    },
+    {
+      "name": "drivenBy",
+      "domain": "Vehicle",
+      "range": "Driver"
+    },
+    {
+      "name": "hasLicense",
+      "domain": "Driver",
+      "range": "License"
+    },
+    {
+      "name": "drivesOn",
+      "domain": "Vehicle",
+      "range": "Road"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "maxSpeed",
+      "domain": "Vehicle",
+      "range": "xsd:integer",
+      "datatype": "integer"
+    },
+    {
+      "name": "weight",
+      "domain": "Vehicle",
+      "range": "xsd:double",
+      "datatype": "double"
+    },
+    {
+      "name": "modelYear",
+      "domain": "Vehicle",
+      "range": "xsd:integer",
+      "datatype": "integer"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Car",
+      "to": "Vehicle",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Truck",
+      "to": "Vehicle",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Bicycle",
+      "to": "Vehicle",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "ElectricVehicle",
+      "to": "Vehicle",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Car",
+      "to": "Truck",
+      "label": "owl:disjointWith",
+      "edge_type": "disjointWith"
+    },
+    {
+      "from": "Vehicle",
+      "to": "Engine",
+      "label": "hasEngine",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "ElectricVehicle",
+      "to": "Battery",
+      "label": "hasBattery",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Vehicle",
+      "to": "Wheel",
+      "label": "hasWheel",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Vehicle",
+      "to": "Manufacturer",
+      "label": "madeBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Vehicle",
+      "to": "Driver",
+      "label": "drivenBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Driver",
+      "to": "License",
+      "label": "hasLicense",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Vehicle",
+      "to": "Road",
+      "label": "drivesOn",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Vehicle",
+      "to": "xsd:integer",
+      "label": "maxSpeed",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Vehicle",
+      "to": "xsd:double",
+      "label": "weight",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Vehicle",
+      "to": "xsd:integer",
+      "label": "modelYear",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [
+    {
+      "subject": "Car",
+      "property": "hasWheel",
+      "restriction_type": "exactly",
+      "filler": "Wheel",
+      "cardinality": 4
+    },
+    {
+      "subject": "Bicycle",
+      "property": "hasWheel",
+      "restriction_type": "exactly",
+      "filler": "Wheel",
+      "cardinality": 2
+    },
+    {
+      "subject": "ElectricVehicle",
+      "property": "hasBattery",
+      "restriction_type": "some",
+      "filler": "Battery",
+      "cardinality": null
+    }
+  ],
+  "data_assertions": []
+}

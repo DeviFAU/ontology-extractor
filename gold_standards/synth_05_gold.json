@@ -1,0 +1,66 @@
+{
+  "id": "synth_05",
+  "name": "InverseOf Properties",
+  "complexity": "simple",
+  "diagram_type": "OWL",
+  "description": "Tests owl:inverseOf extraction and type declarations",
+  "base_uri": "http://example.org/inverse#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Parent"
+    },
+    {
+      "name": "Child"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "hasChild",
+      "domain": "Parent",
+      "range": "Child"
+    },
+    {
+      "name": "hasParent",
+      "domain": "Child",
+      "range": "Parent"
+    }
+  ],
+  "data_properties": [],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "hasChild",
+      "to": "hasParent",
+      "label": "owl:inverseOf",
+      "edge_type": "inverseOf"
+    },
+    {
+      "from": "hasChild",
+      "to": "Parent",
+      "label": "rdfs:domain",
+      "edge_type": "domain"
+    },
+    {
+      "from": "hasChild",
+      "to": "Child",
+      "label": "rdfs:range",
+      "edge_type": "range"
+    },
+    {
+      "from": "hasParent",
+      "to": "Child",
+      "label": "rdfs:domain",
+      "edge_type": "domain"
+    },
+    {
+      "from": "hasParent",
+      "to": "Parent",
+      "label": "rdfs:range",
+      "edge_type": "range"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

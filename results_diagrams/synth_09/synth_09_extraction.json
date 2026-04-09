@@ -1,0 +1,425 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Article",
+        "to": "Work",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Book",
+        "to": "Work",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Work",
+        "to": "Genre",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "hasGenre",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Work",
+        "to": "Library",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "heldBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "Work",
+        "to": "xsd:integer",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "yearPublished",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "Work",
+        "to": "Author",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "writtenBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Work",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "title",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "Book",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "isbn",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "Author",
+        "to": "Person",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "writtenBy",
+        "to": "authored",
+        "line_style": "solid",
+        "arrowhead_style": "double-headed",
+        "conclusion": "inverseOf",
+        "label": "owl:inverseOf",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram illustrates a hierarchy of 'Work' subclasses and their relationships to 'Author', 'Genre', 'Library', and datatype properties."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Work",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Article",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Book",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Genre",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Library",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Author",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Person",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasGenre"
+      },
+      {
+        "id": "op2",
+        "name": "heldBy"
+      },
+      {
+        "id": "op3",
+        "name": "writtenBy"
+      },
+      {
+        "id": "op4",
+        "name": "title"
+      },
+      {
+        "id": "op5",
+        "name": "isbn"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Article",
+        "to": "Work",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Work",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Book",
+        "to": "Work",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Work",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Author",
+        "to": "Person",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Person",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Work",
+        "to": "Genre",
+        "label": "hasGenre",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Genre",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Work",
+        "to": "Library",
+        "label": "heldBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Library",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Work",
+        "to": "xsd:integer",
+        "label": "yearPublished",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:integer",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Work",
+        "to": "Author",
+        "label": "writtenBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Author",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Work",
+        "to": "xsd:string",
+        "label": "title",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "Book",
+        "to": "xsd:string",
+        "label": "isbn",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "writtenBy",
+        "to": "authored",
+        "label": "owl:inverseOf",
+        "edge_type": "inverseOf",
+        "arrowhead_at": "authored",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Work",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Article",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Book",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Genre",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Library",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Author",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Person",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasGenre"
+      },
+      {
+        "id": "op2",
+        "name": "heldBy"
+      },
+      {
+        "id": "op3",
+        "name": "writtenBy"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Article",
+        "to": "Work",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e2",
+        "from": "Book",
+        "to": "Work",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e3",
+        "from": "Author",
+        "to": "Person",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e4",
+        "from": "Work",
+        "to": "Genre",
+        "label": "hasGenre",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "Work",
+        "to": "Library",
+        "label": "heldBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Work",
+        "to": "xsd:integer",
+        "label": "yearPublished",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Work",
+        "to": "Author",
+        "label": "writtenBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Work",
+        "to": "xsd:string",
+        "label": "title",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e9",
+        "from": "Book",
+        "to": "xsd:string",
+        "label": "isbn",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e10",
+        "from": "writtenBy",
+        "to": "authored",
+        "label": "owl:inverseOf",
+        "edge_type": "inverseOf"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

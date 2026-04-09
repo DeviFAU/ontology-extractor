@@ -1,0 +1,68 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+prov:actedOnBehalfOf a owl:ObjectProperty ;
+    rdfs:label "actedOnBehalfOf"@en ;
+    rdfs:domain prov:Agent ;
+    rdfs:range prov:Agent .
+
+prov:endedAtTime a owl:DatatypeProperty ;
+    rdfs:label "endedAtTime"@en ;
+    rdfs:domain prov:Activity ;
+    rdfs:range xsd:dateTime .
+
+prov:startedAtTime a owl:DatatypeProperty ;
+    rdfs:label "startedAtTime"@en ;
+    rdfs:domain prov:Activity ;
+    rdfs:range xsd:dateTime .
+
+prov:used a owl:ObjectProperty ;
+    rdfs:label "used"@en ;
+    rdfs:domain prov:Activity ;
+    rdfs:range prov:Entity .
+
+prov:wasAssociatedWith a owl:ObjectProperty ;
+    rdfs:label "wasAssociatedWith"@en ;
+    rdfs:domain prov:Agent ;
+    rdfs:range prov:Activity .
+
+prov:wasAttributedTo a owl:ObjectProperty ;
+    rdfs:label "wasAttributedTo"@en ;
+    rdfs:domain prov:Agent,
+        prov:Entity ;
+    rdfs:range prov:Activity,
+        prov:Agent .
+
+prov:wasDerivedFrom a owl:ObjectProperty ;
+    rdfs:label "wasDerivedFrom"@en ;
+    rdfs:domain prov:Entity ;
+    rdfs:range prov:Entity .
+
+prov:wasGeneratedBy a owl:ObjectProperty ;
+    rdfs:label "wasGeneratedBy"@en ;
+    rdfs:domain prov:Activity ;
+    rdfs:range prov:Entity .
+
+prov:wasInformedBy a owl:ObjectProperty ;
+    rdfs:label "wasInformedBy"@en ;
+    rdfs:domain prov:Activity ;
+    rdfs:range prov:Activity .
+
+prov:wasUsedBy a owl:ObjectProperty ;
+    rdfs:label "wasUsedBy"@en ;
+    rdfs:domain prov:Entity ;
+    rdfs:range prov:Activity .
+
+prov:Agent a owl:Class ;
+    rdfs:label "Agent"@en .
+
+prov:Entity a owl:Class ;
+    rdfs:label "Entity"@en .
+
+prov:Activity a owl:Class ;
+    rdfs:label "Activity"@en .
+

@@ -1,0 +1,107 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/experiment> a owl:Ontology .
+
+<http://example.org/experiment#analysesSample> a owl:ObjectProperty ;
+    rdfs:label "analysesSample"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range <http://example.org/experiment#Sample> .
+
+<http://example.org/experiment#conductedBy> a owl:ObjectProperty ;
+    rdfs:label "conductedBy"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range <http://example.org/experiment#Researcher> .
+
+<http://example.org/experiment#experimentDate> a owl:DatatypeProperty ;
+    rdfs:label "experimentDate"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range xsd:date .
+
+<http://example.org/experiment#experimentName> a owl:DatatypeProperty ;
+    rdfs:label "experimentName"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range xsd:string .
+
+<http://example.org/experiment#followsProtocol> a owl:ObjectProperty ;
+    rdfs:label "followsProtocol"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range <http://example.org/experiment#Protocol> .
+
+<http://example.org/experiment#fundedBy> a owl:ObjectProperty ;
+    rdfs:label "fundedBy"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range <http://example.org/experiment#FundingSource> .
+
+<http://example.org/experiment#hasParameter> a owl:ObjectProperty ;
+    rdfs:label "hasParameter"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range <http://example.org/experiment#Parameter> .
+
+<http://example.org/experiment#performedAt> a owl:ObjectProperty ;
+    rdfs:label "performedAt"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range <http://example.org/experiment#Lab> .
+
+<http://example.org/experiment#producesResult> a owl:ObjectProperty ;
+    rdfs:label "producesResult"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range <http://example.org/experiment#Result> .
+
+<http://example.org/experiment#publishedIn> a owl:ObjectProperty ;
+    rdfs:label "publishedIn"@en ;
+    rdfs:domain <http://example.org/experiment#Result> ;
+    rdfs:range <http://example.org/experiment#Publication> .
+
+<http://example.org/experiment#usesDataset> a owl:ObjectProperty ;
+    rdfs:label "usesDataset"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range <http://example.org/experiment#Dataset> .
+
+<http://example.org/experiment#usesInstrument> a owl:ObjectProperty ;
+    rdfs:label "usesInstrument"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range <http://example.org/experiment#Instrument> .
+
+<http://example.org/experiment#usesSoftware> a owl:ObjectProperty ;
+    rdfs:label "usesSoftware"@en ;
+    rdfs:domain <http://example.org/experiment#Experiment> ;
+    rdfs:range <http://example.org/experiment#Software> .
+
+<http://example.org/experiment#Dataset> a owl:Class ;
+    rdfs:label "Dataset"@en .
+
+<http://example.org/experiment#FundingSource> a owl:Class ;
+    rdfs:label "FundingSource"@en .
+
+<http://example.org/experiment#Instrument> a owl:Class ;
+    rdfs:label "Instrument"@en .
+
+<http://example.org/experiment#Lab> a owl:Class ;
+    rdfs:label "Lab"@en .
+
+<http://example.org/experiment#Parameter> a owl:Class ;
+    rdfs:label "Parameter"@en .
+
+<http://example.org/experiment#Protocol> a owl:Class ;
+    rdfs:label "Protocol"@en .
+
+<http://example.org/experiment#Publication> a owl:Class ;
+    rdfs:label "Publication"@en .
+
+<http://example.org/experiment#Researcher> a owl:Class ;
+    rdfs:label "Researcher"@en .
+
+<http://example.org/experiment#Sample> a owl:Class ;
+    rdfs:label "Sample"@en .
+
+<http://example.org/experiment#Software> a owl:Class ;
+    rdfs:label "Software"@en .
+
+<http://example.org/experiment#Result> a owl:Class ;
+    rdfs:label "Result"@en .
+
+<http://example.org/experiment#Experiment> a owl:Class ;
+    rdfs:label "Experiment"@en .
+

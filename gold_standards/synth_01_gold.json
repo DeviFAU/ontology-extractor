@@ -1,0 +1,49 @@
+{
+  "id": "synth_01",
+  "name": "Animal Hierarchy",
+  "complexity": "simple",
+  "diagram_type": "OWL",
+  "description": "Tests subClassOf extraction with 3 subclass relationships",
+  "base_uri": "http://example.org/animals#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Animal"
+    },
+    {
+      "name": "Dog"
+    },
+    {
+      "name": "Cat"
+    },
+    {
+      "name": "Bird"
+    }
+  ],
+  "object_properties": [],
+  "data_properties": [],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Dog",
+      "to": "Animal",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Cat",
+      "to": "Animal",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Bird",
+      "to": "Animal",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

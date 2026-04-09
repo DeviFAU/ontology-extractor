@@ -1,0 +1,210 @@
+{
+  "id": "input13",
+  "name": "Medical Profile Ontology",
+  "complexity": "simple",
+  "diagram_type": "OWL",
+  "description": "Medical ontology with blue class rectangles and orange xsd datatype boxes. Classes: Patient, Examination, Hospital Admission, Medical Profile, Disease, Current Medication, Medication. is part of edges point FROM sub-components TO Medical Profile. Current Medication isA Medication (subClassOf). Disease is treated by Current Medication. Data props: examination date, has name, has result (Examination); has reasons, has symptoms, admissioned at (Hospital Admission); has ID (Medical Profile, xsd:integer); has name (Disease).",
+  "base_uri": "http://example.org/ontology#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Patient"
+    },
+    {
+      "name": "Examination"
+    },
+    {
+      "name": "Hospital Admission"
+    },
+    {
+      "name": "Medical Profile"
+    },
+    {
+      "name": "Disease"
+    },
+    {
+      "name": "Current Medication"
+    },
+    {
+      "name": "Medication"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "has a",
+      "domain": "Patient",
+      "range": "Medical Profile"
+    },
+    {
+      "name": "is part of",
+      "domain": "Examination",
+      "range": "Medical Profile"
+    },
+    {
+      "name": "is part of",
+      "domain": "Hospital Admission",
+      "range": "Medical Profile"
+    },
+    {
+      "name": "is part of",
+      "domain": "Disease",
+      "range": "Medical Profile"
+    },
+    {
+      "name": "is part of",
+      "domain": "Current Medication",
+      "range": "Medical Profile"
+    },
+    {
+      "name": "is treated by",
+      "domain": "Disease",
+      "range": "Current Medication"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "examination date",
+      "domain": "Examination",
+      "range": "xsd:datetime",
+      "datatype": "datetime"
+    },
+    {
+      "name": "has name",
+      "domain": "Examination",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "has result",
+      "domain": "Examination",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "has reasons",
+      "domain": "Hospital Admission",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "has symptoms",
+      "domain": "Hospital Admission",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "admissioned at",
+      "domain": "Hospital Admission",
+      "range": "xsd:datetime",
+      "datatype": "datetime"
+    },
+    {
+      "name": "has ID",
+      "domain": "Medical Profile",
+      "range": "xsd:integer",
+      "datatype": "integer"
+    },
+    {
+      "name": "has name",
+      "domain": "Disease",
+      "range": "xsd:string",
+      "datatype": "string"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Current Medication",
+      "to": "Medication",
+      "label": "is a",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Patient",
+      "to": "Medical Profile",
+      "label": "has a",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Examination",
+      "to": "Medical Profile",
+      "label": "is part of",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Hospital Admission",
+      "to": "Medical Profile",
+      "label": "is part of",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Disease",
+      "to": "Medical Profile",
+      "label": "is part of",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Current Medication",
+      "to": "Medical Profile",
+      "label": "is part of",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Disease",
+      "to": "Current Medication",
+      "label": "is treated by",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Examination",
+      "to": "xsd:datetime",
+      "label": "examination date",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Examination",
+      "to": "xsd:string",
+      "label": "has name",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Examination",
+      "to": "xsd:string",
+      "label": "has result",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Hospital Admission",
+      "to": "xsd:string",
+      "label": "has reasons",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Hospital Admission",
+      "to": "xsd:string",
+      "label": "has symptoms",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Hospital Admission",
+      "to": "xsd:datetime",
+      "label": "admissioned at",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Medical Profile",
+      "to": "xsd:integer",
+      "label": "has ID",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Disease",
+      "to": "xsd:string",
+      "label": "has name",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

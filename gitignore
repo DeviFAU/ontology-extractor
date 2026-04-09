@@ -1,0 +1,54 @@
+# ── API keys & secrets ───────────────────────────────────────────────────────
+.env
+.env.*
+*.env
+secrets.py
+config_local.py
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pycache
+*.egg-info/
+dist/
+build/
+*.egg
+.Python
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── OS files ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Large / generated output files ───────────────────────────────────────────
+# Keep gold standards and diagrams, exclude bulk generated results
+results_diagrams/*.owl
+results_diagrams/*.ttl
+results_diagrams/*_extraction.json
+
+# ── Keep these (uncomment to include everything) ──────────────────────────────
+# !results_diagrams/
+# !results/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://e.org/ont#semanticWeb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://e.org/ont#Topic"/>
+    <rdfs:label xml:lang="en">semanticWeb</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont#writes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">writes</rdfs:label>
+    <rdfs:domain rdf:resource="http://e.org/ont#Person"/>
+    <rdfs:range rdf:resource="http://e.org/ont#Document"/>
+    <owl:inverseOf rdf:resource="http://e.org/ont#author"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont#author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">author</rdfs:label>
+    <rdfs:domain rdf:resource="http://e.org/ont#Document"/>
+    <rdfs:range rdf:resource="http://e.org/ont#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont#Topic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Topic</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont#ConferencePaper">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">ConferencePaper</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://e.org/ont#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont#Thesis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Thesis</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://e.org/ont#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont#eetu">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://e.org/ont#Thesis"/>
+    <rdfs:label xml:lang="en">eetu</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont#about">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">about</rdfs:label>
+    <rdfs:domain rdf:resource="http://e.org/ont#Document"/>
+    <rdfs:range rdf:resource="http://e.org/ont#Topic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont#search">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://e.org/ont#Topic"/>
+    <rdfs:label xml:lang="en">search</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont#Document">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e.org/ont">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>

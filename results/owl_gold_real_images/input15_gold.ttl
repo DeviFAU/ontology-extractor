@@ -1,0 +1,140 @@
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix ocrv: <http://example.org/ocrv#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ro: <http://purl.obolibrary.org/obo/> .
+@prefix teo: <http://example.org/teo#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ocrv:casually%20related%20to a owl:ObjectProperty ;
+    rdfs:label "casually related to"@en ;
+    rdfs:domain ncit:disease%20or%20disorder ;
+    rdfs:range ncit:disease%20or%20disorder .
+
+ocrv:has%20death%20cause a owl:ObjectProperty ;
+    rdfs:label "has death cause"@en ;
+    rdfs:domain ncit:patient ;
+    rdfs:range ncit:disease%20or%20disorder .
+
+ocrv:has%20diagnosis a owl:ObjectProperty ;
+    rdfs:label "has diagnosis"@en ;
+    rdfs:domain ncit:patient ;
+    rdfs:range ncit:diagnosis%20relation .
+
+ocrv:has%20martial%20status a owl:ObjectProperty ;
+    rdfs:label "has martial status"@en ;
+    rdfs:domain ncit:patient ;
+    rdfs:range ncit:single .
+
+ocrv:has%20procedure a owl:ObjectProperty ;
+    rdfs:label "has procedure"@en ;
+    rdfs:domain ncit:patient ;
+    rdfs:range ncit:surgery .
+
+ocrv:has%20svi a owl:ObjectProperty ;
+    rdfs:label "has svi"@en ;
+    rdfs:domain ncit:census%20tract ;
+    rdfs:range ocrv:SVI%20socioeconomic%20status .
+
+ocrv:has%20tumor%20type a owl:ObjectProperty ;
+    rdfs:label "has tumor type"@en ;
+    rdfs:domain ncit:diagnosis%20relation ;
+    rdfs:range ncit:disease%20or%20disorder .
+
+ocrv:lives%20in a owl:ObjectProperty ;
+    rdfs:label "lives in"@en ;
+    rdfs:domain ncit:patient ;
+    rdfs:range ncit:census%20tract .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#birth%2F307879> a ncit:birth%20year,
+        owl:NamedIndividual ;
+    rdfs:label "birth/307879"@en .
+
+<http://example.org/ontology#breast_adenocarcinoma%2F8500> a ncit:disease%20or%20disorder,
+        owl:NamedIndividual ;
+    rdfs:label "breast_adenocarcinoma/8500"@en .
+
+<http://example.org/ontology#cause_of_death%2F3> a ncit:disease%20or%20disorder,
+        owl:NamedIndividual ;
+    rdfs:label "cause_of_death/3"@en .
+
+<http://example.org/ontology#census_tract%2F12073002303> a ncit:census%20tract,
+        owl:NamedIndividual ;
+    rdfs:label "census_tract/12073002303"@en ;
+    ocrv:has%20svi 4.6224e+01 .
+
+<http://example.org/ontology#county%2F31> a ncit:county,
+        owl:NamedIndividual ;
+    rdfs:label "county/31"@en .
+
+<http://example.org/ontology#diagnosis_relation%2F3> a ncit:diagnosis%20relation,
+        owl:NamedIndividual ;
+    rdfs:label "diagnosis_relation/3"@en .
+
+<http://example.org/ontology#malignant_breast_neoplasms%2F1749> a ncit:disease%20or%20disorder,
+        owl:NamedIndividual ;
+    rdfs:label "malignant_breast_neoplasms/1749"@en ;
+    rdfs:subClassOf ncit:disease%20or%20disorder .
+
+<http://example.org/ontology#marital_status%2F4> a ncit:single,
+        owl:NamedIndividual ;
+    rdfs:label "marital_status/4"@en .
+
+<http://example.org/ontology#patient%2F307879> a ncit:patient,
+        owl:NamedIndividual ;
+    rdfs:label "patient/307879"@en .
+
+<http://example.org/ontology#surgery%2F307879> a ncit:surgery,
+        owl:NamedIndividual ;
+    rdfs:label "surgery/307879"@en .
+
+<http://example.org/ontology#time_instant%2F1941> a ncit:birth%20year,
+        owl:NamedIndividual ;
+    rdfs:label "time_instant/1941"@en .
+
+<http://example.org/ontology#time_instant%2F19860320> a ocrv:date%20of%20diagnosis,
+        owl:NamedIndividual ;
+    rdfs:label "time_instant/19860320"@en .
+
+teo:hasValidTime a owl:ObjectProperty ;
+    rdfs:label "hasValidTime"@en ;
+    rdfs:domain ncit:birth%20year ;
+    rdfs:range ocrv:date%20of%20diagnosis .
+
+ro:participates%20in a owl:ObjectProperty ;
+    rdfs:label "participates in"@en ;
+    rdfs:domain ncit:patient ;
+    rdfs:range ncit:birth%20year .
+
+ocrv:SVI%20socioeconomic%20status a owl:Class ;
+    rdfs:label "SVI socioeconomic status"@en .
+
+ncit:county a owl:Class ;
+    rdfs:label "county"@en .
+
+ocrv:date%20of%20diagnosis a owl:Class ;
+    rdfs:label "date of diagnosis"@en .
+
+ncit:single a owl:Class ;
+    rdfs:label "single"@en .
+
+ncit:surgery a owl:Class ;
+    rdfs:label "surgery"@en .
+
+ncit:census%20tract a owl:Class ;
+    rdfs:label "census tract"@en .
+
+ncit:diagnosis%20relation a owl:Class ;
+    rdfs:label "diagnosis relation"@en .
+
+ncit:birth%20year a owl:Class ;
+    rdfs:label "birth year"@en .
+
+ncit:patient a owl:Class ;
+    rdfs:label "patient"@en .
+
+ncit:disease%20or%20disorder a owl:Class ;
+    rdfs:label "disease or disorder"@en .
+

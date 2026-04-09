@@ -1,0 +1,87 @@
+{
+  "id": "synth_02",
+  "name": "Person Attributes",
+  "complexity": "simple",
+  "diagram_type": "ER",
+  "description": "Tests data property extraction from ER-style attribute boxes",
+  "base_uri": "http://example.org/person#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Person"
+    },
+    {
+      "name": "Address"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "livesAt",
+      "domain": "Person",
+      "range": "Address"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "hasName",
+      "domain": "Person",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "hasAge",
+      "domain": "Person",
+      "range": "xsd:integer",
+      "datatype": "integer"
+    },
+    {
+      "name": "hasEmail",
+      "domain": "Person",
+      "range": "xsd:string",
+      "datatype": "string"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [
+    {
+      "value": "John",
+      "property": "hasName",
+      "domain_class": "Person",
+      "datatype": "string"
+    },
+    {
+      "value": "30",
+      "property": "hasAge",
+      "domain_class": "Person",
+      "datatype": "integer"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Person",
+      "to": "Address",
+      "label": "livesAt",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Person",
+      "to": "xsd:string",
+      "label": "hasName",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Person",
+      "to": "xsd:integer",
+      "label": "hasAge",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Person",
+      "to": "xsd:string",
+      "label": "hasEmail",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

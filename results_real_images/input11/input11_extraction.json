@@ -1,0 +1,494 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "BOOK",
+        "to": "PERSON",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "hasBuyer",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "SHOP",
+        "to": "BOOK",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "hasStock",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "SHOP",
+        "to": "PERSON",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "hasCustomer",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "BOOK",
+        "to": "War and Peace",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "hasTitle",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "BOOK",
+        "to": "Leo Tolstoy",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "hasAuthor",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "SHOP",
+        "to": "books",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "hasType",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "SHOP",
+        "to": "Waterstones",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "hasName",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "PERSON",
+        "to": "Rachel",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "hasName",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram represents entities and their relationships in a bookselling context with clear object and data properties."
+  },
+  "pass1": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "BOOK",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "PERSON",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "SHOP",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasStock"
+      },
+      {
+        "id": "op2",
+        "name": "hasCustomer"
+      },
+      {
+        "id": "op3",
+        "name": "hasBuyer"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [
+      {
+        "id": "av1",
+        "value": "War and Peace",
+        "property": "hasTitle",
+        "domain_class": "BOOK",
+        "datatype": "string"
+      },
+      {
+        "id": "av2",
+        "value": "Leo Tolstoy",
+        "property": "hasAuthor",
+        "domain_class": "BOOK",
+        "datatype": "string"
+      },
+      {
+        "id": "av3",
+        "value": "Rachel",
+        "property": "hasName",
+        "domain_class": "PERSON",
+        "datatype": "string"
+      },
+      {
+        "id": "av4",
+        "value": "Waterstones",
+        "property": "hasName",
+        "domain_class": "SHOP",
+        "datatype": "string"
+      },
+      {
+        "id": "av5",
+        "value": "books",
+        "property": "hasType",
+        "domain_class": "SHOP",
+        "datatype": "string"
+      }
+    ],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "SHOP",
+        "to": "BOOK",
+        "label": "hasStock",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "BOOK",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "SHOP",
+        "to": "PERSON",
+        "label": "hasCustomer",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "PERSON",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "BOOK",
+        "to": "PERSON",
+        "label": "hasBuyer",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "PERSON",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "BOOK",
+        "property": "hasTitle",
+        "datatype": "string"
+      },
+      {
+        "class": "BOOK",
+        "property": "hasAuthor",
+        "datatype": "string"
+      },
+      {
+        "class": "PERSON",
+        "property": "hasName",
+        "datatype": "string"
+      },
+      {
+        "class": "SHOP",
+        "property": "hasName",
+        "datatype": "string"
+      },
+      {
+        "class": "SHOP",
+        "property": "hasType",
+        "datatype": "string"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "BOOK",
+      "to": "War and Peace",
+      "label": "hasTitle",
+      "edge_type": "attribute",
+      "arrowhead_at": "War and Peace",
+      "visual_evidence": "The line is a solid black line with an arrowhead pointing to the green attribute node 'War and Peace'."
+    },
+    {
+      "id": "me2",
+      "from": "BOOK",
+      "to": "Leo Tolstoy",
+      "label": "hasAuthor",
+      "edge_type": "attribute",
+      "arrowhead_at": "Leo Tolstoy",
+      "visual_evidence": "The line is a solid black line with an arrowhead pointing to the green attribute node 'Leo Tolstoy'."
+    },
+    {
+      "id": "me3",
+      "from": "SHOP",
+      "to": "books",
+      "label": "hasType",
+      "edge_type": "attribute",
+      "arrowhead_at": "books",
+      "visual_evidence": "The line is a solid black line with an arrowhead pointing to the green attribute node 'books'."
+    },
+    {
+      "id": "me4",
+      "from": "SHOP",
+      "to": "Waterstones",
+      "label": "hasName",
+      "edge_type": "attribute",
+      "arrowhead_at": "Waterstones",
+      "visual_evidence": "The line is a solid black line with an arrowhead pointing to the green attribute node 'Waterstones'."
+    },
+    {
+      "id": "me5",
+      "from": "PERSON",
+      "to": "Rachel",
+      "label": "hasName",
+      "edge_type": "attribute",
+      "arrowhead_at": "Rachel",
+      "visual_evidence": "The line is a solid black line with an arrowhead pointing to the green attribute node 'Rachel'."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [
+      {
+        "name": "BOOK",
+        "type_class": "BOOK",
+        "visual_cue": "oval with relationships"
+      },
+      {
+        "name": "PERSON",
+        "type_class": "PERSON",
+        "visual_cue": "oval with relationships"
+      },
+      {
+        "name": "SHOP",
+        "type_class": "SHOP",
+        "visual_cue": "oval with relationships"
+      }
+    ],
+    "reclassified_nodes": [
+      {
+        "name": "War and Peace",
+        "was": "instance",
+        "now": "attribute_value",
+        "property": "hasTitle",
+        "domain_class": "BOOK",
+        "datatype": "string",
+        "reason": "green rectangle, only connected via hasTitle data property"
+      },
+      {
+        "name": "Leo Tolstoy",
+        "was": "instance",
+        "now": "attribute_value",
+        "property": "hasAuthor",
+        "domain_class": "BOOK",
+        "datatype": "string",
+        "reason": "green rectangle, only connected via hasAuthor data property"
+      },
+      {
+        "name": "Rachel",
+        "was": "instance",
+        "now": "attribute_value",
+        "property": "hasName",
+        "domain_class": "PERSON",
+        "datatype": "string",
+        "reason": "green rectangle, only connected via hasName data property"
+      },
+      {
+        "name": "Waterstones",
+        "was": "instance",
+        "now": "attribute_value",
+        "property": "hasName",
+        "domain_class": "SHOP",
+        "datatype": "string",
+        "reason": "green rectangle, only connected via hasName data property"
+      },
+      {
+        "name": "books",
+        "was": "instance",
+        "now": "attribute_value",
+        "property": "hasType",
+        "domain_class": "SHOP",
+        "datatype": "string",
+        "reason": "green rectangle, only connected via hasType data property"
+      }
+    ],
+    "no_instances_present": false
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [
+      "Entity, Attribute, Relationship"
+    ],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "BOOK",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "PERSON",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "SHOP",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasStock"
+      },
+      {
+        "id": "op2",
+        "name": "hasCustomer"
+      },
+      {
+        "id": "op3",
+        "name": "hasBuyer"
+      }
+    ],
+    "instances": [
+      {
+        "name": "BOOK",
+        "type_class": "BOOK"
+      },
+      {
+        "name": "PERSON",
+        "type_class": "PERSON"
+      },
+      {
+        "name": "SHOP",
+        "type_class": "SHOP"
+      }
+    ],
+    "attribute_values": [
+      {
+        "id": "av1",
+        "value": "War and Peace",
+        "property": "hasTitle",
+        "domain_class": "BOOK",
+        "datatype": "string"
+      },
+      {
+        "id": "av2",
+        "value": "Leo Tolstoy",
+        "property": "hasAuthor",
+        "domain_class": "BOOK",
+        "datatype": "string"
+      },
+      {
+        "id": "av3",
+        "value": "Rachel",
+        "property": "hasName",
+        "domain_class": "PERSON",
+        "datatype": "string"
+      },
+      {
+        "id": "av4",
+        "value": "Waterstones",
+        "property": "hasName",
+        "domain_class": "SHOP",
+        "datatype": "string"
+      },
+      {
+        "id": "av5",
+        "value": "books",
+        "property": "hasType",
+        "domain_class": "SHOP",
+        "datatype": "string"
+      }
+    ],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "SHOP",
+        "to": "BOOK",
+        "label": "hasStock",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e2",
+        "from": "SHOP",
+        "to": "PERSON",
+        "label": "hasCustomer",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e3",
+        "from": "BOOK",
+        "to": "PERSON",
+        "label": "hasBuyer",
+        "edge_type": "objectProperty"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "BOOK",
+        "property": "hasTitle",
+        "datatype": "string"
+      },
+      {
+        "class": "BOOK",
+        "property": "hasAuthor",
+        "datatype": "string"
+      },
+      {
+        "class": "PERSON",
+        "property": "hasName",
+        "datatype": "string"
+      },
+      {
+        "class": "SHOP",
+        "property": "hasName",
+        "datatype": "string"
+      },
+      {
+        "class": "SHOP",
+        "property": "hasType",
+        "datatype": "string"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [
+      "Entity, Attribute, Relationship"
+    ],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

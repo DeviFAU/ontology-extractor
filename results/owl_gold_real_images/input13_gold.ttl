@@ -1,0 +1,82 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#admissioned%20at> a owl:DatatypeProperty ;
+    rdfs:label "admissioned at"@en ;
+    rdfs:domain <http://example.org/ontology#Hospital%20Admission> ;
+    rdfs:range xsd:dateTime .
+
+<http://example.org/ontology#examination%20date> a owl:DatatypeProperty ;
+    rdfs:label "examination date"@en ;
+    rdfs:domain <http://example.org/ontology#Examination> ;
+    rdfs:range xsd:dateTime .
+
+<http://example.org/ontology#has%20ID> a owl:DatatypeProperty ;
+    rdfs:label "has ID"@en ;
+    rdfs:domain <http://example.org/ontology#Medical%20Profile> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/ontology#has%20a> a owl:ObjectProperty ;
+    rdfs:label "has a"@en ;
+    rdfs:domain <http://example.org/ontology#Patient> ;
+    rdfs:range <http://example.org/ontology#Medical%20Profile> .
+
+<http://example.org/ontology#has%20name> a owl:DatatypeProperty ;
+    rdfs:label "has name"@en ;
+    rdfs:domain <http://example.org/ontology#Disease>,
+        <http://example.org/ontology#Examination> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#has%20reasons> a owl:DatatypeProperty ;
+    rdfs:label "has reasons"@en ;
+    rdfs:domain <http://example.org/ontology#Hospital%20Admission> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#has%20result> a owl:DatatypeProperty ;
+    rdfs:label "has result"@en ;
+    rdfs:domain <http://example.org/ontology#Examination> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#has%20symptoms> a owl:DatatypeProperty ;
+    rdfs:label "has symptoms"@en ;
+    rdfs:domain <http://example.org/ontology#Hospital%20Admission> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#is%20part%20of> a owl:ObjectProperty ;
+    rdfs:label "is part of"@en ;
+    rdfs:domain <http://example.org/ontology#Current%20Medication>,
+        <http://example.org/ontology#Disease>,
+        <http://example.org/ontology#Examination>,
+        <http://example.org/ontology#Hospital%20Admission> ;
+    rdfs:range <http://example.org/ontology#Medical%20Profile> .
+
+<http://example.org/ontology#is%20treated%20by> a owl:ObjectProperty ;
+    rdfs:label "is treated by"@en ;
+    rdfs:domain <http://example.org/ontology#Disease> ;
+    rdfs:range <http://example.org/ontology#Current%20Medication> .
+
+<http://example.org/ontology#Medication> a owl:Class ;
+    rdfs:label "Medication"@en .
+
+<http://example.org/ontology#Patient> a owl:Class ;
+    rdfs:label "Patient"@en .
+
+<http://example.org/ontology#Current%20Medication> a owl:Class ;
+    rdfs:label "Current Medication"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Medication> .
+
+<http://example.org/ontology#Disease> a owl:Class ;
+    rdfs:label "Disease"@en .
+
+<http://example.org/ontology#Medical%20Profile> a owl:Class ;
+    rdfs:label "Medical Profile"@en .
+
+<http://example.org/ontology#Examination> a owl:Class ;
+    rdfs:label "Examination"@en .
+
+<http://example.org/ontology#Hospital%20Admission> a owl:Class ;
+    rdfs:label "Hospital Admission"@en .
+

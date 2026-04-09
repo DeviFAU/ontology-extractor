@@ -1,0 +1,106 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/fullowl> a owl:Ontology .
+
+<http://example.org/fullowl#Bicycle> a owl:Class ;
+    rdfs:label "Bicycle"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://example.org/fullowl#hasWheel> ],
+        <http://example.org/fullowl#Vehicle> .
+
+<http://example.org/fullowl#Car> a owl:Class ;
+    rdfs:label "Car"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "4"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://example.org/fullowl#hasWheel> ],
+        <http://example.org/fullowl#Vehicle> ;
+    owl:disjointWith <http://example.org/fullowl#Truck> .
+
+<http://example.org/fullowl#drivenBy> a owl:ObjectProperty ;
+    rdfs:label "drivenBy"@en ;
+    rdfs:domain <http://example.org/fullowl#Vehicle> ;
+    rdfs:range <http://example.org/fullowl#Driver> .
+
+<http://example.org/fullowl#drivesOn> a owl:ObjectProperty ;
+    rdfs:label "drivesOn"@en ;
+    rdfs:domain <http://example.org/fullowl#Vehicle> ;
+    rdfs:range <http://example.org/fullowl#Road> .
+
+<http://example.org/fullowl#hasEngine> a owl:ObjectProperty ;
+    rdfs:label "hasEngine"@en ;
+    rdfs:domain <http://example.org/fullowl#Vehicle> ;
+    rdfs:range <http://example.org/fullowl#Engine> .
+
+<http://example.org/fullowl#hasLicense> a owl:ObjectProperty ;
+    rdfs:label "hasLicense"@en ;
+    rdfs:domain <http://example.org/fullowl#Driver> ;
+    rdfs:range <http://example.org/fullowl#License> .
+
+<http://example.org/fullowl#madeBy> a owl:ObjectProperty ;
+    rdfs:label "madeBy"@en ;
+    rdfs:domain <http://example.org/fullowl#Vehicle> ;
+    rdfs:range <http://example.org/fullowl#Manufacturer> .
+
+<http://example.org/fullowl#maxSpeed> a owl:DatatypeProperty ;
+    rdfs:label "maxSpeed"@en ;
+    rdfs:domain <http://example.org/fullowl#Vehicle> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/fullowl#modelYear> a owl:DatatypeProperty ;
+    rdfs:label "modelYear"@en ;
+    rdfs:domain <http://example.org/fullowl#Vehicle> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/fullowl#weight> a owl:DatatypeProperty ;
+    rdfs:label "weight"@en ;
+    rdfs:domain <http://example.org/fullowl#Vehicle> ;
+    rdfs:range xsd:double .
+
+<http://example.org/fullowl#ElectricVehicle> a owl:Class ;
+    rdfs:label "ElectricVehicle"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <http://example.org/fullowl#hasBattery> ;
+            owl:someValuesFrom <http://example.org/fullowl#Battery> ],
+        <http://example.org/fullowl#Vehicle> .
+
+<http://example.org/fullowl#Engine> a owl:Class ;
+    rdfs:label "Engine"@en .
+
+<http://example.org/fullowl#License> a owl:Class ;
+    rdfs:label "License"@en .
+
+<http://example.org/fullowl#Manufacturer> a owl:Class ;
+    rdfs:label "Manufacturer"@en .
+
+<http://example.org/fullowl#Road> a owl:Class ;
+    rdfs:label "Road"@en .
+
+<http://example.org/fullowl#Truck> a owl:Class ;
+    rdfs:label "Truck"@en ;
+    rdfs:subClassOf <http://example.org/fullowl#Vehicle> .
+
+<http://example.org/fullowl#Wheel> a owl:Class ;
+    rdfs:label "Wheel"@en .
+
+<http://example.org/fullowl#hasBattery> a owl:ObjectProperty ;
+    rdfs:label "hasBattery"@en ;
+    rdfs:domain <http://example.org/fullowl#ElectricVehicle> ;
+    rdfs:range <http://example.org/fullowl#Battery> .
+
+<http://example.org/fullowl#Battery> a owl:Class ;
+    rdfs:label "Battery"@en .
+
+<http://example.org/fullowl#Driver> a owl:Class ;
+    rdfs:label "Driver"@en .
+
+<http://example.org/fullowl#hasWheel> a owl:ObjectProperty ;
+    rdfs:label "hasWheel"@en ;
+    rdfs:domain <http://example.org/fullowl#Vehicle> ;
+    rdfs:range <http://example.org/fullowl#Wheel> .
+
+<http://example.org/fullowl#Vehicle> a owl:Class ;
+    rdfs:label "Vehicle"@en .
+

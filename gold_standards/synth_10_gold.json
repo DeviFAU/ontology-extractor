@@ -1,0 +1,147 @@
+{
+  "id": "synth_10",
+  "name": "Healthcare Ontology",
+  "complexity": "medium",
+  "diagram_type": "OWL",
+  "description": "Tests OWL restriction axioms (some, only, min)",
+  "base_uri": "http://example.org/health#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Patient"
+    },
+    {
+      "name": "Doctor"
+    },
+    {
+      "name": "Hospital"
+    },
+    {
+      "name": "Diagnosis"
+    },
+    {
+      "name": "Treatment"
+    },
+    {
+      "name": "Medication"
+    },
+    {
+      "name": "Allergy"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "treatedBy",
+      "domain": "Patient",
+      "range": "Doctor"
+    },
+    {
+      "name": "hasDiagnosis",
+      "domain": "Patient",
+      "range": "Diagnosis"
+    },
+    {
+      "name": "hasTreatment",
+      "domain": "Diagnosis",
+      "range": "Treatment"
+    },
+    {
+      "name": "prescribes",
+      "domain": "Treatment",
+      "range": "Medication"
+    },
+    {
+      "name": "worksAt",
+      "domain": "Doctor",
+      "range": "Hospital"
+    },
+    {
+      "name": "hasAllergy",
+      "domain": "Patient",
+      "range": "Allergy"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "patientID",
+      "domain": "Patient",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "dateOfBirth",
+      "domain": "Patient",
+      "range": "xsd:date",
+      "datatype": "date"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Patient",
+      "to": "Doctor",
+      "label": "treatedBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Patient",
+      "to": "Diagnosis",
+      "label": "hasDiagnosis",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Diagnosis",
+      "to": "Treatment",
+      "label": "hasTreatment",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Treatment",
+      "to": "Medication",
+      "label": "prescribes",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Doctor",
+      "to": "Hospital",
+      "label": "worksAt",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Patient",
+      "to": "Allergy",
+      "label": "hasAllergy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Patient",
+      "to": "xsd:string",
+      "label": "patientID",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Patient",
+      "to": "xsd:date",
+      "label": "dateOfBirth",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [
+    {
+      "subject": "Patient",
+      "property": "treatedBy",
+      "restriction_type": "some",
+      "filler": "Doctor",
+      "cardinality": null
+    },
+    {
+      "subject": "Patient",
+      "property": "hasDiagnosis",
+      "restriction_type": "min",
+      "filler": "Diagnosis",
+      "cardinality": 1
+    }
+  ],
+  "data_assertions": []
+}

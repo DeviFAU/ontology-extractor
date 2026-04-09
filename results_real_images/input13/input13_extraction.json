@@ -1,0 +1,631 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Patient",
+        "to": "Medical Profile",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "has a",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Examination",
+        "to": "Medical Profile",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "is part of",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Hospital Admission",
+        "to": "Medical Profile",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "is part of",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Disease",
+        "to": "Medical Profile",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "is part of",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "Current Medication",
+        "to": "Medical Profile",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "is part of",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "Medical Profile",
+        "to": "Disease",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "is treated by",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Examination",
+        "to": "xsd:datetime",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "examination date",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "Examination",
+        "to": "xsd:string",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "has name",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "Examination",
+        "to": "xsd:string",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "has result",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "Hospital Admission",
+        "to": "xsd:string",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "has reasons",
+        "confidence": "high"
+      },
+      {
+        "id": "a11",
+        "from": "Hospital Admission",
+        "to": "xsd:string",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "has symptoms",
+        "confidence": "high"
+      },
+      {
+        "id": "a12",
+        "from": "Hospital Admission",
+        "to": "xsd:datetime",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "admitted at",
+        "confidence": "high"
+      },
+      {
+        "id": "a13",
+        "from": "Medical Profile",
+        "to": "xsd:integer",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "has ID",
+        "confidence": "high"
+      },
+      {
+        "id": "a14",
+        "from": "Disease",
+        "to": "xsd:string",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "has name",
+        "confidence": "high"
+      },
+      {
+        "id": "a15",
+        "from": "Current Medication",
+        "to": "Medication",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "is a",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram outlines a medical ontology linking patient profiles, examinations, admissions, diseases, and medications with corresponding properties using solid lines and chevron arrowheads."
+  },
+  "pass1": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Patient",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Examination",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Medical Profile",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Disease",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Hospital Admission",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Current Medication",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Medication",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "has a"
+      },
+      {
+        "id": "op2",
+        "name": "is part of"
+      },
+      {
+        "id": "op3",
+        "name": "is treated by"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Patient",
+        "to": "Medical Profile",
+        "label": "has a",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Medical Profile",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Examination",
+        "to": "Medical Profile",
+        "label": "is part of",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Medical Profile",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Medical Profile",
+        "to": "Disease",
+        "label": "is part of",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Disease",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Disease",
+        "to": "Medical Profile",
+        "label": "is part of",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Medical Profile",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Hospital Admission",
+        "to": "Medical Profile",
+        "label": "is part of",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Medical Profile",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Current Medication",
+        "to": "Medical Profile",
+        "label": "is part of",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Medical Profile",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Medical Profile",
+        "to": "Current Medication",
+        "label": "is treated by",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Current Medication",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Current Medication",
+        "to": "Medication",
+        "label": "is a",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Medication",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "Examination",
+        "to": "xsd:dateTime",
+        "label": "examination date",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:dateTime",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "Examination",
+        "to": "xsd:string",
+        "label": "has name",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e11",
+        "from": "Examination",
+        "to": "xsd:string",
+        "label": "has result",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e12",
+        "from": "Hospital Admission",
+        "to": "xsd:string",
+        "label": "has reasons",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e13",
+        "from": "Hospital Admission",
+        "to": "xsd:string",
+        "label": "has symptoms",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e14",
+        "from": "Hospital Admission",
+        "to": "xsd:dateTime",
+        "label": "admitted at",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:dateTime",
+        "confidence": "high"
+      },
+      {
+        "id": "e15",
+        "from": "Patient",
+        "to": "xsd:integer",
+        "label": "has ID",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:integer",
+        "confidence": "high"
+      },
+      {
+        "id": "e16",
+        "from": "Disease",
+        "to": "xsd:string",
+        "label": "has name",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "Medical Profile",
+      "to": "Patient",
+      "label": "has a",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Patient",
+      "visual_evidence": "The arrow is blue, located between Medical Profile and Patient, with a black arrowhead touching Patient."
+    },
+    {
+      "id": "me2",
+      "from": "Medical Profile",
+      "to": "Examination",
+      "label": "is part of",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Examination",
+      "visual_evidence": "The arrow is blue, located between Medical Profile and Examination, with a black arrowhead touching Examination."
+    },
+    {
+      "id": "me3",
+      "from": "Disease",
+      "to": "Medical Profile",
+      "label": "is part of",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Medical Profile",
+      "visual_evidence": "The arrow is blue, located between Disease and Medical Profile, with a black arrowhead touching Medical Profile."
+    },
+    {
+      "id": "me4",
+      "from": "Current Medication",
+      "to": "Disease",
+      "label": "is part of",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Disease",
+      "visual_evidence": "The arrow is blue, located between Current Medication and Disease, with a black arrowhead touching Disease."
+    },
+    {
+      "id": "me5",
+      "from": "Hospital Admission",
+      "to": "Patient",
+      "label": "is part of",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Patient",
+      "visual_evidence": "The arrow is blue, located between Hospital Admission and Patient, with a black arrowhead touching Patient."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [
+      {
+        "from": "Medication",
+        "to": "Current Medication",
+        "label": "is a",
+        "edge_type": "subClassOf",
+        "visual_evidence": "Line from Medication heading into Current Medication."
+      }
+    ],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "minor gaps",
+    "notes": "A subclass relationship from Medication to Current Medication was missing."
+  },
+  "final": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Patient",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Examination",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Medical Profile",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Disease",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Hospital Admission",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Current Medication",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Medication",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "has a"
+      },
+      {
+        "id": "op2",
+        "name": "is part of"
+      },
+      {
+        "id": "op3",
+        "name": "is treated by"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Patient",
+        "to": "Medical Profile",
+        "label": "has a",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e2",
+        "from": "Examination",
+        "to": "Medical Profile",
+        "label": "is part of",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e3",
+        "from": "Medical Profile",
+        "to": "Disease",
+        "label": "is part of",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e4",
+        "from": "Disease",
+        "to": "Medical Profile",
+        "label": "is part of",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "Hospital Admission",
+        "to": "Medical Profile",
+        "label": "is part of",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Current Medication",
+        "to": "Medical Profile",
+        "label": "is part of",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Medical Profile",
+        "to": "Current Medication",
+        "label": "is treated by",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Current Medication",
+        "to": "Medication",
+        "label": "is a",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e9",
+        "from": "Examination",
+        "to": "xsd:dateTime",
+        "label": "examination date",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e10",
+        "from": "Examination",
+        "to": "xsd:string",
+        "label": "has name",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e11",
+        "from": "Examination",
+        "to": "xsd:string",
+        "label": "has result",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e12",
+        "from": "Hospital Admission",
+        "to": "xsd:string",
+        "label": "has reasons",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e13",
+        "from": "Hospital Admission",
+        "to": "xsd:string",
+        "label": "has symptoms",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e14",
+        "from": "Hospital Admission",
+        "to": "xsd:dateTime",
+        "label": "admitted at",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e15",
+        "from": "Patient",
+        "to": "xsd:integer",
+        "label": "has ID",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e16",
+        "from": "Disease",
+        "to": "xsd:string",
+        "label": "has name",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "me4",
+        "from": "Current Medication",
+        "to": "Disease",
+        "label": "is part of",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me5",
+        "from": "Hospital Admission",
+        "to": "Patient",
+        "label": "is part of",
+        "edge_type": "objectProperty"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "minor gaps",
+    "completeness_notes": "A subclass relationship from Medication to Current Medication was missing."
+  }
+}

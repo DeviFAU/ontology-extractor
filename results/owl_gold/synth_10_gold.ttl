@@ -1,0 +1,73 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/health> a owl:Ontology .
+
+<http://example.org/health#dateOfBirth> a owl:DatatypeProperty ;
+    rdfs:label "dateOfBirth"@en ;
+    rdfs:domain <http://example.org/health#Patient> ;
+    rdfs:range xsd:date .
+
+<http://example.org/health#hasAllergy> a owl:ObjectProperty ;
+    rdfs:label "hasAllergy"@en ;
+    rdfs:domain <http://example.org/health#Patient> ;
+    rdfs:range <http://example.org/health#Allergy> .
+
+<http://example.org/health#hasTreatment> a owl:ObjectProperty ;
+    rdfs:label "hasTreatment"@en ;
+    rdfs:domain <http://example.org/health#Diagnosis> ;
+    rdfs:range <http://example.org/health#Treatment> .
+
+<http://example.org/health#patientID> a owl:DatatypeProperty ;
+    rdfs:label "patientID"@en ;
+    rdfs:domain <http://example.org/health#Patient> ;
+    rdfs:range xsd:string .
+
+<http://example.org/health#prescribes> a owl:ObjectProperty ;
+    rdfs:label "prescribes"@en ;
+    rdfs:domain <http://example.org/health#Treatment> ;
+    rdfs:range <http://example.org/health#Medication> .
+
+<http://example.org/health#worksAt> a owl:ObjectProperty ;
+    rdfs:label "worksAt"@en ;
+    rdfs:domain <http://example.org/health#Doctor> ;
+    rdfs:range <http://example.org/health#Hospital> .
+
+<http://example.org/health#Allergy> a owl:Class ;
+    rdfs:label "Allergy"@en .
+
+<http://example.org/health#Hospital> a owl:Class ;
+    rdfs:label "Hospital"@en .
+
+<http://example.org/health#Medication> a owl:Class ;
+    rdfs:label "Medication"@en .
+
+<http://example.org/health#hasDiagnosis> a owl:ObjectProperty ;
+    rdfs:label "hasDiagnosis"@en ;
+    rdfs:domain <http://example.org/health#Patient> ;
+    rdfs:range <http://example.org/health#Diagnosis> .
+
+<http://example.org/health#treatedBy> a owl:ObjectProperty ;
+    rdfs:label "treatedBy"@en ;
+    rdfs:domain <http://example.org/health#Patient> ;
+    rdfs:range <http://example.org/health#Doctor> .
+
+<http://example.org/health#Diagnosis> a owl:Class ;
+    rdfs:label "Diagnosis"@en .
+
+<http://example.org/health#Treatment> a owl:Class ;
+    rdfs:label "Treatment"@en .
+
+<http://example.org/health#Doctor> a owl:Class ;
+    rdfs:label "Doctor"@en .
+
+<http://example.org/health#Patient> a owl:Class ;
+    rdfs:label "Patient"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <http://example.org/health#treatedBy> ;
+            owl:someValuesFrom <http://example.org/health#Doctor> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://example.org/health#hasDiagnosis> ] .
+

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/ontology#hasItems">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasItems</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Order"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasSeller">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasSeller</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Order"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Address"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Seller"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Buyer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Buyer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Business_Party"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasCountry</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Country"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Business_Party"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasId</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#OrderId"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Order"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasCity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasCity</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Address"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#City"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#deliverTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">deliverTo</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Order"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#City">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">City</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Euro">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Euro</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Currency"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasAddress</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Business_Party"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasCurrency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasCurrency</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Currency"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Business_Party"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#USD">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">USD</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Currency"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Address</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Country">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Country</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Item">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Item</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#OrderId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">OrderId</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Order">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Order</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Price">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Price</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Business_Party">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Business Party</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Seller">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Seller</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Business_Party"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#billTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">billTo</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Buyer"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Order"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Currency_relatedTo_Price">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">Currency_relatedTo_Price</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Currency"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Currency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Currency</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>

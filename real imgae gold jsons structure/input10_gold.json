@@ -1,0 +1,300 @@
+{
+  "id": "input10",
+  "name": "APQP Engineering Ontology",
+  "complexity": "medium",
+  "diagram_type": "OWL",
+  "description": "UML-style ontology with legend: oval=Class, rectangle=Object Property, dashed=Data Property. Classes: Customer, Program, DesignItem, DFMEA, ProcessFlow, PFMEA, ControlPlan. Object properties with Domain/Range labels. Data properties shown as dashed arrows to attribute boxes.",
+  "base_uri": "http://example.org/ontology#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Customer"
+    },
+    {
+      "name": "Program"
+    },
+    {
+      "name": "DesignItem"
+    },
+    {
+      "name": "DFMEA"
+    },
+    {
+      "name": "ProcessFlow"
+    },
+    {
+      "name": "PFMEA"
+    },
+    {
+      "name": "ControlPlan"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "hasProgram",
+      "domain": "Customer",
+      "range": "Program"
+    },
+    {
+      "name": "hasDesignItem",
+      "domain": "Program",
+      "range": "DesignItem"
+    },
+    {
+      "name": "hasDFMEA",
+      "domain": "DesignItem",
+      "range": "DFMEA"
+    },
+    {
+      "name": "hasProcessFlow",
+      "domain": "DesignItem",
+      "range": "ProcessFlow"
+    },
+    {
+      "name": "hasPFMEA",
+      "domain": "DesignItem",
+      "range": "PFMEA"
+    },
+    {
+      "name": "hasControlPlan",
+      "domain": "DesignItem",
+      "range": "ControlPlan"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "CustomerName",
+      "domain": "Customer",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "ProgramName",
+      "domain": "Program",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "PartNumber",
+      "domain": "DesignItem",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "PartName",
+      "domain": "DesignItem",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "DFMEACoreTeam",
+      "domain": "DFMEA",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "DFMEADesignResponsibility",
+      "domain": "DFMEA",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "DFMEAModelYears",
+      "domain": "DFMEA",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "DFMEANumber",
+      "domain": "DFMEA",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "DFMEAOriginal_Date",
+      "domain": "DFMEA",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "PFMEAKEYDate",
+      "domain": "PFMEA",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "PFMEAOriginalDate",
+      "domain": "PFMEA",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "PFMEAPreparedBY",
+      "domain": "PFMEA",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "PFMEANumber",
+      "domain": "PFMEA",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "ControlPlanDateOriginal",
+      "domain": "ControlPlan",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "ControlPlanKeyContactInfo",
+      "domain": "ControlPlan",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "ControlPlanNumber",
+      "domain": "ControlPlan",
+      "range": "xsd:string",
+      "datatype": "string"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Customer",
+      "to": "Program",
+      "label": "hasProgram",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Program",
+      "to": "DesignItem",
+      "label": "hasDesignItem",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "DesignItem",
+      "to": "DFMEA",
+      "label": "hasDFMEA",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "DesignItem",
+      "to": "ProcessFlow",
+      "label": "hasProcessFlow",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "DesignItem",
+      "to": "PFMEA",
+      "label": "hasPFMEA",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "DesignItem",
+      "to": "ControlPlan",
+      "label": "hasControlPlan",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Customer",
+      "to": "xsd:string",
+      "label": "CustomerName",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Program",
+      "to": "xsd:string",
+      "label": "ProgramName",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "DesignItem",
+      "to": "xsd:string",
+      "label": "PartNumber",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "DesignItem",
+      "to": "xsd:string",
+      "label": "PartName",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "DFMEA",
+      "to": "xsd:string",
+      "label": "DFMEACoreTeam",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "DFMEA",
+      "to": "xsd:string",
+      "label": "DFMEADesignResponsibility",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "DFMEA",
+      "to": "xsd:string",
+      "label": "DFMEAModelYears",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "DFMEA",
+      "to": "xsd:string",
+      "label": "DFMEANumber",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "DFMEA",
+      "to": "xsd:string",
+      "label": "DFMEAOriginal_Date",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "PFMEA",
+      "to": "xsd:string",
+      "label": "PFMEAKEYDate",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "PFMEA",
+      "to": "xsd:string",
+      "label": "PFMEAOriginalDate",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "PFMEA",
+      "to": "xsd:string",
+      "label": "PFMEAPreparedBY",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "PFMEA",
+      "to": "xsd:string",
+      "label": "PFMEANumber",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "ControlPlan",
+      "to": "xsd:string",
+      "label": "ControlPlanDateOriginal",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "ControlPlan",
+      "to": "xsd:string",
+      "label": "ControlPlanKeyContactInfo",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "ControlPlan",
+      "to": "xsd:string",
+      "label": "ControlPlanNumber",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

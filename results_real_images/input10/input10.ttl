@@ -1,0 +1,150 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#ControlPlanDateOriginal> a owl:DatatypeProperty ;
+    rdfs:label "ControlPlanDateOriginal"@en ;
+    rdfs:domain <http://example.org/ontology#ControlPlan> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#ControlPlanKeyContactInfo> a owl:DatatypeProperty ;
+    rdfs:label "ControlPlanKeyContactInfo"@en ;
+    rdfs:domain <http://example.org/ontology#ControlPlan> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#ControlPlanNumber> a owl:DatatypeProperty ;
+    rdfs:label "ControlPlanNumber"@en ;
+    rdfs:domain <http://example.org/ontology#ControlPlan> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#CustomerName> a owl:DatatypeProperty ;
+    rdfs:label "CustomerName"@en ;
+    rdfs:domain <http://example.org/ontology#Customer> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#DFMEACoreTeam> a owl:DatatypeProperty ;
+    rdfs:label "DFMEACoreTeam"@en ;
+    rdfs:domain <http://example.org/ontology#DFMEA> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#DFMEADesignResponsibility> a owl:DatatypeProperty ;
+    rdfs:label "DFMEADesignResponsibility"@en ;
+    rdfs:domain <http://example.org/ontology#DFMEA> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#DFMEAModelYears> a owl:DatatypeProperty ;
+    rdfs:label "DFMEAModelYears"@en ;
+    rdfs:domain <http://example.org/ontology#DFMEA> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#DFMEANumber> a owl:DatatypeProperty ;
+    rdfs:label "DFMEANumber"@en ;
+    rdfs:domain <http://example.org/ontology#DFMEA> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#DFMEAOriginal_Date> a owl:DatatypeProperty ;
+    rdfs:label "DFMEAOriginal_Date"@en ;
+    rdfs:domain <http://example.org/ontology#DFMEA> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#PFMEAEKYDate> a owl:DatatypeProperty ;
+    rdfs:label "PFMEAEKYDate"@en ;
+    rdfs:domain <http://example.org/ontology#PFMEA> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#PFMEANumber> a owl:DatatypeProperty ;
+    rdfs:label "PFMEANumber"@en ;
+    rdfs:domain <http://example.org/ontology#PFMEA> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#PFMEAOriginalDate> a owl:DatatypeProperty ;
+    rdfs:label "PFMEAOriginalDate"@en ;
+    rdfs:domain <http://example.org/ontology#PFMEA> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#PFMEAPreparedBY> a owl:DatatypeProperty ;
+    rdfs:label "PFMEAPreparedBY"@en ;
+    rdfs:domain <http://example.org/ontology#PFMEA> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#PartName> a owl:DatatypeProperty ;
+    rdfs:label "PartName"@en ;
+    rdfs:domain <http://example.org/ontology#Design_Item> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#PartNumber> a owl:DatatypeProperty ;
+    rdfs:label "PartNumber"@en ;
+    rdfs:domain <http://example.org/ontology#Design_Item> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#ProgramName> a owl:DatatypeProperty ;
+    rdfs:label "ProgramName"@en ;
+    rdfs:domain <http://example.org/ontology#Program> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#domain> a owl:DatatypeProperty ;
+    rdfs:label "domain"@en ;
+    rdfs:domain <http://example.org/ontology#hasProgram> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasControlPlan> a owl:ObjectProperty ;
+    rdfs:label "hasControlPlan"@en ;
+    rdfs:domain <http://example.org/ontology#Design_Item> ;
+    rdfs:range <http://example.org/ontology#ControlPlan> .
+
+<http://example.org/ontology#hasDFMEA> a owl:ObjectProperty ;
+    rdfs:label "hasDFMEA"@en ;
+    rdfs:domain <http://example.org/ontology#Design_Item> ;
+    rdfs:range <http://example.org/ontology#DFMEA> .
+
+<http://example.org/ontology#hasDesignItem> a owl:ObjectProperty ;
+    rdfs:label "hasDesignItem"@en ;
+    rdfs:domain <http://example.org/ontology#Program> ;
+    rdfs:range <http://example.org/ontology#Design_Item> .
+
+<http://example.org/ontology#hasPFMEA> a owl:ObjectProperty ;
+    rdfs:label "hasPFMEA"@en ;
+    rdfs:domain <http://example.org/ontology#Design_Item> ;
+    rdfs:range <http://example.org/ontology#PFMEA> .
+
+<http://example.org/ontology#hasProcessFlow> a owl:ObjectProperty ;
+    rdfs:label "hasProcessFlow"@en ;
+    rdfs:domain <http://example.org/ontology#Design_Item> ;
+    rdfs:range <http://example.org/ontology#ProcessFlow> .
+
+<http://example.org/ontology#range> a owl:DatatypeProperty ;
+    rdfs:label "range"@en ;
+    rdfs:domain <http://example.org/ontology#hasProgram> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#ProcessFlow> a owl:Class ;
+    rdfs:label "ProcessFlow"@en .
+
+<http://example.org/ontology#Customer> a owl:Class ;
+    rdfs:label "Customer"@en .
+
+<http://example.org/ontology#hasProgram> a owl:ObjectProperty ;
+    rdfs:label "hasProgram"@en ;
+    rdfs:domain <http://example.org/ontology#Customer> ;
+    rdfs:range <http://example.org/ontology#Program> .
+
+<http://example.org/ontology#Program> a owl:Class ;
+    rdfs:label "Program"@en .
+
+<http://example.org/ontology#ControlPlan> a owl:Class ;
+    rdfs:label "ControlPlan"@en .
+
+<http://example.org/ontology#PFMEA> a owl:Class ;
+    rdfs:label "PFMEA"@en .
+
+<http://example.org/ontology#DFMEA> a owl:Class,
+        owl:DatatypeProperty ;
+    rdfs:label "DFMEA"@en ;
+    rdfs:domain <http://example.org/ontology#DFMEA> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#Design_Item> a owl:Class ;
+    rdfs:label "Design Item"@en .
+

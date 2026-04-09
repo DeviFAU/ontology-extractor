@@ -1,0 +1,475 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Agent",
+        "to": "Entity",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "wasAttributedTo",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Agent",
+        "to": "Agent",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "actedOnBehalfOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Agent",
+        "to": "Activity",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "wasAssociatedWith",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Activity",
+        "to": "Entity",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "used",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "Entity",
+        "to": "Entity",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "wasDerivedFrom",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "Activity",
+        "to": "Entity",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "wasGeneratedBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Activity",
+        "to": "Activity",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "wasInformedBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "Activity",
+        "to": "xsd:dateTime",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "startedAtTime",
+        "confidence": "medium"
+      },
+      {
+        "id": "a9",
+        "from": "Activity",
+        "to": "xsd:dateTime",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "endedAtTime",
+        "confidence": "medium"
+      }
+    ],
+    "diagram_notes": "This diagram uses solid triangles for object properties and chevron arrows for data properties, indicating the relationships between agents, activities, and entities. The structure is consistent with ontology models where activities interact with agents and entities."
+  },
+  "pass1": {
+    "diagram_type": "PROV-O",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "prov:Agent",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "prov:Entity",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "prov:Activity",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "prov:actedOnBehalfOf"
+      },
+      {
+        "id": "op2",
+        "name": "prov:wasAttributedTo"
+      },
+      {
+        "id": "op3",
+        "name": "prov:wasAssociatedWith"
+      },
+      {
+        "id": "op4",
+        "name": "prov:wasDerivedFrom"
+      },
+      {
+        "id": "op5",
+        "name": "prov:used"
+      },
+      {
+        "id": "op6",
+        "name": "prov:wasGeneratedBy"
+      },
+      {
+        "id": "op7",
+        "name": "prov:wasInformedBy"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "prov:Agent",
+        "to": "prov:Agent",
+        "label": "prov:actedOnBehalfOf",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Agent",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "prov:Activity",
+        "to": "prov:Agent",
+        "label": "prov:wasAttributedTo",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Agent",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "prov:Activity",
+        "to": "prov:Agent",
+        "label": "prov:wasAssociatedWith",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Agent",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "prov:Entity",
+        "to": "prov:Entity",
+        "label": "prov:wasDerivedFrom",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Entity",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "prov:Activity",
+        "to": "prov:Entity",
+        "label": "prov:used",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Entity",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "prov:Entity",
+        "to": "prov:Activity",
+        "label": "prov:wasGeneratedBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Activity",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "prov:Activity",
+        "to": "prov:Activity",
+        "label": "prov:wasInformedBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "prov:Activity",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "prov:Activity",
+        "to": "xsd:dateTime",
+        "label": "prov:startedAtTime",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:dateTime",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "prov:Activity",
+        "to": "xsd:dateTime",
+        "label": "prov:endedAtTime",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:dateTime",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "prov:Activity",
+        "property": "prov:startedAtTime",
+        "datatype": "xsd:dateTime"
+      },
+      {
+        "class": "prov:Activity",
+        "property": "prov:endedAtTime",
+        "datatype": "xsd:dateTime"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "prov: http://www.w3.org/ns/prov#",
+    "ambiguities": []
+  },
+  "pass2_corrections": [
+    {
+      "id": "e2",
+      "from": "prov:Agent",
+      "to": "prov:Activity",
+      "label": "prov:wasAttributedTo",
+      "edge_type": "objectProperty",
+      "direction_changed": true,
+      "correction_note": "The arrowhead is pink and touches the prov:Activity node."
+    },
+    {
+      "id": "e3",
+      "from": "prov:Agent",
+      "to": "prov:Activity",
+      "label": "prov:wasAssociatedWith",
+      "edge_type": "objectProperty",
+      "direction_changed": true,
+      "correction_note": "The arrowhead is pink and touches the prov:Activity node."
+    },
+    {
+      "id": "e6",
+      "from": "prov:Activity",
+      "to": "prov:Entity",
+      "label": "prov:wasGeneratedBy",
+      "edge_type": "objectProperty",
+      "direction_changed": true,
+      "correction_note": "The arrowhead is black and touches the prov:Entity node."
+    }
+  ],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "prov:Entity",
+      "to": "prov:Agent",
+      "label": "prov:wasAttributedTo",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "prov:Agent",
+      "visual_evidence": "The line is pink, the arrowhead is pink, and it touches the prov:Agent node."
+    },
+    {
+      "id": "me2",
+      "from": "prov:Entity",
+      "to": "prov:Activity",
+      "label": "prov:wasUsedBy",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "prov:Activity",
+      "visual_evidence": "The line is black, the arrowhead is black, and it touches the prov:Activity node."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [
+      "Figure 1. The three Starting Point classes and the properties that relate them.",
+      "The diagrams in this document depict Entities as yellow ovals, Activities as blue rectangles, and Agents as orange pentagons.",
+      "The responsibility properties are shown in pink."
+    ],
+    "namespace_info": "prov: http://www.w3.org/ns/prov#; xsd: http://www.w3.org/2001/XMLSchema#",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "PROV-O",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "prov:Agent",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "prov:Entity",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "prov:Activity",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "prov:actedOnBehalfOf"
+      },
+      {
+        "id": "op2",
+        "name": "prov:wasAttributedTo"
+      },
+      {
+        "id": "op3",
+        "name": "prov:wasAssociatedWith"
+      },
+      {
+        "id": "op4",
+        "name": "prov:wasDerivedFrom"
+      },
+      {
+        "id": "op5",
+        "name": "prov:used"
+      },
+      {
+        "id": "op6",
+        "name": "prov:wasGeneratedBy"
+      },
+      {
+        "id": "op7",
+        "name": "prov:wasInformedBy"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "prov:Agent",
+        "to": "prov:Agent",
+        "label": "prov:actedOnBehalfOf",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e2",
+        "from": "prov:Agent",
+        "to": "prov:Activity",
+        "label": "prov:wasAttributedTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e3",
+        "from": "prov:Agent",
+        "to": "prov:Activity",
+        "label": "prov:wasAssociatedWith",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e4",
+        "from": "prov:Entity",
+        "to": "prov:Entity",
+        "label": "prov:wasDerivedFrom",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "prov:Activity",
+        "to": "prov:Entity",
+        "label": "prov:used",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "prov:Activity",
+        "to": "prov:Entity",
+        "label": "prov:wasGeneratedBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "prov:Activity",
+        "to": "prov:Activity",
+        "label": "prov:wasInformedBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "prov:Activity",
+        "to": "xsd:dateTime",
+        "label": "prov:startedAtTime",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e9",
+        "from": "prov:Activity",
+        "to": "xsd:dateTime",
+        "label": "prov:endedAtTime",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "me1",
+        "from": "prov:Entity",
+        "to": "prov:Agent",
+        "label": "prov:wasAttributedTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me2",
+        "from": "prov:Entity",
+        "to": "prov:Activity",
+        "label": "prov:wasUsedBy",
+        "edge_type": "objectProperty"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "prov:Activity",
+        "property": "prov:startedAtTime",
+        "datatype": "xsd:dateTime"
+      },
+      {
+        "class": "prov:Activity",
+        "property": "prov:endedAtTime",
+        "datatype": "xsd:dateTime"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "prov: http://www.w3.org/ns/prov#",
+    "ambiguities": [],
+    "namespace_info": "prov: http://www.w3.org/ns/prov#; xsd: http://www.w3.org/2001/XMLSchema#",
+    "annotations": [
+      "Figure 1. The three Starting Point classes and the properties that relate them.",
+      "The diagrams in this document depict Entities as yellow ovals, Activities as blue rectangles, and Agents as orange pentagons.",
+      "The responsibility properties are shown in pink."
+    ],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

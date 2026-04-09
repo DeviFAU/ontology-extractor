@@ -1,0 +1,24 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/domrange> a owl:Ontology .
+
+<http://example.org/domrange#publishes> a owl:ObjectProperty ;
+    rdfs:label "publishes"@en ;
+    rdfs:domain <http://example.org/domrange#Publisher> ;
+    rdfs:range <http://example.org/domrange#Book> .
+
+<http://example.org/domrange#writes> a owl:ObjectProperty ;
+    rdfs:label "writes"@en ;
+    rdfs:domain <http://example.org/domrange#Author> ;
+    rdfs:range <http://example.org/domrange#Book> .
+
+<http://example.org/domrange#Author> a owl:Class ;
+    rdfs:label "Author"@en .
+
+<http://example.org/domrange#Publisher> a owl:Class ;
+    rdfs:label "Publisher"@en .
+
+<http://example.org/domrange#Book> a owl:Class ;
+    rdfs:label "Book"@en .
+

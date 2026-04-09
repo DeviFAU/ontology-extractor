@@ -1,0 +1,98 @@
+@prefix ns1: <http://example.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ro: <http://purl.obolibrary.org/obo/> .
+@prefix teo: <http://www.ontologydesignpatterns.org/cp/owl/teo.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+ns1:breast_adenocarcinoma_8500 a owl:NamedIndividual ;
+    rdfs:label "breast_adenocarcinoma/8500"@en .
+
+ns1:cause_of_death_3 a owl:NamedIndividual ;
+    rdfs:label "cause_of_death/3"@en .
+
+ns1:census_tract_12073002303 a ns1:ncit_census_tract,
+        owl:NamedIndividual ;
+    rdfs:label "census_tract/12073002303"@en ;
+    ns1:ocrv_has_svi 4.6224e+01 .
+
+ns1:county_31 a ns1:ncit_county,
+        owl:NamedIndividual ;
+    rdfs:label "county/31"@en .
+
+ns1:diagnosis_relation_3 a ns1:ncit_diagnosis_relation,
+        owl:NamedIndividual ;
+    rdfs:label "diagnosis_relation/3"@en .
+
+ns1:marital_status_4 a ns1:ncit_single,
+        owl:NamedIndividual ;
+    rdfs:label "marital_status/4"@en .
+
+ns1:ocrv_casually_related_to a owl:ObjectProperty ;
+    rdfs:label "casually related to"@en ;
+    rdfs:range ns1:malignant_breast_neoplasms_1749 .
+
+ns1:ocrv_has_death_cause a owl:ObjectProperty ;
+    rdfs:label "has death cause"@en .
+
+ns1:ocrv_has_diagnosis a owl:ObjectProperty ;
+    rdfs:label "has diagnosis"@en .
+
+ns1:ocrv_has_marital_status a owl:ObjectProperty ;
+    rdfs:label "has marital status"@en .
+
+ns1:ocrv_has_procedure a owl:ObjectProperty ;
+    rdfs:label "has procedure"@en .
+
+ns1:ocrv_has_svi a owl:DatatypeProperty ;
+    rdfs:label "has svi"@en .
+
+ns1:ocrv_has_tumor_type a owl:ObjectProperty ;
+    rdfs:label "has tumor type"@en .
+
+ns1:ocrv_lives_in a owl:ObjectProperty ;
+    rdfs:label "lives in"@en .
+
+ns1:patient_307879 a ns1:birth_307879,
+        ns1:ncit_patient,
+        ns1:surgery_307879,
+        owl:NamedIndividual ;
+    rdfs:label "patient/307879"@en .
+
+ro:participates_in a owl:ObjectProperty ;
+    rdfs:label "participates in"@en .
+
+teo:hasValidTime a owl:ObjectProperty ;
+    rdfs:label "hasValidTime"@en ;
+    rdfs:range ns1:time_instant_1941,
+        ns1:time_instant_19860320 .
+
+ns1:birth_307879 a owl:NamedIndividual ;
+    rdfs:label "birth/307879"@en .
+
+ns1:malignant_breast_neoplasms_1749 rdfs:subClassOf ns1:ncit_disease_or_disorder .
+
+ns1:ncit_census_tract a owl:Class ;
+    rdfs:label "census tract"@en .
+
+ns1:ncit_county a owl:Class ;
+    rdfs:label "county"@en .
+
+ns1:ncit_diagnosis_relation a owl:Class ;
+    rdfs:label "diagnosis relation"@en .
+
+ns1:ncit_disease_or_disorder a owl:Class ;
+    rdfs:label "disease or disorder"@en .
+
+ns1:ncit_patient a owl:Class ;
+    rdfs:label "patient"@en .
+
+ns1:ncit_surgery a owl:Class ;
+    rdfs:label "surgery"@en .
+
+ns1:surgery_307879 a ns1:ncit_surgery,
+        owl:NamedIndividual ;
+    rdfs:label "surgery/307879"@en .
+

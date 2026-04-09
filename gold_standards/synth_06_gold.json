@@ -1,0 +1,131 @@
+{
+  "id": "synth_06",
+  "name": "University Ontology",
+  "complexity": "medium",
+  "diagram_type": "OWL",
+  "description": "Tests mixed subClassOf + objectProperty + dataProperty",
+  "base_uri": "http://example.org/university#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Person"
+    },
+    {
+      "name": "Student"
+    },
+    {
+      "name": "Professor"
+    },
+    {
+      "name": "Course"
+    },
+    {
+      "name": "Department"
+    },
+    {
+      "name": "University"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "enrolledIn",
+      "domain": "Student",
+      "range": "Course"
+    },
+    {
+      "name": "teaches",
+      "domain": "Professor",
+      "range": "Course"
+    },
+    {
+      "name": "belongsTo",
+      "domain": "Course",
+      "range": "Department"
+    },
+    {
+      "name": "partOf",
+      "domain": "Department",
+      "range": "University"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "hasName",
+      "domain": "Person",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "hasID",
+      "domain": "Student",
+      "range": "xsd:integer",
+      "datatype": "integer"
+    },
+    {
+      "name": "courseCode",
+      "domain": "Course",
+      "range": "xsd:string",
+      "datatype": "string"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Student",
+      "to": "Person",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Professor",
+      "to": "Person",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Student",
+      "to": "Course",
+      "label": "enrolledIn",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Professor",
+      "to": "Course",
+      "label": "teaches",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Course",
+      "to": "Department",
+      "label": "belongsTo",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Department",
+      "to": "University",
+      "label": "partOf",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Person",
+      "to": "xsd:string",
+      "label": "hasName",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Student",
+      "to": "xsd:integer",
+      "label": "hasID",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Course",
+      "to": "xsd:string",
+      "label": "courseCode",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

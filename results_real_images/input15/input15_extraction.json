@@ -1,0 +1,853 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "patient/307879",
+        "to": "birth/307879",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "ocrv:has procedure",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "birth/307879",
+        "to": "time_instant/1941",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "teo:hasValidTime",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "birth/307879",
+        "to": "time_instant/1941",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "patient/307879",
+        "to": "surgery/307879",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "r:o:participates in",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "surgery/307879",
+        "to": "ncit:surgery",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "patient/307879",
+        "to": "cause_of_death/3",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "ocrv:has death cause",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "cause_of_death/3",
+        "to": "malignant_breast_neoplasms/1749",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "ocrv:causally related to",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "malignant_breast_neoplasms/1749",
+        "to": "ncit:disease or disorder",
+        "line_style": "dashed",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "patient/307879",
+        "to": "diagnosis_relation/3",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "ocrv:has diagnosis",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "diagnosis_relation/3",
+        "to": "breast_adenocarcinoma/8500",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "ocrv:has tumor type",
+        "confidence": "high"
+      },
+      {
+        "id": "a11",
+        "from": "diagnosis_relation/3",
+        "to": "time_instant/19860320",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "teo:hasValidTime",
+        "confidence": "high"
+      },
+      {
+        "id": "a12",
+        "from": "time_instant/19860320",
+        "to": "ocrv:date of diagnosis",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a13",
+        "from": "patient/307879",
+        "to": "census_tract/12073002303",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "ocrv:lives in",
+        "confidence": "high"
+      },
+      {
+        "id": "a14",
+        "from": "census_tract/12073002303",
+        "to": "ncit:census tract",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a15",
+        "from": "census_tract/12073002303",
+        "to": "46.224^^xsd:double",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "dataProperty",
+        "label": "ocrv:has svi",
+        "confidence": "high"
+      },
+      {
+        "id": "a16",
+        "from": "46.224^^xsd:double",
+        "to": "ocrv:SVI socioeconomic status",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "medium"
+      },
+      {
+        "id": "a17",
+        "from": "patient/307879",
+        "to": "marital_status/4",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "ocrv:has marital status",
+        "confidence": "high"
+      },
+      {
+        "id": "a18",
+        "from": "marital_status/4",
+        "to": "ncit:single",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a19",
+        "from": "patient/307879",
+        "to": "county/31",
+        "line_style": "solid",
+        "arrowhead_style": "simple-chevron",
+        "conclusion": "objectProperty",
+        "label": "ocrv:lives in",
+        "confidence": "high"
+      },
+      {
+        "id": "a20",
+        "from": "county/31",
+        "to": "ncit:county",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram represents various relationships and classifications using a mix of rdf:type, object properties, and subtype relationships. The use of hollow triangles for subclass relationships and solid triangles for rdf:type is consistent throughout the diagram."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "ncit:patient",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "ncit:diagnosis relation",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "ncit:surgery",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "ncit:disease or disorder",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "ncit:census tract",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "ncit:county",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "ocrv:has procedure"
+      },
+      {
+        "id": "op2",
+        "name": "ocrv:has death cause"
+      },
+      {
+        "id": "op3",
+        "name": "ocrv:has diagnosis"
+      },
+      {
+        "id": "op4",
+        "name": "ocrv:casually related to"
+      },
+      {
+        "id": "op5",
+        "name": "ocrv:has tumor type"
+      },
+      {
+        "id": "op6",
+        "name": "ocrv:lives in"
+      },
+      {
+        "id": "op7",
+        "name": "ocrv:has marital status"
+      },
+      {
+        "id": "op8",
+        "name": "ocrv:has svi"
+      },
+      {
+        "id": "op9",
+        "name": "ro:participates in"
+      }
+    ],
+    "instances": [
+      {
+        "id": "i1",
+        "name": "patient/307879",
+        "type_class": "ncit:patient"
+      },
+      {
+        "id": "i2",
+        "name": "surgery/307879",
+        "type_class": "ncit:surgery"
+      },
+      {
+        "id": "i3",
+        "name": "birth/307879",
+        "type_class": ""
+      },
+      {
+        "id": "i4",
+        "name": "cause_of_death/3",
+        "type_class": ""
+      },
+      {
+        "id": "i5",
+        "name": "diagnosis_relation/3",
+        "type_class": "ncit:diagnosis relation"
+      },
+      {
+        "id": "i6",
+        "name": "breast_adenocarcinoma/8500",
+        "type_class": ""
+      },
+      {
+        "id": "i7",
+        "name": "census_tract/12073002303",
+        "type_class": "ncit:census tract"
+      },
+      {
+        "id": "i8",
+        "name": "marital_status/4",
+        "type_class": ""
+      },
+      {
+        "id": "i9",
+        "name": "county/31",
+        "type_class": "ncit:county"
+      }
+    ],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "malignant_breast_neoplasms/1749",
+        "to": "ncit:disease or disorder",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "ncit:disease or disorder",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "birth/307879",
+        "to": "time_instant/1941",
+        "label": "teo:hasValidTime",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "time_instant/1941",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "patient/307879",
+        "to": "surgery/307879",
+        "label": "ocrv:has procedure",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "surgery/307879",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "patient/307879",
+        "to": "cause_of_death/3",
+        "label": "ocrv:has death cause",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "cause_of_death/3",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "cause_of_death/3",
+        "to": "malignant_breast_neoplasms/1749",
+        "label": "ocrv:casually related to",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "malignant_breast_neoplasms/1749",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "patient/307879",
+        "to": "diagnosis_relation/3",
+        "label": "ocrv:has diagnosis",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "diagnosis_relation/3",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "diagnosis_relation/3",
+        "to": "breast_adenocarcinoma/8500",
+        "label": "ocrv:has tumor type",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "breast_adenocarcinoma/8500",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "birth/307879",
+        "to": "patient/307879",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "patient/307879",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "surgery/307879",
+        "to": "patient/307879",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "patient/307879",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "patient/307879",
+        "to": "census_tract/12073002303",
+        "label": "ocrv:lives in",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "census_tract/12073002303",
+        "confidence": "high"
+      },
+      {
+        "id": "e11",
+        "from": "patient/307879",
+        "to": "marital_status/4",
+        "label": "ocrv:has marital status",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "marital_status/4",
+        "confidence": "high"
+      },
+      {
+        "id": "e12",
+        "from": "patient/307879",
+        "to": "county/31",
+        "label": "ocrv:lives in",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "county/31",
+        "confidence": "high"
+      },
+      {
+        "id": "e13",
+        "from": "census_tract/12073002303",
+        "to": "46.224^^xsd:double",
+        "label": "ocrv:has svi",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "46.224^^xsd:double",
+        "confidence": "high"
+      },
+      {
+        "id": "e14",
+        "from": "diagnosis_relation/3",
+        "to": "time_instant/19860320",
+        "label": "teo:hasValidTime",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "time_instant/19860320",
+        "confidence": "high"
+      },
+      {
+        "id": "e15",
+        "from": "patient/307879",
+        "to": "surgery/307879",
+        "label": "ro:participates in",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "surgery/307879",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [
+    {
+      "id": "e8",
+      "from": "patient/307879",
+      "to": "birth/307879",
+      "label": "rdf:type",
+      "edge_type": "instanceOf",
+      "direction_changed": true,
+      "correction_note": "The arrowhead is black, a hollow triangle pointing at birth/307879."
+    },
+    {
+      "id": "e9",
+      "from": "patient/307879",
+      "to": "surgery/307879",
+      "label": "rdf:type",
+      "edge_type": "instanceOf",
+      "direction_changed": true,
+      "correction_note": "The arrowhead is black, a hollow triangle pointing at surgery/307879."
+    }
+  ],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "marital_status/4",
+      "to": "ncit:single",
+      "label": "rdf:type",
+      "edge_type": "instanceOf",
+      "arrowhead_at": "ncit:single",
+      "visual_evidence": "The arrow is dashed, pointing from marital_status/4 to ncit:single with a dashed arrowhead touching ncit:single."
+    },
+    {
+      "id": "me2",
+      "from": "census_tract/12073002303",
+      "to": "ncit:census tract",
+      "label": "rdf:type",
+      "edge_type": "instanceOf",
+      "arrowhead_at": "ncit:census tract",
+      "visual_evidence": "The arrow is dashed, pointing from census_tract/12073002303 to ncit:census tract with a dashed arrowhead touching ncit:census tract."
+    },
+    {
+      "id": "me3",
+      "from": "county/31",
+      "to": "ncit:county",
+      "label": "rdf:type",
+      "edge_type": "instanceOf",
+      "arrowhead_at": "ncit:county",
+      "visual_evidence": "The arrow is dashed, pointing from county/31 to ncit:county with a dashed arrowhead touching ncit:county."
+    },
+    {
+      "id": "me4",
+      "from": "diagnosis_relation/3",
+      "to": "ncit:diagnosis relation",
+      "label": "rdf:type",
+      "edge_type": "instanceOf",
+      "arrowhead_at": "ncit:diagnosis relation",
+      "visual_evidence": "The arrow is dashed, pointing from diagnosis_relation/3 to ncit:diagnosis relation with a dashed arrowhead touching ncit:diagnosis relation."
+    },
+    {
+      "id": "me5",
+      "from": "birth/307879",
+      "to": "time_instant/1941",
+      "label": "rdf:birth year",
+      "edge_type": "dataProperty",
+      "arrowhead_at": "time_instant/1941",
+      "visual_evidence": "The arrow is solid, pointing from birth/307879 to time_instant/1941 with a small black filled arrowhead touching time_instant/1941."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [
+      {
+        "name": "patient/307879",
+        "type_class": "ncit:patient",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "surgery/307879",
+        "type_class": "ncit:surgery",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "birth/307879",
+        "type_class": "",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "cause_of_death/3",
+        "type_class": "",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "diagnosis_relation/3",
+        "type_class": "ncit:diagnosis relation",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "breast_adenocarcinoma/8500",
+        "type_class": "",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "census_tract/12073002303",
+        "type_class": "ncit:census tract",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "marital_status/4",
+        "type_class": "",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "county/31",
+        "type_class": "ncit:county",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      }
+    ],
+    "reclassified_nodes": [],
+    "no_instances_present": false
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [
+      {
+        "individual": "census_tract/12073002303",
+        "property": "ocrv:has svi",
+        "value": "46.224",
+        "datatype": "xsd:double"
+      }
+    ],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "minor gaps",
+    "notes": "The data assertion for the SVI value was present but not captured."
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "ncit:patient",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "ncit:diagnosis relation",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "ncit:surgery",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "ncit:disease or disorder",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "ncit:census tract",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "ncit:county",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "ocrv:has procedure"
+      },
+      {
+        "id": "op2",
+        "name": "ocrv:has death cause"
+      },
+      {
+        "id": "op3",
+        "name": "ocrv:has diagnosis"
+      },
+      {
+        "id": "op4",
+        "name": "ocrv:casually related to"
+      },
+      {
+        "id": "op5",
+        "name": "ocrv:has tumor type"
+      },
+      {
+        "id": "op6",
+        "name": "ocrv:lives in"
+      },
+      {
+        "id": "op7",
+        "name": "ocrv:has marital status"
+      },
+      {
+        "id": "op9",
+        "name": "ro:participates in"
+      }
+    ],
+    "instances": [
+      {
+        "name": "patient/307879",
+        "type_class": "ncit:patient"
+      },
+      {
+        "name": "surgery/307879",
+        "type_class": "ncit:surgery"
+      },
+      {
+        "name": "birth/307879",
+        "type_class": ""
+      },
+      {
+        "name": "cause_of_death/3",
+        "type_class": ""
+      },
+      {
+        "name": "diagnosis_relation/3",
+        "type_class": "ncit:diagnosis relation"
+      },
+      {
+        "name": "breast_adenocarcinoma/8500",
+        "type_class": ""
+      },
+      {
+        "name": "census_tract/12073002303",
+        "type_class": "ncit:census tract"
+      },
+      {
+        "name": "marital_status/4",
+        "type_class": ""
+      },
+      {
+        "name": "county/31",
+        "type_class": "ncit:county"
+      }
+    ],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "malignant_breast_neoplasms/1749",
+        "to": "ncit:disease or disorder",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e2",
+        "from": "birth/307879",
+        "to": "time_instant/1941",
+        "label": "teo:hasValidTime",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e3",
+        "from": "patient/307879",
+        "to": "surgery/307879",
+        "label": "ocrv:has procedure",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e4",
+        "from": "patient/307879",
+        "to": "cause_of_death/3",
+        "label": "ocrv:has death cause",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "cause_of_death/3",
+        "to": "malignant_breast_neoplasms/1749",
+        "label": "ocrv:casually related to",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "patient/307879",
+        "to": "diagnosis_relation/3",
+        "label": "ocrv:has diagnosis",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "diagnosis_relation/3",
+        "to": "breast_adenocarcinoma/8500",
+        "label": "ocrv:has tumor type",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "patient/307879",
+        "to": "birth/307879",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e9",
+        "from": "patient/307879",
+        "to": "surgery/307879",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e10",
+        "from": "patient/307879",
+        "to": "census_tract/12073002303",
+        "label": "ocrv:lives in",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e11",
+        "from": "patient/307879",
+        "to": "marital_status/4",
+        "label": "ocrv:has marital status",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e12",
+        "from": "patient/307879",
+        "to": "county/31",
+        "label": "ocrv:lives in",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e13",
+        "from": "census_tract/12073002303",
+        "to": "46.224^^xsd:double",
+        "label": "ocrv:has svi",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e14",
+        "from": "diagnosis_relation/3",
+        "to": "time_instant/19860320",
+        "label": "teo:hasValidTime",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e15",
+        "from": "patient/307879",
+        "to": "surgery/307879",
+        "label": "ro:participates in",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me1",
+        "from": "marital_status/4",
+        "to": "ncit:single",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "me2",
+        "from": "census_tract/12073002303",
+        "to": "ncit:census tract",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [
+      {
+        "individual": "census_tract/12073002303",
+        "property": "ocrv:has svi",
+        "value": "46.224",
+        "datatype": "xsd:double"
+      }
+    ],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "minor gaps",
+    "completeness_notes": "The data assertion for the SVI value was present but not captured."
+  }
+}

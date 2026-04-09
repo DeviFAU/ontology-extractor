@@ -1,0 +1,579 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "owl:inverseOf",
+        "to": "e:author",
+        "line_style": "solid",
+        "arrowhead_style": "double-headed",
+        "conclusion": "inverseOf",
+        "label": "owl:inverseOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "rdf:type",
+        "to": "owl:ObjectProperty",
+        "line_style": "solid",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "other",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "e:author",
+        "to": "owl:ObjectProperty",
+        "line_style": "solid",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "other",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "e:writes",
+        "to": "owl:ObjectProperty",
+        "line_style": "solid",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "other",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "rdf:type",
+        "to": "e:Person",
+        "line_style": "dashed",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "rdf:type",
+        "to": "e:Document",
+        "line_style": "dashed",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "rdf:type",
+        "to": "e:semanticWeb",
+        "line_style": "dashed",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "rdf:type",
+        "to": "e:search",
+        "line_style": "dashed",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "rdfs:subClassOf",
+        "to": "e:Document",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "rdfs:subClassOf",
+        "to": "e:Document",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a11",
+        "from": "e:author",
+        "to": "e:Document",
+        "line_style": "solid",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "other",
+        "label": "rdfs:domain",
+        "confidence": "high"
+      },
+      {
+        "id": "a12",
+        "from": "e:writes",
+        "to": "e:Person",
+        "line_style": "solid",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "other",
+        "label": "rdfs:range",
+        "confidence": "high"
+      },
+      {
+        "id": "a13",
+        "from": "e:about",
+        "to": "e:Document",
+        "line_style": "solid",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "other",
+        "label": "rdfs:domain",
+        "confidence": "high"
+      },
+      {
+        "id": "a14",
+        "from": "e:about",
+        "to": "e:Topic",
+        "line_style": "solid",
+        "arrowhead_style": "simple chevron",
+        "conclusion": "other",
+        "label": "rdfs:range",
+        "confidence": "high"
+      },
+      {
+        "id": "a15",
+        "from": "rdfs:subClassOf",
+        "to": "e:Document",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram shows RDF relationships with multiple types of lines and arrowheads indicating subclass, instance, and inverse relationships. The 'subClassOf' relationships are consistently marked with hollow triangles."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "e:Person",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "e:Document",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "e:Thesis",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "e:ConferencePaper",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "e:Topic",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "e:writes",
+        "note": ""
+      },
+      {
+        "id": "op2",
+        "name": "e:author",
+        "note": ""
+      },
+      {
+        "id": "op3",
+        "name": "e:about",
+        "note": ""
+      }
+    ],
+    "instances": [
+      {
+        "id": "i1",
+        "name": "e:eetu",
+        "type_class": "e:Person"
+      },
+      {
+        "id": "i2",
+        "name": "e:semanticWeb",
+        "type_class": "e:Topic"
+      },
+      {
+        "id": "i3",
+        "name": "e:search",
+        "type_class": "e:Topic"
+      }
+    ],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "e:author",
+        "to": "e:writes",
+        "label": "owl:inverseOf",
+        "edge_type": "inverseOf",
+        "arrowhead_at": "e:writes",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "e:writes",
+        "to": "owl:ObjectProperty",
+        "label": "rdf:type",
+        "edge_type": "typeDeclaration",
+        "arrowhead_at": "owl:ObjectProperty",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "e:author",
+        "to": "owl:ObjectProperty",
+        "label": "rdf:type",
+        "edge_type": "typeDeclaration",
+        "arrowhead_at": "owl:ObjectProperty",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "e:about",
+        "to": "owl:ObjectProperty",
+        "label": "rdf:type",
+        "edge_type": "typeDeclaration",
+        "arrowhead_at": "owl:ObjectProperty",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "e:author",
+        "to": "e:Person",
+        "label": "rdfs:range",
+        "edge_type": "range",
+        "arrowhead_at": "e:Person",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "e:author",
+        "to": "e:Document",
+        "label": "rdfs:domain",
+        "edge_type": "domain",
+        "arrowhead_at": "e:Document",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "e:about",
+        "to": "e:Topic",
+        "label": "rdfs:range",
+        "edge_type": "range",
+        "arrowhead_at": "e:Topic",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "e:about",
+        "to": "e:Document",
+        "label": "rdfs:domain",
+        "edge_type": "domain",
+        "arrowhead_at": "e:Document",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "e:Thesis",
+        "to": "e:Document",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "e:Document",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "e:ConferencePaper",
+        "to": "e:Document",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "e:Document",
+        "confidence": "high"
+      },
+      {
+        "id": "e11",
+        "from": "e:eetu",
+        "to": "e:Person",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "e:Person",
+        "confidence": "high"
+      },
+      {
+        "id": "e12",
+        "from": "e:semanticWeb",
+        "to": "e:Topic",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "e:Topic",
+        "confidence": "high"
+      },
+      {
+        "id": "e13",
+        "from": "e:search",
+        "to": "e:Topic",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "e:Topic",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "e: http://e.org/ont#",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "e:semanticWeb",
+      "to": "e:Document",
+      "label": "rdf:type",
+      "edge_type": "instanceOf",
+      "arrowhead_at": "e:Document",
+      "visual_evidence": "Red dashed arrow from 'e:semanticWeb' to 'e:Document' with an arrowhead touching 'e:Document'"
+    },
+    {
+      "id": "me2",
+      "from": "e:eetu",
+      "to": "e:Thesis",
+      "label": "rdf:type",
+      "edge_type": "instanceOf",
+      "arrowhead_at": "e:Thesis",
+      "visual_evidence": "Red dashed arrow from 'e:eetu' to 'e:Thesis' with an arrowhead touching 'e:Thesis'"
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [
+      {
+        "name": "e:eetu",
+        "type_class": "e:Person",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "e:semanticWeb",
+        "type_class": "e:Topic",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "e:search",
+        "type_class": "e:Topic",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      }
+    ],
+    "reclassified_nodes": [],
+    "no_instances_present": false
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "e:Person",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "e:Document",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "e:Thesis",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "e:ConferencePaper",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "e:Topic",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "e:writes",
+        "note": ""
+      },
+      {
+        "id": "op2",
+        "name": "e:author",
+        "note": ""
+      },
+      {
+        "id": "op3",
+        "name": "e:about",
+        "note": ""
+      }
+    ],
+    "instances": [
+      {
+        "name": "e:eetu",
+        "type_class": "e:Person"
+      },
+      {
+        "name": "e:semanticWeb",
+        "type_class": "e:Topic"
+      },
+      {
+        "name": "e:search",
+        "type_class": "e:Topic"
+      }
+    ],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "e:author",
+        "to": "e:writes",
+        "label": "owl:inverseOf",
+        "edge_type": "inverseOf"
+      },
+      {
+        "id": "e2",
+        "from": "e:writes",
+        "to": "owl:ObjectProperty",
+        "label": "rdf:type",
+        "edge_type": "typeDeclaration"
+      },
+      {
+        "id": "e3",
+        "from": "e:author",
+        "to": "owl:ObjectProperty",
+        "label": "rdf:type",
+        "edge_type": "typeDeclaration"
+      },
+      {
+        "id": "e4",
+        "from": "e:about",
+        "to": "owl:ObjectProperty",
+        "label": "rdf:type",
+        "edge_type": "typeDeclaration"
+      },
+      {
+        "id": "e5",
+        "from": "e:author",
+        "to": "e:Person",
+        "label": "rdfs:range",
+        "edge_type": "range"
+      },
+      {
+        "id": "e6",
+        "from": "e:author",
+        "to": "e:Document",
+        "label": "rdfs:domain",
+        "edge_type": "domain"
+      },
+      {
+        "id": "e7",
+        "from": "e:about",
+        "to": "e:Topic",
+        "label": "rdfs:range",
+        "edge_type": "range"
+      },
+      {
+        "id": "e8",
+        "from": "e:about",
+        "to": "e:Document",
+        "label": "rdfs:domain",
+        "edge_type": "domain"
+      },
+      {
+        "id": "e9",
+        "from": "e:Thesis",
+        "to": "e:Document",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e10",
+        "from": "e:ConferencePaper",
+        "to": "e:Document",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e11",
+        "from": "e:eetu",
+        "to": "e:Person",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e12",
+        "from": "e:semanticWeb",
+        "to": "e:Topic",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e13",
+        "from": "e:search",
+        "to": "e:Topic",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "me1",
+        "from": "e:semanticWeb",
+        "to": "e:Document",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "me2",
+        "from": "e:eetu",
+        "to": "e:Thesis",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "e: http://e.org/ont#",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

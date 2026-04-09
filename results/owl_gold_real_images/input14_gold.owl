@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/ontology#Sample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Sample</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasData">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasData</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Experiment"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#File"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">name</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#StandardOperatingProcedure"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#File"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasAttributedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">wasAttributedTo</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Experiment"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Person"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Author"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">description</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#StandardOperatingProcedure"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#File"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Study">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Study</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/p-plan#isSubPlanOfPlan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">isSubPlanOfPlan</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Experiment"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#StandardOperatingProcedure"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Study"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Plan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasMaterial">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasMaterial</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Experiment"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Sample"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Material"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Publication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Publication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#modifiedAtTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">modifiedAtTime</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Experiment"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/p-plan#isVariableOfPlan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">isVariableOfPlan</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Experiment"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Publication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Entity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Entity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#File">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">File</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#uses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">uses</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Experiment"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Material">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Material</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Author</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Measurement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Measurement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Plan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Plan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Experiment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Experiment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasSetting">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasSetting</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Experiment"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Measurement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#StandardOperatingProcedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">StandardOperatingProcedure</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#generatedAtTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">generatedAtTime</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Experiment"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+</rdf:RDF>

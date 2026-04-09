@@ -1,0 +1,244 @@
+{
+  "id": "input12",
+  "name": "E-Commerce Order Ontology",
+  "complexity": "medium",
+  "diagram_type": "informal ontology",
+  "description": "Informal OWL diagram with ovals as classes, 'isA' = rdfs:subClassOf. Classes: BusinessParty, Seller, Buyer, Order, Address, City, Currency, Euro, USD, Price, Country, Item, Id, OrderId. Data properties shown as labeled rectangles (hasStreet string, hasZipCode int, hasName string).",
+  "base_uri": "http://example.org/ontology#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "BusinessParty"
+    },
+    {
+      "name": "Seller"
+    },
+    {
+      "name": "Buyer"
+    },
+    {
+      "name": "Order"
+    },
+    {
+      "name": "Address"
+    },
+    {
+      "name": "City"
+    },
+    {
+      "name": "Currency"
+    },
+    {
+      "name": "Euro"
+    },
+    {
+      "name": "USD"
+    },
+    {
+      "name": "Price"
+    },
+    {
+      "name": "Country"
+    },
+    {
+      "name": "Item"
+    },
+    {
+      "name": "Id"
+    },
+    {
+      "name": "OrderId"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "hasCountry",
+      "domain": "BusinessParty",
+      "range": "Country"
+    },
+    {
+      "name": "hasCurrency",
+      "domain": "BusinessParty",
+      "range": "Currency"
+    },
+    {
+      "name": "hasAddress",
+      "domain": "BusinessParty",
+      "range": "Address"
+    },
+    {
+      "name": "hasCity",
+      "domain": "Address",
+      "range": "City"
+    },
+    {
+      "name": "hasSeller",
+      "domain": "Order",
+      "range": "Seller"
+    },
+    {
+      "name": "deliverTo",
+      "domain": "Order",
+      "range": "Address"
+    },
+    {
+      "name": "billTo",
+      "domain": "Order",
+      "range": "Buyer"
+    },
+    {
+      "name": "hasItems",
+      "domain": "Order",
+      "range": "Item"
+    },
+    {
+      "name": "hasId",
+      "domain": "Order",
+      "range": "OrderId"
+    },
+    {
+      "name": "hasPrice",
+      "domain": "Item",
+      "range": "Price"
+    },
+    {
+      "name": "hasCurrency",
+      "domain": "Price",
+      "range": "Currency"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "hasStreet",
+      "domain": "Address",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "hasZipCode",
+      "domain": "Address",
+      "range": "xsd:int",
+      "datatype": "integer"
+    },
+    {
+      "name": "hasName",
+      "domain": "Item",
+      "range": "xsd:string",
+      "datatype": "string"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Seller",
+      "to": "BusinessParty",
+      "label": "isA",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Buyer",
+      "to": "BusinessParty",
+      "label": "isA",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Euro",
+      "to": "Currency",
+      "label": "isA",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "USD",
+      "to": "Currency",
+      "label": "isA",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "BusinessParty",
+      "to": "Country",
+      "label": "hasCountry",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "BusinessParty",
+      "to": "Currency",
+      "label": "hasCurrency",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "BusinessParty",
+      "to": "Address",
+      "label": "hasAddress",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Address",
+      "to": "City",
+      "label": "hasCity",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Order",
+      "to": "Seller",
+      "label": "hasSeller",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Order",
+      "to": "Address",
+      "label": "deliverTo",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Order",
+      "to": "Buyer",
+      "label": "billTo",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Order",
+      "to": "Item",
+      "label": "hasItems",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Order",
+      "to": "OrderId",
+      "label": "hasId",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Item",
+      "to": "Price",
+      "label": "hasPrice",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Price",
+      "to": "Currency",
+      "label": "hasCurrency",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Address",
+      "to": "xsd:string",
+      "label": "hasStreet",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Address",
+      "to": "xsd:int",
+      "label": "hasZipCode",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Item",
+      "to": "xsd:string",
+      "label": "hasName",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

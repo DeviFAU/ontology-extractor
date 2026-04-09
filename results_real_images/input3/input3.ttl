@@ -1,0 +1,155 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#Affected_Party> a owl:Class ;
+    rdfs:label "Affected Party"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Stake_Holder> .
+
+<http://example.org/ontology#Decision_Maker> a owl:Class ;
+    rdfs:label "Decision Maker"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Stake_Holder> .
+
+<http://example.org/ontology#bounds> a owl:ObjectProperty ;
+    rdfs:label "bounds"@en ;
+    rdfs:domain <http://example.org/ontology#Decision> ;
+    rdfs:range <http://example.org/ontology#Alternative> .
+
+<http://example.org/ontology#collectively_triggers> a owl:ObjectProperty ;
+    rdfs:label "collectively-triggers"@en ;
+    rdfs:domain <http://example.org/ontology#Framed_Decision_Problem> ;
+    rdfs:range <http://example.org/ontology#Stake_Holder_Factors> .
+
+<http://example.org/ontology#defines> a owl:ObjectProperty ;
+    rdfs:label "defines"@en ;
+    rdfs:domain <http://example.org/ontology#Alternative>,
+        <http://example.org/ontology#Decision> ;
+    rdfs:range <http://example.org/ontology#Consequence>,
+        <http://example.org/ontology#Future_Event>,
+        <http://example.org/ontology#Outcome> .
+
+<http://example.org/ontology#defines_possible> a owl:ObjectProperty ;
+    rdfs:label "defines-possible"@en ;
+    rdfs:domain <http://example.org/ontology#Alternative> ;
+    rdfs:range <http://example.org/ontology#Alternative> .
+
+<http://example.org/ontology#establishes> a owl:ObjectProperty ;
+    rdfs:label "establishes"@en ;
+    rdfs:domain <http://example.org/ontology#Framing_Specific_Stake_Holder_Factors> ;
+    rdfs:range <http://example.org/ontology#Criteria> .
+
+<http://example.org/ontology#establishes_Utility_Factors> a owl:ObjectProperty ;
+    rdfs:label "establishes-Utility-Factors"@en ;
+    rdfs:domain <http://example.org/ontology#Criteria> ;
+    rdfs:range <http://example.org/ontology#Utility_Structure> .
+
+<http://example.org/ontology#frames> a owl:ObjectProperty ;
+    rdfs:label "frames"@en ;
+    rdfs:domain <http://example.org/ontology#Situation> ;
+    rdfs:range <http://example.org/ontology#Framed_Decision_Problem> .
+
+<http://example.org/ontology#has_Effect> a owl:ObjectProperty ;
+    rdfs:label "has-Effect"@en ;
+    rdfs:domain <http://example.org/ontology#Consequence> ;
+    rdfs:range <http://example.org/ontology#Criteria> .
+
+<http://example.org/ontology#has_Influence> a owl:ObjectProperty ;
+    rdfs:label "has-Influence"@en ;
+    rdfs:domain <http://example.org/ontology#Alternative>,
+        <http://example.org/ontology#Outcome> ;
+    rdfs:range <http://example.org/ontology#Future_Event>,
+        <http://example.org/ontology#Outcome> .
+
+<http://example.org/ontology#has_Interaction> a owl:ObjectProperty ;
+    rdfs:label "has-Interaction"@en ;
+    rdfs:domain <http://example.org/ontology#Situation> ;
+    rdfs:range <http://example.org/ontology#Stake_Holder_Factors> .
+
+<http://example.org/ontology#has_influence> a owl:ObjectProperty ;
+    rdfs:label "has-influence"@en .
+
+<http://example.org/ontology#has_part> a owl:ObjectProperty ;
+    rdfs:label "has-part"@en .
+
+<http://example.org/ontology#has_relevance> a owl:ObjectProperty ;
+    rdfs:label "has-relevance"@en ;
+    rdfs:domain <http://example.org/ontology#Situation>,
+        <http://example.org/ontology#Stake_Holder> ;
+    rdfs:range <http://example.org/ontology#Framing_Specific_Situation>,
+        <http://example.org/ontology#Framing_Specific_Stake_Holder_Factors> .
+
+<http://example.org/ontology#provides_Focus> a owl:ObjectProperty ;
+    rdfs:label "provides-Focus"@en ;
+    rdfs:domain <http://example.org/ontology#Framed_Decision_Problem> ;
+    rdfs:range <http://example.org/ontology#Framing_Specific_Situation>,
+        <http://example.org/ontology#Framing_Specific_Stake_Holder_Factors> .
+
+<http://example.org/ontology#sets> a owl:ObjectProperty ;
+    rdfs:label "sets"@en ;
+    rdfs:domain <http://example.org/ontology#Decision> ;
+    rdfs:range <http://example.org/ontology#Utility_Structure> .
+
+<http://example.org/ontology#sets_Attributes> a owl:ObjectProperty ;
+    rdfs:label "sets-Attributes"@en ;
+    rdfs:domain <http://example.org/ontology#Alternative> ;
+    rdfs:range <http://example.org/ontology#Consequence> .
+
+<http://example.org/ontology#sets_Relevance> a owl:ObjectProperty ;
+    rdfs:label "sets-Relevance"@en ;
+    rdfs:domain <http://example.org/ontology#Framing_Specific_Stake_Holder_Factors> ;
+    rdfs:range <http://example.org/ontology#Consequence> .
+
+<http://example.org/ontology#specifies> a owl:ObjectProperty ;
+    rdfs:label "specifies"@en ;
+    rdfs:domain <http://example.org/ontology#Framing_Specific_Situation> ;
+    rdfs:range <http://example.org/ontology#Decision> .
+
+<http://example.org/ontology#utility_Input> a owl:ObjectProperty ;
+    rdfs:label "utility-Input"@en ;
+    rdfs:domain <http://example.org/ontology#Criteria> ;
+    rdfs:range <http://example.org/ontology#Utility_Structure> .
+
+<http://example.org/ontology#Context> a owl:Class ;
+    rdfs:label "Context"@en .
+
+<http://example.org/ontology#Future_Event> a owl:Class ;
+    rdfs:label "Future Event"@en .
+
+<http://example.org/ontology#Stake_Holder_Factors> a owl:Class ;
+    rdfs:label "Stake Holder Factors"@en .
+
+<http://example.org/ontology#Framed_Decision_Problem> a owl:Class ;
+    rdfs:label "Framed Decision Problem"@en .
+
+<http://example.org/ontology#Framing_Specific_Situation> a owl:Class ;
+    rdfs:label "Framing Specific Situation"@en .
+
+<http://example.org/ontology#Outcome> a owl:Class ;
+    rdfs:label "Outcome"@en .
+
+<http://example.org/ontology#Situation> a owl:Class ;
+    rdfs:label "Situation"@en .
+
+<http://example.org/ontology#Stake_Holder> a owl:Class ;
+    rdfs:label "Stake Holder"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Context> .
+
+<http://example.org/ontology#Utility_Structure> a owl:Class ;
+    rdfs:label "Utility Structure"@en .
+
+<http://example.org/ontology#Consequence> a owl:Class ;
+    rdfs:label "Consequence"@en .
+
+<http://example.org/ontology#Criteria> a owl:Class ;
+    rdfs:label "Criteria"@en .
+
+<http://example.org/ontology#Decision> a owl:Class ;
+    rdfs:label "Decision"@en .
+
+<http://example.org/ontology#Framing_Specific_Stake_Holder_Factors> a owl:Class ;
+    rdfs:label "Framing Specific Stake Holder Factors"@en .
+
+<http://example.org/ontology#Alternative> a owl:Class ;
+    rdfs:label "Alternative"@en .
+

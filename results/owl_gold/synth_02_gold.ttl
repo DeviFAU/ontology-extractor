@@ -1,0 +1,32 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/person> a owl:Ontology .
+
+<http://example.org/person#hasAge> a owl:DatatypeProperty ;
+    rdfs:label "hasAge"@en ;
+    rdfs:domain <http://example.org/person#Person> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/person#hasEmail> a owl:DatatypeProperty ;
+    rdfs:label "hasEmail"@en ;
+    rdfs:domain <http://example.org/person#Person> ;
+    rdfs:range xsd:string .
+
+<http://example.org/person#hasName> a owl:DatatypeProperty ;
+    rdfs:label "hasName"@en ;
+    rdfs:domain <http://example.org/person#Person> ;
+    rdfs:range xsd:string .
+
+<http://example.org/person#livesAt> a owl:ObjectProperty ;
+    rdfs:label "livesAt"@en ;
+    rdfs:domain <http://example.org/person#Person> ;
+    rdfs:range <http://example.org/person#Address> .
+
+<http://example.org/person#Address> a owl:Class ;
+    rdfs:label "Address"@en .
+
+<http://example.org/person#Person> a owl:Class ;
+    rdfs:label "Person"@en .
+

@@ -1,0 +1,51 @@
+@prefix e: <http://e.org/ont#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://e.org/ont> a owl:Ontology .
+
+e:ConferencePaper a owl:Class ;
+    rdfs:label "ConferencePaper"@en ;
+    rdfs:subClassOf e:Document .
+
+e:about a owl:ObjectProperty ;
+    rdfs:label "about"@en ;
+    rdfs:domain e:Document ;
+    rdfs:range e:Topic .
+
+e:eetu a e:Thesis,
+        owl:NamedIndividual ;
+    rdfs:label "eetu"@en .
+
+e:search a e:Topic,
+        owl:NamedIndividual ;
+    rdfs:label "search"@en .
+
+e:semanticWeb a e:Topic,
+        owl:NamedIndividual ;
+    rdfs:label "semanticWeb"@en .
+
+e:writes a owl:ObjectProperty ;
+    rdfs:label "writes"@en ;
+    rdfs:domain e:Person ;
+    rdfs:range e:Document ;
+    owl:inverseOf e:author .
+
+e:Thesis a owl:Class ;
+    rdfs:label "Thesis"@en ;
+    rdfs:subClassOf e:Document .
+
+e:author a owl:ObjectProperty ;
+    rdfs:label "author"@en ;
+    rdfs:domain e:Document ;
+    rdfs:range e:Person .
+
+e:Person a owl:Class ;
+    rdfs:label "Person"@en .
+
+e:Topic a owl:Class ;
+    rdfs:label "Topic"@en .
+
+e:Document a owl:Class ;
+    rdfs:label "Document"@en .
+

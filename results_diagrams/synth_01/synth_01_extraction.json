@@ -1,0 +1,179 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Dog",
+        "to": "Animal",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Cat",
+        "to": "Animal",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Bird",
+        "to": "Animal",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "This ontology diagram uses the 'rdfs:subClassOf' relationship with hollow triangle arrowheads for inheritance from specific animals to the superclass 'Animal'."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Dog",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Cat",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Bird",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Animal",
+        "description": ""
+      }
+    ],
+    "object_properties": [],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Dog",
+        "to": "Animal",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Animal",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Cat",
+        "to": "Animal",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Animal",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Bird",
+        "to": "Animal",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Animal",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Dog",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Cat",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Bird",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Animal",
+        "description": ""
+      }
+    ],
+    "object_properties": [],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Dog",
+        "to": "Animal",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e2",
+        "from": "Cat",
+        "to": "Animal",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e3",
+        "from": "Bird",
+        "to": "Animal",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

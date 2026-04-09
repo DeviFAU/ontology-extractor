@@ -1,0 +1,422 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Customer",
+        "to": "Order",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "places",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Order",
+        "to": "Product",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "contains",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Product",
+        "to": "Category",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "belongsTo",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Customer",
+        "to": "ShippingAddress",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "hasAddress",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "Order",
+        "to": "ShippingAddress",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "shippedTo",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "Order",
+        "to": "Payment",
+        "line_style": "solid",
+        "arrowhead_style": "chevron",
+        "conclusion": "objectProperty",
+        "label": "paidBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Order",
+        "to": "xsd:double",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "totalPrice",
+        "confidence": "medium"
+      },
+      {
+        "id": "a8",
+        "from": "Order",
+        "to": "xsd:date",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "orderDate",
+        "confidence": "medium"
+      },
+      {
+        "id": "a9",
+        "from": "Product",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "productName",
+        "confidence": "medium"
+      }
+    ],
+    "diagram_notes": "The diagram uses objectProperties to relate entities and dataProperties for attributes with dashed lines."
+  },
+  "pass1": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Customer",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Order",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Product",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Payment",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "ShippingAddress",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Category",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "places",
+        "note": ""
+      },
+      {
+        "id": "op2",
+        "name": "contains",
+        "note": ""
+      },
+      {
+        "id": "op3",
+        "name": "paidBy",
+        "note": ""
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Customer",
+        "to": "Order",
+        "label": "places",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Order",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Order",
+        "to": "Product",
+        "label": "contains",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Product",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Order",
+        "to": "Payment",
+        "label": "paidBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Payment",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Order",
+        "to": "ShippingAddress",
+        "label": "shippedTo",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "ShippingAddress",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Customer",
+        "to": "ShippingAddress",
+        "label": "hasAddress",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "ShippingAddress",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Product",
+        "to": "Category",
+        "label": "belongsTo",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Category",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Order",
+        "to": "xsd:date",
+        "label": "orderDate",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:date",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Order",
+        "to": "xsd:double",
+        "label": "totalPrice",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:double",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "Payment",
+        "to": "xsd:date",
+        "label": "paidBy",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:date",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "Product",
+        "to": "xsd:string",
+        "label": "productName",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "Order",
+      "to": "xsd:date",
+      "label": "orderDate",
+      "edge_type": "dataProperty",
+      "arrowhead_at": "xsd:date",
+      "visual_evidence": "Dashed line marked 'orderDate', black arrowhead touching 'xsd:date' box"
+    },
+    {
+      "id": "me2",
+      "from": "Product",
+      "to": "xsd:string",
+      "label": "productName",
+      "edge_type": "dataProperty",
+      "arrowhead_at": "xsd:string",
+      "visual_evidence": "Dashed line marked 'productName', black arrowhead touching 'xsd:string' box"
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": "Diagram captures all visible elements accurately."
+  },
+  "final": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Customer",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Order",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Product",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Payment",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "ShippingAddress",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Category",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "places",
+        "note": ""
+      },
+      {
+        "id": "op2",
+        "name": "contains",
+        "note": ""
+      },
+      {
+        "id": "op3",
+        "name": "paidBy",
+        "note": ""
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Customer",
+        "to": "Order",
+        "label": "places",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e2",
+        "from": "Order",
+        "to": "Product",
+        "label": "contains",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e3",
+        "from": "Order",
+        "to": "Payment",
+        "label": "paidBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e4",
+        "from": "Order",
+        "to": "ShippingAddress",
+        "label": "shippedTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "Customer",
+        "to": "ShippingAddress",
+        "label": "hasAddress",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Product",
+        "to": "Category",
+        "label": "belongsTo",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Order",
+        "to": "xsd:date",
+        "label": "orderDate",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Order",
+        "to": "xsd:double",
+        "label": "totalPrice",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e9",
+        "from": "Payment",
+        "to": "xsd:date",
+        "label": "paidBy",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e10",
+        "from": "Product",
+        "to": "xsd:string",
+        "label": "productName",
+        "edge_type": "dataProperty"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": "Diagram captures all visible elements accurately."
+  }
+}

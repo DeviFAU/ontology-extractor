@@ -1,0 +1,730 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Startup",
+        "to": "Company",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Company",
+        "to": "Organization",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Company",
+        "to": "Department",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasDepartment",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Department",
+        "to": "Office",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "locatedAt",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "Department",
+        "to": "Employee",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "employs",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "Manager",
+        "to": "Department",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "manages",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Manager",
+        "to": "Employee",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "Engineer",
+        "to": "Employee",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "Employee",
+        "to": "Project",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "worksOn",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "Employee",
+        "to": "Skill",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasSkill",
+        "confidence": "high"
+      },
+      {
+        "id": "a11",
+        "from": "Employee",
+        "to": "Meeting",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "attends",
+        "confidence": "high"
+      },
+      {
+        "id": "a12",
+        "from": "Employee",
+        "to": "xsd:double",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "salary",
+        "confidence": "high"
+      },
+      {
+        "id": "a13",
+        "from": "Employee",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "employeeID",
+        "confidence": "medium"
+      },
+      {
+        "id": "a14",
+        "from": "Project",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "projectName",
+        "confidence": "medium"
+      },
+      {
+        "id": "a15",
+        "from": "Project",
+        "to": "Technology",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "uses",
+        "confidence": "high"
+      },
+      {
+        "id": "a16",
+        "from": "Skill",
+        "to": "xsd:date",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "startDate",
+        "confidence": "medium"
+      }
+    ],
+    "diagram_notes": "The diagram primarily represents an ontology mapping the relationships within a company structure, with a clear distinction between subClassOf (inheritance) indicated by hollow-triangle arrows and object/data properties using solid-triangle and dashed arrows."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Startup",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Company",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Organization",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Manager",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Department",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Office",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Employee",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "Engineer",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "Project",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "Skill",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "Meeting",
+        "description": ""
+      },
+      {
+        "id": "c12",
+        "name": "Technology",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasDepartment"
+      },
+      {
+        "id": "op2",
+        "name": "manages"
+      },
+      {
+        "id": "op3",
+        "name": "locatedAt"
+      },
+      {
+        "id": "op4",
+        "name": "employs"
+      },
+      {
+        "id": "op5",
+        "name": "worksOn"
+      },
+      {
+        "id": "op6",
+        "name": "hasSkill"
+      },
+      {
+        "id": "op7",
+        "name": "attends"
+      },
+      {
+        "id": "op8",
+        "name": "uses"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Startup",
+        "to": "Company",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Company",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Company",
+        "to": "Organization",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Organization",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Manager",
+        "to": "Employee",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Employee",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Engineer",
+        "to": "Employee",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Employee",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Company",
+        "to": "Department",
+        "label": "hasDepartment",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Department",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Manager",
+        "to": "Department",
+        "label": "manages",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Department",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Department",
+        "to": "Office",
+        "label": "locatedAt",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Office",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Department",
+        "to": "Employee",
+        "label": "employs",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Employee",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "Employee",
+        "to": "Project",
+        "label": "worksOn",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Project",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "Employee",
+        "to": "Skill",
+        "label": "hasSkill",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Skill",
+        "confidence": "high"
+      },
+      {
+        "id": "e11",
+        "from": "Employee",
+        "to": "Meeting",
+        "label": "attends",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Meeting",
+        "confidence": "high"
+      },
+      {
+        "id": "e12",
+        "from": "Project",
+        "to": "Technology",
+        "label": "uses",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Technology",
+        "confidence": "high"
+      },
+      {
+        "id": "e13",
+        "from": "Employee",
+        "to": "xsd:string",
+        "label": "employeeID",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e14",
+        "from": "Project",
+        "to": "xsd:string",
+        "label": "projectName",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e15",
+        "from": "Skill",
+        "to": "xsd:date",
+        "label": "startDate",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:date",
+        "confidence": "high"
+      },
+      {
+        "id": "e16",
+        "from": "Employee",
+        "to": "xsd:double",
+        "label": "salary",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:double",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Employee",
+        "property": "employeeID",
+        "datatype": "string"
+      },
+      {
+        "class": "Project",
+        "property": "projectName",
+        "datatype": "string"
+      },
+      {
+        "class": "Skill",
+        "property": "startDate",
+        "datatype": "date"
+      },
+      {
+        "class": "Employee",
+        "property": "salary",
+        "datatype": "double"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "Technology",
+      "to": "Skill",
+      "label": "relates",
+      "edge_type": "objectProperty",
+      "arrowhead_at": "Skill",
+      "visual_evidence": "Dashed line with a hollow arrowhead at the Skill node, positioned to the bottom right of the Technology node."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [
+      {
+        "from": "Technology",
+        "to": "Skill",
+        "label": "relates",
+        "edge_type": "objectProperty",
+        "visual_evidence": "Dashed line connecting Technology to Skill with label 'relates'"
+      }
+    ],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "minor gaps",
+    "notes": "The diagram appears to be well captured except for the missing 'relates' edge between Technology and Skill."
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Startup",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Company",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Organization",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Manager",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Department",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Office",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Employee",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "Engineer",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "Project",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "Skill",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "Meeting",
+        "description": ""
+      },
+      {
+        "id": "c12",
+        "name": "Technology",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasDepartment"
+      },
+      {
+        "id": "op2",
+        "name": "manages"
+      },
+      {
+        "id": "op3",
+        "name": "locatedAt"
+      },
+      {
+        "id": "op4",
+        "name": "employs"
+      },
+      {
+        "id": "op5",
+        "name": "worksOn"
+      },
+      {
+        "id": "op6",
+        "name": "hasSkill"
+      },
+      {
+        "id": "op7",
+        "name": "attends"
+      },
+      {
+        "id": "op8",
+        "name": "uses"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Startup",
+        "to": "Company",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e2",
+        "from": "Company",
+        "to": "Organization",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e3",
+        "from": "Manager",
+        "to": "Employee",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e4",
+        "from": "Engineer",
+        "to": "Employee",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e5",
+        "from": "Company",
+        "to": "Department",
+        "label": "hasDepartment",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Manager",
+        "to": "Department",
+        "label": "manages",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Department",
+        "to": "Office",
+        "label": "locatedAt",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Department",
+        "to": "Employee",
+        "label": "employs",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e9",
+        "from": "Employee",
+        "to": "Project",
+        "label": "worksOn",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e10",
+        "from": "Employee",
+        "to": "Skill",
+        "label": "hasSkill",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e11",
+        "from": "Employee",
+        "to": "Meeting",
+        "label": "attends",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e12",
+        "from": "Project",
+        "to": "Technology",
+        "label": "uses",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e13",
+        "from": "Employee",
+        "to": "xsd:string",
+        "label": "employeeID",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e14",
+        "from": "Project",
+        "to": "xsd:string",
+        "label": "projectName",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e15",
+        "from": "Skill",
+        "to": "xsd:date",
+        "label": "startDate",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e16",
+        "from": "Employee",
+        "to": "xsd:double",
+        "label": "salary",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "me1",
+        "from": "Technology",
+        "to": "Skill",
+        "label": "relates",
+        "edge_type": "objectProperty"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Employee",
+        "property": "employeeID",
+        "datatype": "string"
+      },
+      {
+        "class": "Project",
+        "property": "projectName",
+        "datatype": "string"
+      },
+      {
+        "class": "Skill",
+        "property": "startDate",
+        "datatype": "date"
+      },
+      {
+        "class": "Employee",
+        "property": "salary",
+        "datatype": "double"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "minor gaps",
+    "completeness_notes": "The diagram appears to be well captured except for the missing 'relates' edge between Technology and Skill."
+  }
+}

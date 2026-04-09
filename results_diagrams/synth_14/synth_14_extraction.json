@@ -1,0 +1,631 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Experiment",
+        "to": "Researcher",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "conductedBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Experiment",
+        "to": "Dataset",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "usesDataset",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Experiment",
+        "to": "Protocol",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "followsProtocol",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Experiment",
+        "to": "Instrument",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "usesInstrument",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "Experiment",
+        "to": "Sample",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "analysesSample",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "Experiment",
+        "to": "Result",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "producesResult",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Result",
+        "to": "Publication",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "publishedIn",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "Experiment",
+        "to": "Lab",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "performedAt",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "Experiment",
+        "to": "FundingSource",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "fundedBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "Experiment",
+        "to": "Software",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "usesSoftware",
+        "confidence": "high"
+      },
+      {
+        "id": "a11",
+        "from": "Experiment",
+        "to": "Parameter",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasParameter",
+        "confidence": "high"
+      },
+      {
+        "id": "a12",
+        "from": "Experiment",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "experimentName",
+        "confidence": "medium"
+      },
+      {
+        "id": "a13",
+        "from": "Experiment",
+        "to": "xsd:date",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "experimentDate",
+        "confidence": "medium"
+      }
+    ],
+    "diagram_notes": "The diagram follows a typical ontology structure with a focus on experimental data modeling, using solid lines with solid arrowheads to indicate object properties and dashed lines with chevrons suggesting data properties."
+  },
+  "pass1": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Researcher",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Dataset",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Protocol",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Instrument",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Sample",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Result",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Lab",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "FundingSource",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "Software",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "Parameter",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "Experiment",
+        "description": ""
+      },
+      {
+        "id": "c12",
+        "name": "Publication",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "conductedBy"
+      },
+      {
+        "id": "op2",
+        "name": "usesDataset"
+      },
+      {
+        "id": "op3",
+        "name": "followsProtocol"
+      },
+      {
+        "id": "op4",
+        "name": "usesInstrument"
+      },
+      {
+        "id": "op5",
+        "name": "analysesSample"
+      },
+      {
+        "id": "op6",
+        "name": "producesResult"
+      },
+      {
+        "id": "op7",
+        "name": "performedAt"
+      },
+      {
+        "id": "op8",
+        "name": "fundedBy"
+      },
+      {
+        "id": "op9",
+        "name": "usesSoftware"
+      },
+      {
+        "id": "op10",
+        "name": "hasParameter"
+      },
+      {
+        "id": "op11",
+        "name": "publishedIn"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Experiment",
+        "to": "Researcher",
+        "label": "conductedBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Researcher",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Experiment",
+        "to": "Dataset",
+        "label": "usesDataset",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Dataset",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Experiment",
+        "to": "Protocol",
+        "label": "followsProtocol",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Protocol",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Experiment",
+        "to": "Instrument",
+        "label": "usesInstrument",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Instrument",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Experiment",
+        "to": "Sample",
+        "label": "analysesSample",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Sample",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Experiment",
+        "to": "Result",
+        "label": "producesResult",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Result",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Result",
+        "to": "Publication",
+        "label": "publishedIn",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Publication",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Experiment",
+        "to": "Lab",
+        "label": "performedAt",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Lab",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "Experiment",
+        "to": "FundingSource",
+        "label": "fundedBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "FundingSource",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "Experiment",
+        "to": "Software",
+        "label": "usesSoftware",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Software",
+        "confidence": "high"
+      },
+      {
+        "id": "e11",
+        "from": "Experiment",
+        "to": "Parameter",
+        "label": "hasParameter",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Parameter",
+        "confidence": "high"
+      },
+      {
+        "id": "e12",
+        "from": "Experiment",
+        "to": "xsd:string",
+        "label": "experimentName",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e13",
+        "from": "Experiment",
+        "to": "xsd:date",
+        "label": "experimentDate",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:date",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Experiment",
+        "property": "experimentName",
+        "datatype": "string"
+      },
+      {
+        "class": "Experiment",
+        "property": "experimentDate",
+        "datatype": "date"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Researcher",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Dataset",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Protocol",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Instrument",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Sample",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Result",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Lab",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "FundingSource",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "Software",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "Parameter",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "Experiment",
+        "description": ""
+      },
+      {
+        "id": "c12",
+        "name": "Publication",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "conductedBy"
+      },
+      {
+        "id": "op2",
+        "name": "usesDataset"
+      },
+      {
+        "id": "op3",
+        "name": "followsProtocol"
+      },
+      {
+        "id": "op4",
+        "name": "usesInstrument"
+      },
+      {
+        "id": "op5",
+        "name": "analysesSample"
+      },
+      {
+        "id": "op6",
+        "name": "producesResult"
+      },
+      {
+        "id": "op7",
+        "name": "performedAt"
+      },
+      {
+        "id": "op8",
+        "name": "fundedBy"
+      },
+      {
+        "id": "op9",
+        "name": "usesSoftware"
+      },
+      {
+        "id": "op10",
+        "name": "hasParameter"
+      },
+      {
+        "id": "op11",
+        "name": "publishedIn"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Experiment",
+        "to": "Researcher",
+        "label": "conductedBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e2",
+        "from": "Experiment",
+        "to": "Dataset",
+        "label": "usesDataset",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e3",
+        "from": "Experiment",
+        "to": "Protocol",
+        "label": "followsProtocol",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e4",
+        "from": "Experiment",
+        "to": "Instrument",
+        "label": "usesInstrument",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "Experiment",
+        "to": "Sample",
+        "label": "analysesSample",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Experiment",
+        "to": "Result",
+        "label": "producesResult",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Result",
+        "to": "Publication",
+        "label": "publishedIn",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Experiment",
+        "to": "Lab",
+        "label": "performedAt",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e9",
+        "from": "Experiment",
+        "to": "FundingSource",
+        "label": "fundedBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e10",
+        "from": "Experiment",
+        "to": "Software",
+        "label": "usesSoftware",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e11",
+        "from": "Experiment",
+        "to": "Parameter",
+        "label": "hasParameter",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e12",
+        "from": "Experiment",
+        "to": "xsd:string",
+        "label": "experimentName",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e13",
+        "from": "Experiment",
+        "to": "xsd:date",
+        "label": "experimentDate",
+        "edge_type": "dataProperty"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Experiment",
+        "property": "experimentName",
+        "datatype": "string"
+      },
+      {
+        "class": "Experiment",
+        "property": "experimentDate",
+        "datatype": "date"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "id": "synth_13",
+  "name": "Organization Structure",
+  "complexity": "complex",
+  "diagram_type": "informal",
+  "description": "Tests large class count with deep hierarchy and cross-relationships",
+  "base_uri": "http://example.org/org#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Organization"
+    },
+    {
+      "name": "Company"
+    },
+    {
+      "name": "Startup"
+    },
+    {
+      "name": "Department"
+    },
+    {
+      "name": "Employee"
+    },
+    {
+      "name": "Manager"
+    },
+    {
+      "name": "Engineer"
+    },
+    {
+      "name": "Project"
+    },
+    {
+      "name": "Skill"
+    },
+    {
+      "name": "Technology"
+    },
+    {
+      "name": "Office"
+    },
+    {
+      "name": "Meeting"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "hasDepartment",
+      "domain": "Company",
+      "range": "Department"
+    },
+    {
+      "name": "employs",
+      "domain": "Department",
+      "range": "Employee"
+    },
+    {
+      "name": "manages",
+      "domain": "Manager",
+      "range": "Department"
+    },
+    {
+      "name": "worksOn",
+      "domain": "Employee",
+      "range": "Project"
+    },
+    {
+      "name": "hasSkill",
+      "domain": "Employee",
+      "range": "Skill"
+    },
+    {
+      "name": "uses",
+      "domain": "Project",
+      "range": "Technology"
+    },
+    {
+      "name": "locatedAt",
+      "domain": "Department",
+      "range": "Office"
+    },
+    {
+      "name": "attends",
+      "domain": "Employee",
+      "range": "Meeting"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "employeeID",
+      "domain": "Employee",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "salary",
+      "domain": "Employee",
+      "range": "xsd:double",
+      "datatype": "double"
+    },
+    {
+      "name": "projectName",
+      "domain": "Project",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "startDate",
+      "domain": "Project",
+      "range": "xsd:date",
+      "datatype": "date"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Company",
+      "to": "Organization",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Startup",
+      "to": "Company",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Manager",
+      "to": "Employee",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Engineer",
+      "to": "Employee",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Company",
+      "to": "Department",
+      "label": "hasDepartment",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Department",
+      "to": "Employee",
+      "label": "employs",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Manager",
+      "to": "Department",
+      "label": "manages",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Employee",
+      "to": "Project",
+      "label": "worksOn",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Employee",
+      "to": "Skill",
+      "label": "hasSkill",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Project",
+      "to": "Technology",
+      "label": "uses",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Department",
+      "to": "Office",
+      "label": "locatedAt",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Employee",
+      "to": "Meeting",
+      "label": "attends",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Employee",
+      "to": "xsd:string",
+      "label": "employeeID",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Employee",
+      "to": "xsd:double",
+      "label": "salary",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Project",
+      "to": "xsd:string",
+      "label": "projectName",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Project",
+      "to": "xsd:date",
+      "label": "startDate",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

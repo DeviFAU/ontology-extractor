@@ -1,0 +1,411 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Patient",
+        "to": "Doctor",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "treatedBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Patient",
+        "to": "Diagnosis",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasDiagnosis",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Patient",
+        "to": "Allergy",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasAllergy",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Patient",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "patientID",
+        "confidence": "medium"
+      },
+      {
+        "id": "a5",
+        "from": "Patient",
+        "to": "xsd:date",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "dateOfBirth",
+        "confidence": "medium"
+      },
+      {
+        "id": "a6",
+        "from": "Doctor",
+        "to": "Hospital",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "worksAt",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Diagnosis",
+        "to": "Treatment",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasTreatment",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "Treatment",
+        "to": "Medication",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "prescribes",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram shows a structured ontology with clear use of objectProperties and dataProperties. The dashed lines are used for data properties rather than rdf:type connections."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Patient",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Doctor",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Diagnosis",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Allergy",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Hospital",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Treatment",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Medication",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "treatedBy"
+      },
+      {
+        "id": "op2",
+        "name": "hasDiagnosis"
+      },
+      {
+        "id": "op3",
+        "name": "hasAllergy"
+      },
+      {
+        "id": "op4",
+        "name": "worksAt"
+      },
+      {
+        "id": "op5",
+        "name": "hasTreatment"
+      },
+      {
+        "id": "op6",
+        "name": "prescribes"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Patient",
+        "to": "Doctor",
+        "label": "treatedBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Doctor",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Patient",
+        "to": "Diagnosis",
+        "label": "hasDiagnosis",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Diagnosis",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Patient",
+        "to": "Allergy",
+        "label": "hasAllergy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Allergy",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Doctor",
+        "to": "Hospital",
+        "label": "worksAt",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Hospital",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Diagnosis",
+        "to": "Treatment",
+        "label": "hasTreatment",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Treatment",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Treatment",
+        "to": "Medication",
+        "label": "prescribes",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Medication",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "Patient",
+        "to": "xsd:string",
+        "label": "patientID",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "Patient",
+        "to": "xsd:date",
+        "label": "dateOfBirth",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:date",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Patient",
+        "property": "patientID",
+        "datatype": "xsd:string"
+      },
+      {
+        "class": "Patient",
+        "property": "dateOfBirth",
+        "datatype": "xsd:date"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": "All elements from the diagram are captured in the extraction."
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Patient",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Doctor",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Diagnosis",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Allergy",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Hospital",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Treatment",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Medication",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "treatedBy"
+      },
+      {
+        "id": "op2",
+        "name": "hasDiagnosis"
+      },
+      {
+        "id": "op3",
+        "name": "hasAllergy"
+      },
+      {
+        "id": "op4",
+        "name": "worksAt"
+      },
+      {
+        "id": "op5",
+        "name": "hasTreatment"
+      },
+      {
+        "id": "op6",
+        "name": "prescribes"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Patient",
+        "to": "Doctor",
+        "label": "treatedBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e2",
+        "from": "Patient",
+        "to": "Diagnosis",
+        "label": "hasDiagnosis",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e3",
+        "from": "Patient",
+        "to": "Allergy",
+        "label": "hasAllergy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e4",
+        "from": "Doctor",
+        "to": "Hospital",
+        "label": "worksAt",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "Diagnosis",
+        "to": "Treatment",
+        "label": "hasTreatment",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Treatment",
+        "to": "Medication",
+        "label": "prescribes",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "Patient",
+        "to": "xsd:string",
+        "label": "patientID",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e8",
+        "from": "Patient",
+        "to": "xsd:date",
+        "label": "dateOfBirth",
+        "edge_type": "dataProperty"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Patient",
+        "property": "patientID",
+        "datatype": "xsd:string"
+      },
+      {
+        "class": "Patient",
+        "property": "dateOfBirth",
+        "datatype": "xsd:date"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": "All elements from the diagram are captured in the extraction."
+  }
+}

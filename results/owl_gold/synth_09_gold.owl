@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/library#hasGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasGenre</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/library#Work"/>
+    <rdfs:range rdf:resource="http://example.org/library#Genre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Genre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Genre</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Article">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Article</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#writtenBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">writtenBy</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/library#Work"/>
+    <rdfs:range rdf:resource="http://example.org/library#Author"/>
+    <owl:inverseOf rdf:resource="http://example.org/library#authored"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#yearPublished">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">yearPublished</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/library#Work"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#heldBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">heldBy</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/library#Work"/>
+    <rdfs:range rdf:resource="http://example.org/library#Library"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#authored">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">authored</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/library#Author"/>
+    <rdfs:range rdf:resource="http://example.org/library#Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#isbn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">isbn</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Book">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Book</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Author</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Work">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Work</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Library">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Library</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">title</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/library#Work"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,256 @@
+{
+  "id": "synth_11",
+  "name": "Building IoT",
+  "complexity": "complex",
+  "diagram_type": "mixed",
+  "description": "Tests two-layer extraction: schema classes + named instances",
+  "base_uri": "http://example.org/building#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Building"
+    },
+    {
+      "name": "Floor"
+    },
+    {
+      "name": "Room"
+    },
+    {
+      "name": "Sensor"
+    },
+    {
+      "name": "TemperatureSensor"
+    },
+    {
+      "name": "HumiditySensor"
+    },
+    {
+      "name": "Actuator"
+    },
+    {
+      "name": "HVACUnit"
+    },
+    {
+      "name": "LightController"
+    },
+    {
+      "name": "Zone"
+    },
+    {
+      "name": "OccupancyZone"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "hasFloor",
+      "domain": "Building",
+      "range": "Floor"
+    },
+    {
+      "name": "hasRoom",
+      "domain": "Floor",
+      "range": "Room"
+    },
+    {
+      "name": "containsSensor",
+      "domain": "Room",
+      "range": "Sensor"
+    },
+    {
+      "name": "controlledBy",
+      "domain": "Room",
+      "range": "Actuator"
+    },
+    {
+      "name": "feedsDataTo",
+      "domain": "Sensor",
+      "range": "Actuator"
+    },
+    {
+      "name": "inZone",
+      "domain": "Room",
+      "range": "Zone"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "roomNumber",
+      "domain": "Room",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "sensorValue",
+      "domain": "Sensor",
+      "range": "xsd:double",
+      "datatype": "double"
+    }
+  ],
+  "instances": [
+    {
+      "name": "buildingA",
+      "type_class": "Building"
+    },
+    {
+      "name": "floor1",
+      "type_class": "Floor"
+    },
+    {
+      "name": "room101",
+      "type_class": "Room"
+    },
+    {
+      "name": "tempSensor1",
+      "type_class": "TemperatureSensor"
+    },
+    {
+      "name": "hvac1",
+      "type_class": "HVACUnit"
+    }
+  ],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "TemperatureSensor",
+      "to": "Sensor",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "HumiditySensor",
+      "to": "Sensor",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "HVACUnit",
+      "to": "Actuator",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "LightController",
+      "to": "Actuator",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "OccupancyZone",
+      "to": "Zone",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Building",
+      "to": "Floor",
+      "label": "hasFloor",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Floor",
+      "to": "Room",
+      "label": "hasRoom",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Room",
+      "to": "Sensor",
+      "label": "containsSensor",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Room",
+      "to": "Actuator",
+      "label": "controlledBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Sensor",
+      "to": "Actuator",
+      "label": "feedsDataTo",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Room",
+      "to": "Zone",
+      "label": "inZone",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Room",
+      "to": "xsd:string",
+      "label": "roomNumber",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Sensor",
+      "to": "xsd:double",
+      "label": "sensorValue",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "buildingA",
+      "to": "Building",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "floor1",
+      "to": "Floor",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "room101",
+      "to": "Room",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "tempSensor1",
+      "to": "TemperatureSensor",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "hvac1",
+      "to": "HVACUnit",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "buildingA",
+      "to": "floor1",
+      "label": "hasFloor",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "floor1",
+      "to": "room101",
+      "label": "hasRoom",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "room101",
+      "to": "tempSensor1",
+      "label": "containsSensor",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "room101",
+      "to": "hvac1",
+      "label": "controlledBy",
+      "edge_type": "objectProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": [
+    {
+      "individual": "room101",
+      "property": "roomNumber",
+      "value": "101",
+      "datatype": "string"
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Person",
+        "to": "Address",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "livesAt",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Person",
+        "to": "xsd:integer",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasAge",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Person",
+        "to": "xsd:string",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasName",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Person",
+        "to": "xsd:string",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "hasEmail",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram follows an ontology structure with 'Person' as the central node linking to data and object properties. There are no inheritance relationships or dashed lines indicating instance relationships."
+  },
+  "pass1": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Person",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Address",
+        "description": ""
+      }
+    ],
+    "object_properties": [],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Person",
+        "to": "Address",
+        "label": "livesAt",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Address",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Person",
+        "to": "xsd:integer",
+        "label": "hasAge",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:integer",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Person",
+        "to": "xsd:string",
+        "label": "hasName",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Person",
+        "to": "xsd:string",
+        "label": "hasEmail",
+        "edge_type": "dataProperty",
+        "arrowhead_at": "xsd:string",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [
+      {
+        "name": "John",
+        "was": "instance",
+        "now": "attribute_value",
+        "property": "hasName",
+        "domain_class": "Person",
+        "datatype": "string",
+        "reason": "green rectangle, only connected via hasName data property"
+      },
+      {
+        "name": "30",
+        "was": "instance",
+        "now": "attribute_value",
+        "property": "hasAge",
+        "domain_class": "Person",
+        "datatype": "integer",
+        "reason": "green rectangle, only connected via hasAge data property"
+      }
+    ],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [
+      {
+        "individual": "Person",
+        "property": "hasName",
+        "value": "John",
+        "datatype": "string"
+      },
+      {
+        "individual": "Person",
+        "property": "hasAge",
+        "value": "30",
+        "datatype": "integer"
+      }
+    ],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "informal ontology",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Person",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Address",
+        "description": ""
+      }
+    ],
+    "object_properties": [],
+    "instances": [],
+    "attribute_values": [
+      {
+        "value": "John",
+        "property": "hasName",
+        "domain_class": "Person",
+        "datatype": "string"
+      },
+      {
+        "value": "30",
+        "property": "hasAge",
+        "domain_class": "Person",
+        "datatype": "integer"
+      }
+    ],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Person",
+        "to": "Address",
+        "label": "livesAt",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e2",
+        "from": "Person",
+        "to": "xsd:integer",
+        "label": "hasAge",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e3",
+        "from": "Person",
+        "to": "xsd:string",
+        "label": "hasName",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "e4",
+        "from": "Person",
+        "to": "xsd:string",
+        "label": "hasEmail",
+        "edge_type": "dataProperty"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [
+      {
+        "individual": "Person",
+        "property": "hasName",
+        "value": "John",
+        "datatype": "string"
+      },
+      {
+        "individual": "Person",
+        "property": "hasAge",
+        "value": "30",
+        "datatype": "integer"
+      }
+    ],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

@@ -1,0 +1,20 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/animals> a owl:Ontology .
+
+<http://example.org/animals#Bird> a owl:Class ;
+    rdfs:label "Bird"@en ;
+    rdfs:subClassOf <http://example.org/animals#Animal> .
+
+<http://example.org/animals#Cat> a owl:Class ;
+    rdfs:label "Cat"@en ;
+    rdfs:subClassOf <http://example.org/animals#Animal> .
+
+<http://example.org/animals#Dog> a owl:Class ;
+    rdfs:label "Dog"@en ;
+    rdfs:subClassOf <http://example.org/animals#Animal> .
+
+<http://example.org/animals#Animal> a owl:Class ;
+    rdfs:label "Animal"@en .
+

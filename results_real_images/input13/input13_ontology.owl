@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/ontology#is_part_of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is part of</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Examination"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Medical_Profile"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Disease"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Hospital_Admission"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Current_Medication"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Medical_Profile"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Disease"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Patient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#examination_date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">examination date</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Examination"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Current_Medication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Current Medication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Medication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_result">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has result</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Examination"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Hospital_Admission">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Hospital Admission</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Disease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Disease</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Medication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Medication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#admitted_at">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">admitted at</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Hospital_Admission"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_ID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has ID</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Examination">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Examination</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_symptoms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has symptoms</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Hospital_Admission"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#is_treated_by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is treated by</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Medical_Profile"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Current_Medication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Patient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Patient</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has a</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Patient"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Medical_Profile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has name</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Examination"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Disease"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Medical_Profile">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Medical Profile</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_reasons">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has reasons</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Hospital_Admission"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>

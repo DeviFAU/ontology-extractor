@@ -1,0 +1,72 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#belongsTo> a owl:ObjectProperty ;
+    rdfs:label "belongsTo"@en ;
+    rdfs:domain <http://example.org/ontology#Product> ;
+    rdfs:range <http://example.org/ontology#Category> .
+
+<http://example.org/ontology#contains> a owl:ObjectProperty ;
+    rdfs:label "contains"@en ;
+    rdfs:domain <http://example.org/ontology#Order> ;
+    rdfs:range <http://example.org/ontology#Product> .
+
+<http://example.org/ontology#hasAddress> a owl:ObjectProperty ;
+    rdfs:label "hasAddress"@en ;
+    rdfs:domain <http://example.org/ontology#Customer> ;
+    rdfs:range <http://example.org/ontology#ShippingAddress> .
+
+<http://example.org/ontology#orderDate> a owl:DatatypeProperty ;
+    rdfs:label "orderDate"@en ;
+    rdfs:domain <http://example.org/ontology#Order> ;
+    rdfs:range xsd:date .
+
+<http://example.org/ontology#paidBy> a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "paidBy"@en ;
+    rdfs:domain <http://example.org/ontology#Order>,
+        <http://example.org/ontology#Payment> ;
+    rdfs:range <http://example.org/ontology#Payment>,
+        xsd:date .
+
+<http://example.org/ontology#places> a owl:ObjectProperty ;
+    rdfs:label "places"@en ;
+    rdfs:domain <http://example.org/ontology#Customer> ;
+    rdfs:range <http://example.org/ontology#Order> .
+
+<http://example.org/ontology#productName> a owl:DatatypeProperty ;
+    rdfs:label "productName"@en ;
+    rdfs:domain <http://example.org/ontology#Product> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#shippedTo> a owl:ObjectProperty ;
+    rdfs:label "shippedTo"@en ;
+    rdfs:domain <http://example.org/ontology#Order> ;
+    rdfs:range <http://example.org/ontology#ShippingAddress> .
+
+<http://example.org/ontology#totalPrice> a owl:DatatypeProperty ;
+    rdfs:label "totalPrice"@en ;
+    rdfs:domain <http://example.org/ontology#Order> ;
+    rdfs:range xsd:double .
+
+<http://example.org/ontology#Category> a owl:Class ;
+    rdfs:label "Category"@en .
+
+<http://example.org/ontology#Customer> a owl:Class ;
+    rdfs:label "Customer"@en .
+
+<http://example.org/ontology#Payment> a owl:Class ;
+    rdfs:label "Payment"@en .
+
+<http://example.org/ontology#ShippingAddress> a owl:Class ;
+    rdfs:label "ShippingAddress"@en .
+
+<http://example.org/ontology#Product> a owl:Class ;
+    rdfs:label "Product"@en .
+
+<http://example.org/ontology#Order> a owl:Class ;
+    rdfs:label "Order"@en .
+

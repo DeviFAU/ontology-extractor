@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/ontology#Child">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Child</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasChild">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasChild</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Parent"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Child"/>
+    <owl:inverseOf rdf:resource="http://example.org/ontology#hasParent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasParent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasParent</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Child"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Parent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Parent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Parent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>

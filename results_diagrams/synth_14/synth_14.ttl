@@ -1,0 +1,107 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#analysesSample> a owl:ObjectProperty ;
+    rdfs:label "analysesSample"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Sample> .
+
+<http://example.org/ontology#conductedBy> a owl:ObjectProperty ;
+    rdfs:label "conductedBy"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Researcher> .
+
+<http://example.org/ontology#experimentDate> a owl:DatatypeProperty ;
+    rdfs:label "experimentDate"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range xsd:date .
+
+<http://example.org/ontology#experimentName> a owl:DatatypeProperty ;
+    rdfs:label "experimentName"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#followsProtocol> a owl:ObjectProperty ;
+    rdfs:label "followsProtocol"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Protocol> .
+
+<http://example.org/ontology#fundedBy> a owl:ObjectProperty ;
+    rdfs:label "fundedBy"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#FundingSource> .
+
+<http://example.org/ontology#hasParameter> a owl:ObjectProperty ;
+    rdfs:label "hasParameter"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Parameter> .
+
+<http://example.org/ontology#performedAt> a owl:ObjectProperty ;
+    rdfs:label "performedAt"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Lab> .
+
+<http://example.org/ontology#producesResult> a owl:ObjectProperty ;
+    rdfs:label "producesResult"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Result> .
+
+<http://example.org/ontology#publishedIn> a owl:ObjectProperty ;
+    rdfs:label "publishedIn"@en ;
+    rdfs:domain <http://example.org/ontology#Result> ;
+    rdfs:range <http://example.org/ontology#Publication> .
+
+<http://example.org/ontology#usesDataset> a owl:ObjectProperty ;
+    rdfs:label "usesDataset"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Dataset> .
+
+<http://example.org/ontology#usesInstrument> a owl:ObjectProperty ;
+    rdfs:label "usesInstrument"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Instrument> .
+
+<http://example.org/ontology#usesSoftware> a owl:ObjectProperty ;
+    rdfs:label "usesSoftware"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Software> .
+
+<http://example.org/ontology#Dataset> a owl:Class ;
+    rdfs:label "Dataset"@en .
+
+<http://example.org/ontology#FundingSource> a owl:Class ;
+    rdfs:label "FundingSource"@en .
+
+<http://example.org/ontology#Instrument> a owl:Class ;
+    rdfs:label "Instrument"@en .
+
+<http://example.org/ontology#Lab> a owl:Class ;
+    rdfs:label "Lab"@en .
+
+<http://example.org/ontology#Parameter> a owl:Class ;
+    rdfs:label "Parameter"@en .
+
+<http://example.org/ontology#Protocol> a owl:Class ;
+    rdfs:label "Protocol"@en .
+
+<http://example.org/ontology#Publication> a owl:Class ;
+    rdfs:label "Publication"@en .
+
+<http://example.org/ontology#Researcher> a owl:Class ;
+    rdfs:label "Researcher"@en .
+
+<http://example.org/ontology#Sample> a owl:Class ;
+    rdfs:label "Sample"@en .
+
+<http://example.org/ontology#Software> a owl:Class ;
+    rdfs:label "Software"@en .
+
+<http://example.org/ontology#Result> a owl:Class ;
+    rdfs:label "Result"@en .
+
+<http://example.org/ontology#Experiment> a owl:Class ;
+    rdfs:label "Experiment"@en .
+

@@ -1,0 +1,823 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Band",
+        "to": "Artist",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "SoloArtist",
+        "to": "Artist",
+        "line_style": "solid",
+        "arrowhead_style": "hollow-triangle",
+        "conclusion": "subClassOf",
+        "label": "rdfs:subClassOf",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "Artist",
+        "to": "Instrument",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "plays",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "comeTogether",
+        "to": "Song",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "comeTogether",
+        "to": "beatles",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "performedBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "comeTogether",
+        "to": "abbeyRoad",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "onAlbum",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "abbeyRoad",
+        "to": "Album",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "abbeyRoad",
+        "to": "rock",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasGenre",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "abbeyRoad",
+        "to": "emiRecords",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "releasedBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a10",
+        "from": "emiRecords",
+        "to": "RecordLabel",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "instanceOf",
+        "label": "rdf:type",
+        "confidence": "high"
+      },
+      {
+        "id": "a11",
+        "from": "Song",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "songTitle",
+        "confidence": "high"
+      },
+      {
+        "id": "a12",
+        "from": "Song",
+        "to": "xsd:double",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "duration",
+        "confidence": "high"
+      },
+      {
+        "id": "a13",
+        "from": "Album",
+        "to": "xsd:string",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "albumTitle",
+        "confidence": "high"
+      },
+      {
+        "id": "a14",
+        "from": "Album",
+        "to": "xsd:integer",
+        "line_style": "dashed",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "dataProperty",
+        "label": "releaseYear",
+        "confidence": "high"
+      },
+      {
+        "id": "a15",
+        "from": "Album",
+        "to": "Studio",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "recordedAt",
+        "confidence": "high"
+      },
+      {
+        "id": "a16",
+        "from": "Album",
+        "to": "Producer",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "producedBy",
+        "confidence": "high"
+      },
+      {
+        "id": "a17",
+        "from": "Album",
+        "to": "Award",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "wonAward",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram is a music ontology with various classes and properties related to songs, albums, artists, and their attributes. Dotted lines seem to be used primarily for rdf:type properties, whereas solid lines with hollow triangles indicate subclass relationships."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Band",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "SoloArtist",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Artist",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Instrument",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Song",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Album",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Award",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "Studio",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "Producer",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "Genre",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "RecordLabel",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "performedBy"
+      },
+      {
+        "id": "op2",
+        "name": "onAlbum"
+      },
+      {
+        "id": "op3",
+        "name": "releasedBy"
+      },
+      {
+        "id": "op4",
+        "name": "hasGenre"
+      },
+      {
+        "id": "op5",
+        "name": "wonAward"
+      },
+      {
+        "id": "op6",
+        "name": "recordedAt"
+      },
+      {
+        "id": "op7",
+        "name": "producedBy"
+      },
+      {
+        "id": "op8",
+        "name": "plays"
+      }
+    ],
+    "instances": [
+      {
+        "id": "i1",
+        "name": "comeTogther",
+        "type_class": "Song"
+      },
+      {
+        "id": "i2",
+        "name": "abbeyRoad",
+        "type_class": "Album"
+      },
+      {
+        "id": "i3",
+        "name": "beatles",
+        "type_class": "Band"
+      },
+      {
+        "id": "i4",
+        "name": "rock",
+        "type_class": "Genre"
+      },
+      {
+        "id": "i5",
+        "name": "emiRecords",
+        "type_class": "RecordLabel"
+      }
+    ],
+    "attribute_values": [
+      {
+        "id": "av1",
+        "value": "xsd:double",
+        "property": "duration",
+        "domain_class": "Song",
+        "datatype": "double"
+      },
+      {
+        "id": "av2",
+        "value": "xsd:string",
+        "property": "songTitle",
+        "domain_class": "Song",
+        "datatype": "string"
+      },
+      {
+        "id": "av3",
+        "value": "xsd:string",
+        "property": "albumTitle",
+        "domain_class": "Album",
+        "datatype": "string"
+      },
+      {
+        "id": "av4",
+        "value": "xsd:integer",
+        "property": "releaseYear",
+        "domain_class": "Album",
+        "datatype": "integer"
+      }
+    ],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Band",
+        "to": "Artist",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Artist",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "SoloArtist",
+        "to": "Artist",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf",
+        "arrowhead_at": "Artist",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "comeTogther",
+        "to": "Song",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "Song",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "comeTogther",
+        "to": "beatles",
+        "label": "performedBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "beatles",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "abbeyRoad",
+        "to": "Album",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "Album",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "comeTogther",
+        "to": "abbeyRoad",
+        "label": "onAlbum",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "abbeyRoad",
+        "confidence": "high"
+      },
+      {
+        "id": "e7",
+        "from": "abbeyRoad",
+        "to": "rock",
+        "label": "hasGenre",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "rock",
+        "confidence": "high"
+      },
+      {
+        "id": "e8",
+        "from": "abbeyRoad",
+        "to": "emiRecords",
+        "label": "releasedBy",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "emiRecords",
+        "confidence": "high"
+      },
+      {
+        "id": "e9",
+        "from": "beatles",
+        "to": "Band",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "Band",
+        "confidence": "high"
+      },
+      {
+        "id": "e10",
+        "from": "rock",
+        "to": "Genre",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "Genre",
+        "confidence": "high"
+      },
+      {
+        "id": "e11",
+        "from": "emiRecords",
+        "to": "RecordLabel",
+        "label": "rdf:type",
+        "edge_type": "instanceOf",
+        "arrowhead_at": "RecordLabel",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Song",
+        "property": "duration",
+        "datatype": "double"
+      },
+      {
+        "class": "Song",
+        "property": "songTitle",
+        "datatype": "string"
+      },
+      {
+        "class": "Album",
+        "property": "albumTitle",
+        "datatype": "string"
+      },
+      {
+        "class": "Album",
+        "property": "releaseYear",
+        "datatype": "integer"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "Song",
+      "to": "xsd:string",
+      "label": "songTitle",
+      "edge_type": "datatypeProperty",
+      "arrowhead_at": "xsd:string",
+      "visual_evidence": "Black line located above 'Song' with an arrowhead at 'xsd:string'."
+    },
+    {
+      "id": "me2",
+      "from": "Song",
+      "to": "xsd:double",
+      "label": "duration",
+      "edge_type": "datatypeProperty",
+      "arrowhead_at": "xsd:double",
+      "visual_evidence": "Black dashed line extends from 'Song' with a solid black arrowhead at 'xsd:double'."
+    },
+    {
+      "id": "me3",
+      "from": "Album",
+      "to": "xsd:string",
+      "label": "albumTitle",
+      "edge_type": "datatypeProperty",
+      "arrowhead_at": "xsd:string",
+      "visual_evidence": "Black line from 'Album' directed to the 'xsd:string' with an arrowhead at 'xsd:string'."
+    },
+    {
+      "id": "me4",
+      "from": "Album",
+      "to": "xsd:integer",
+      "label": "wonAward",
+      "edge_type": "datatypeProperty",
+      "arrowhead_at": "xsd:integer",
+      "visual_evidence": "Black dashed line from 'Album' to 'xsd:integer' with an arrowhead touching 'xsd:integer'."
+    },
+    {
+      "id": "me5",
+      "from": "Album",
+      "to": "xsd:integer",
+      "label": "releaseYear",
+      "edge_type": "datatypeProperty",
+      "arrowhead_at": "xsd:integer",
+      "visual_evidence": "Black dashed line extending from 'Album' to 'xsd:integer', with the arrowhead at 'xsd:integer'."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [
+      {
+        "name": "comeTogther",
+        "type_class": "Song",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "abbeyRoad",
+        "type_class": "Album",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "beatles",
+        "type_class": "Band",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "rock",
+        "type_class": "Genre",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      },
+      {
+        "name": "emiRecords",
+        "type_class": "RecordLabel",
+        "visual_cue": "oval with rdf:type arrow or connected via properties"
+      }
+    ],
+    "reclassified_nodes": [],
+    "no_instances_present": false
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [
+      {
+        "individual": "comeTogther",
+        "property": "duration",
+        "value": "xsd:double",
+        "datatype": "double"
+      },
+      {
+        "individual": "comeTogther",
+        "property": "songTitle",
+        "value": "xsd:string",
+        "datatype": "string"
+      },
+      {
+        "individual": "abbeyRoad",
+        "property": "albumTitle",
+        "value": "xsd:string",
+        "datatype": "string"
+      },
+      {
+        "individual": "abbeyRoad",
+        "property": "releaseYear",
+        "value": "xsd:integer",
+        "datatype": "integer"
+      }
+    ],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Band",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "SoloArtist",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Artist",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "Instrument",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "Song",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "Album",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "Award",
+        "description": ""
+      },
+      {
+        "id": "c8",
+        "name": "Studio",
+        "description": ""
+      },
+      {
+        "id": "c9",
+        "name": "Producer",
+        "description": ""
+      },
+      {
+        "id": "c10",
+        "name": "Genre",
+        "description": ""
+      },
+      {
+        "id": "c11",
+        "name": "RecordLabel",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "performedBy"
+      },
+      {
+        "id": "op2",
+        "name": "onAlbum"
+      },
+      {
+        "id": "op3",
+        "name": "releasedBy"
+      },
+      {
+        "id": "op4",
+        "name": "hasGenre"
+      },
+      {
+        "id": "op5",
+        "name": "wonAward"
+      },
+      {
+        "id": "op6",
+        "name": "recordedAt"
+      },
+      {
+        "id": "op7",
+        "name": "producedBy"
+      },
+      {
+        "id": "op8",
+        "name": "plays"
+      }
+    ],
+    "instances": [
+      {
+        "name": "comeTogther",
+        "type_class": "Song"
+      },
+      {
+        "name": "abbeyRoad",
+        "type_class": "Album"
+      },
+      {
+        "name": "beatles",
+        "type_class": "Band"
+      },
+      {
+        "name": "rock",
+        "type_class": "Genre"
+      },
+      {
+        "name": "emiRecords",
+        "type_class": "RecordLabel"
+      }
+    ],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Band",
+        "to": "Artist",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e2",
+        "from": "SoloArtist",
+        "to": "Artist",
+        "label": "rdfs:subClassOf",
+        "edge_type": "subClassOf"
+      },
+      {
+        "id": "e3",
+        "from": "comeTogther",
+        "to": "Song",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e4",
+        "from": "comeTogther",
+        "to": "beatles",
+        "label": "performedBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "abbeyRoad",
+        "to": "Album",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e6",
+        "from": "comeTogther",
+        "to": "abbeyRoad",
+        "label": "onAlbum",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e7",
+        "from": "abbeyRoad",
+        "to": "rock",
+        "label": "hasGenre",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e8",
+        "from": "abbeyRoad",
+        "to": "emiRecords",
+        "label": "releasedBy",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e9",
+        "from": "beatles",
+        "to": "Band",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e10",
+        "from": "rock",
+        "to": "Genre",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      },
+      {
+        "id": "e11",
+        "from": "emiRecords",
+        "to": "RecordLabel",
+        "label": "rdf:type",
+        "edge_type": "instanceOf"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Song",
+        "property": "duration",
+        "datatype": "double"
+      },
+      {
+        "class": "Song",
+        "property": "songTitle",
+        "datatype": "string"
+      },
+      {
+        "class": "Album",
+        "property": "albumTitle",
+        "datatype": "string"
+      },
+      {
+        "class": "Album",
+        "property": "releaseYear",
+        "datatype": "integer"
+      }
+    ],
+    "data_assertions": [
+      {
+        "individual": "comeTogther",
+        "property": "duration",
+        "value": "xsd:double",
+        "datatype": "double"
+      },
+      {
+        "individual": "comeTogther",
+        "property": "songTitle",
+        "value": "xsd:string",
+        "datatype": "string"
+      },
+      {
+        "individual": "abbeyRoad",
+        "property": "albumTitle",
+        "value": "xsd:string",
+        "datatype": "string"
+      },
+      {
+        "individual": "abbeyRoad",
+        "property": "releaseYear",
+        "value": "xsd:integer",
+        "datatype": "integer"
+      }
+    ],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

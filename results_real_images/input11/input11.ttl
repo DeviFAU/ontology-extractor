@@ -1,0 +1,56 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#hasAuthor> a owl:DatatypeProperty ;
+    rdfs:label "hasAuthor"@en ;
+    rdfs:comment "Example value: Leo Tolstoy"@en ;
+    rdfs:domain <http://example.org/ontology#BOOK> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasBuyer> a owl:ObjectProperty ;
+    rdfs:label "hasBuyer"@en .
+
+<http://example.org/ontology#hasCustomer> a owl:ObjectProperty ;
+    rdfs:label "hasCustomer"@en .
+
+<http://example.org/ontology#hasName> a owl:DatatypeProperty ;
+    rdfs:label "hasName"@en ;
+    rdfs:comment "Example value: Rachel"@en,
+        "Example value: Waterstones"@en ;
+    rdfs:domain <http://example.org/ontology#PERSON>,
+        <http://example.org/ontology#SHOP> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasStock> a owl:ObjectProperty ;
+    rdfs:label "hasStock"@en .
+
+<http://example.org/ontology#hasTitle> a owl:DatatypeProperty ;
+    rdfs:label "hasTitle"@en ;
+    rdfs:comment "Example value: War and Peace"@en ;
+    rdfs:domain <http://example.org/ontology#BOOK> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasType> a owl:DatatypeProperty ;
+    rdfs:label "hasType"@en ;
+    rdfs:comment "Example value: books"@en ;
+    rdfs:domain <http://example.org/ontology#SHOP> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#PERSON> a <http://example.org/ontology#PERSON>,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "PERSON"@en .
+
+<http://example.org/ontology#BOOK> a <http://example.org/ontology#BOOK>,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "BOOK"@en .
+
+<http://example.org/ontology#SHOP> a <http://example.org/ontology#SHOP>,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "SHOP"@en .
+

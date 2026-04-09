@@ -1,0 +1,141 @@
+{
+  "id": "synth_07",
+  "name": "E-Commerce Ontology",
+  "complexity": "medium",
+  "diagram_type": "informal",
+  "description": "Tests extraction from business domain with many objectProperties",
+  "base_uri": "http://example.org/ecommerce#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Customer"
+    },
+    {
+      "name": "Order"
+    },
+    {
+      "name": "Product"
+    },
+    {
+      "name": "Category"
+    },
+    {
+      "name": "Payment"
+    },
+    {
+      "name": "ShippingAddress"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "places",
+      "domain": "Customer",
+      "range": "Order"
+    },
+    {
+      "name": "contains",
+      "domain": "Order",
+      "range": "Product"
+    },
+    {
+      "name": "belongsTo",
+      "domain": "Product",
+      "range": "Category"
+    },
+    {
+      "name": "paidBy",
+      "domain": "Order",
+      "range": "Payment"
+    },
+    {
+      "name": "shippedTo",
+      "domain": "Order",
+      "range": "ShippingAddress"
+    },
+    {
+      "name": "hasAddress",
+      "domain": "Customer",
+      "range": "ShippingAddress"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "orderDate",
+      "domain": "Order",
+      "range": "xsd:date",
+      "datatype": "date"
+    },
+    {
+      "name": "totalPrice",
+      "domain": "Order",
+      "range": "xsd:double",
+      "datatype": "double"
+    },
+    {
+      "name": "productName",
+      "domain": "Product",
+      "range": "xsd:string",
+      "datatype": "string"
+    }
+  ],
+  "instances": [],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Customer",
+      "to": "Order",
+      "label": "places",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Order",
+      "to": "Product",
+      "label": "contains",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Product",
+      "to": "Category",
+      "label": "belongsTo",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Order",
+      "to": "Payment",
+      "label": "paidBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Order",
+      "to": "ShippingAddress",
+      "label": "shippedTo",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Customer",
+      "to": "ShippingAddress",
+      "label": "hasAddress",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Order",
+      "to": "xsd:date",
+      "label": "orderDate",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Order",
+      "to": "xsd:double",
+      "label": "totalPrice",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Product",
+      "to": "xsd:string",
+      "label": "productName",
+      "edge_type": "dataProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

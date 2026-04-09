@@ -1,0 +1,101 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#hasMaterial> a owl:ObjectProperty ;
+    rdfs:label "hasMaterial"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment>,
+        <http://example.org/ontology#Material> ;
+    rdfs:range <http://example.org/ontology#Experiment>,
+        <http://example.org/ontology#Measurement>,
+        <http://example.org/ontology#Sample> .
+
+<http://example.org/ontology#hasSetting> a owl:ObjectProperty ;
+    rdfs:label "hasSetting"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Material> .
+
+<http://example.org/ontology#name> a owl:DatatypeProperty ;
+    rdfs:label "name"@en ;
+    rdfs:domain <http://example.org/ontology#File>,
+        <http://example.org/ontology#Standard_Operating_Procedure> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#p_plan_hasData> a owl:ObjectProperty ;
+    rdfs:label "hasData"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#File> .
+
+<http://example.org/ontology#p_plan_isSubPlanOfPlan> a owl:ObjectProperty ;
+    rdfs:label "isSubPlanOfPlan"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment>,
+        <http://example.org/ontology#Standard_Operating_Procedure> ;
+    rdfs:range <http://example.org/ontology#Plan>,
+        <http://example.org/ontology#Study> .
+
+<http://example.org/ontology#p_plan_isVariableOfPlan> a owl:ObjectProperty ;
+    rdfs:label "isVariableOfPlan"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Material> .
+
+<http://example.org/ontology#uses> a owl:ObjectProperty ;
+    rdfs:label "uses"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Entity> .
+
+prov:generatedAtTime a owl:DatatypeProperty ;
+    rdfs:label "generatedAtTime"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range xsd:dateTime .
+
+prov:modifiedAtTime a owl:DatatypeProperty ;
+    rdfs:label "modifiedAtTime"@en ;
+    rdfs:domain <http://example.org/ontology#Experiment> ;
+    rdfs:range xsd:dateTime .
+
+prov:wasAttributedTo a owl:ObjectProperty ;
+    rdfs:label "wasAttributedTo"@en ;
+    rdfs:domain <http://example.org/ontology#Author>,
+        <http://example.org/ontology#Experiment> ;
+    rdfs:range <http://example.org/ontology#Person>,
+        <http://example.org/ontology#Publication> .
+
+<http://example.org/ontology#Author> a owl:Class ;
+    rdfs:label "Author"@en .
+
+<http://example.org/ontology#Entity> a owl:Class ;
+    rdfs:label "Entity"@en .
+
+<http://example.org/ontology#Measurement> a owl:Class ;
+    rdfs:label "Measurement"@en .
+
+<http://example.org/ontology#Person> a owl:Class ;
+    rdfs:label "Person"@en .
+
+<http://example.org/ontology#Plan> a owl:Class ;
+    rdfs:label "Plan"@en .
+
+<http://example.org/ontology#Publication> a owl:Class ;
+    rdfs:label "Publication"@en .
+
+<http://example.org/ontology#Sample> a owl:Class ;
+    rdfs:label "Sample"@en .
+
+<http://example.org/ontology#Study> a owl:Class ;
+    rdfs:label "Study"@en .
+
+<http://example.org/ontology#File> a owl:Class ;
+    rdfs:label "File"@en .
+
+<http://example.org/ontology#Standard_Operating_Procedure> a owl:Class ;
+    rdfs:label "Standard Operating Procedure"@en .
+
+<http://example.org/ontology#Material> a owl:Class ;
+    rdfs:label "Material"@en .
+
+<http://example.org/ontology#Experiment> a owl:Class ;
+    rdfs:label "Experiment"@en .
+

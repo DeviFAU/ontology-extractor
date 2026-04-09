@@ -1,0 +1,296 @@
+{
+  "id": "synth_15",
+  "name": "Music Collection ABox",
+  "complexity": "complex",
+  "diagram_type": "mixed",
+  "description": "Tests rich instance extraction with data assertions and cross-references",
+  "base_uri": "http://example.org/music#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "Artist"
+    },
+    {
+      "name": "Album"
+    },
+    {
+      "name": "Song"
+    },
+    {
+      "name": "Genre"
+    },
+    {
+      "name": "RecordLabel"
+    },
+    {
+      "name": "Instrument"
+    },
+    {
+      "name": "Band"
+    },
+    {
+      "name": "SoloArtist"
+    },
+    {
+      "name": "Studio"
+    },
+    {
+      "name": "Producer"
+    },
+    {
+      "name": "Award"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "performedBy",
+      "domain": "Song",
+      "range": "Artist"
+    },
+    {
+      "name": "onAlbum",
+      "domain": "Song",
+      "range": "Album"
+    },
+    {
+      "name": "hasGenre",
+      "domain": "Album",
+      "range": "Genre"
+    },
+    {
+      "name": "releasedBy",
+      "domain": "Album",
+      "range": "RecordLabel"
+    },
+    {
+      "name": "plays",
+      "domain": "Artist",
+      "range": "Instrument"
+    },
+    {
+      "name": "producedBy",
+      "domain": "Album",
+      "range": "Producer"
+    },
+    {
+      "name": "recordedAt",
+      "domain": "Album",
+      "range": "Studio"
+    },
+    {
+      "name": "wonAward",
+      "domain": "Album",
+      "range": "Award"
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "songTitle",
+      "domain": "Song",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "albumTitle",
+      "domain": "Album",
+      "range": "xsd:string",
+      "datatype": "string"
+    },
+    {
+      "name": "releaseYear",
+      "domain": "Album",
+      "range": "xsd:integer",
+      "datatype": "integer"
+    },
+    {
+      "name": "duration",
+      "domain": "Song",
+      "range": "xsd:double",
+      "datatype": "double"
+    }
+  ],
+  "instances": [
+    {
+      "name": "beatles",
+      "type_class": "Band"
+    },
+    {
+      "name": "abbeyRoad",
+      "type_class": "Album"
+    },
+    {
+      "name": "comeTogther",
+      "type_class": "Song"
+    },
+    {
+      "name": "rock",
+      "type_class": "Genre"
+    },
+    {
+      "name": "emiRecords",
+      "type_class": "RecordLabel"
+    }
+  ],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "Band",
+      "to": "Artist",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "SoloArtist",
+      "to": "Artist",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "Song",
+      "to": "Artist",
+      "label": "performedBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Song",
+      "to": "Album",
+      "label": "onAlbum",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Album",
+      "to": "Genre",
+      "label": "hasGenre",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Album",
+      "to": "RecordLabel",
+      "label": "releasedBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Artist",
+      "to": "Instrument",
+      "label": "plays",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Album",
+      "to": "Producer",
+      "label": "producedBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Album",
+      "to": "Studio",
+      "label": "recordedAt",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Album",
+      "to": "Award",
+      "label": "wonAward",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "Song",
+      "to": "xsd:string",
+      "label": "songTitle",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Album",
+      "to": "xsd:string",
+      "label": "albumTitle",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Album",
+      "to": "xsd:integer",
+      "label": "releaseYear",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "Song",
+      "to": "xsd:double",
+      "label": "duration",
+      "edge_type": "dataProperty"
+    },
+    {
+      "from": "beatles",
+      "to": "Band",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "abbeyRoad",
+      "to": "Album",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "comeTogther",
+      "to": "Song",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "rock",
+      "to": "Genre",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "emiRecords",
+      "to": "RecordLabel",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "comeTogther",
+      "to": "beatles",
+      "label": "performedBy",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "comeTogther",
+      "to": "abbeyRoad",
+      "label": "onAlbum",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "abbeyRoad",
+      "to": "rock",
+      "label": "hasGenre",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "abbeyRoad",
+      "to": "emiRecords",
+      "label": "releasedBy",
+      "edge_type": "objectProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": [
+    {
+      "individual": "abbeyRoad",
+      "property": "albumTitle",
+      "value": "Abbey Road",
+      "datatype": "string"
+    },
+    {
+      "individual": "abbeyRoad",
+      "property": "releaseYear",
+      "value": "1969",
+      "datatype": "integer"
+    },
+    {
+      "individual": "comeTogther",
+      "property": "songTitle",
+      "value": "Come Together",
+      "datatype": "string"
+    }
+  ]
+}

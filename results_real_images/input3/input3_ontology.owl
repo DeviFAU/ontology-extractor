@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/ontology#bounds">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">bounds</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Decision"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Alternative"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Framing_Specific_Stake_Holder_Factors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Framing Specific Stake Holder Factors</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Criteria">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Criteria</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_Influence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has-Influence</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Outcome"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Alternative"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Future_Event"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Outcome"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#establishes_Utility_Factors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">establishes-Utility-Factors</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Criteria"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Utility_Structure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#sets_Relevance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">sets-Relevance</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Framing_Specific_Stake_Holder_Factors"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Consequence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Decision_Maker">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Decision Maker</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Stake_Holder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#sets">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">sets</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Decision"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Utility_Structure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#specifies">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">specifies</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Framing_Specific_Situation"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Decision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Consequence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Consequence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Utility_Structure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Utility Structure</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Context">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Context</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_influence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has-influence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#defines">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">defines</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Alternative"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Decision"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Future_Event"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Outcome"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Consequence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Framed_Decision_Problem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Framed Decision Problem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#frames">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">frames</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Situation"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Framed_Decision_Problem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_part">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has-part</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#sets_Attributes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">sets-Attributes</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Alternative"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Consequence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#provides_Focus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">provides-Focus</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Framed_Decision_Problem"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Framing_Specific_Situation"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Framing_Specific_Stake_Holder_Factors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#collectively_triggers">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">collectively-triggers</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Framed_Decision_Problem"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Stake_Holder_Factors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Situation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Situation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_Effect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has-Effect</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Consequence"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Criteria"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_relevance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has-relevance</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Situation"/>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Stake_Holder"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Framing_Specific_Situation"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Framing_Specific_Stake_Holder_Factors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Outcome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Outcome</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#defines_possible">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">defines-possible</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Alternative"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Alternative"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Framing_Specific_Situation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Framing Specific Situation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Alternative">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Alternative</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Affected_Party">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Affected Party</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Stake_Holder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#has_Interaction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has-Interaction</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Situation"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Stake_Holder_Factors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Stake_Holder_Factors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Stake Holder Factors</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Stake_Holder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Stake Holder</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Context"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Decision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Decision</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Future_Event">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Future Event</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#establishes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">establishes</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Framing_Specific_Stake_Holder_Factors"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Criteria"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#utility_Input">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">utility-Input</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Criteria"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Utility_Structure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>

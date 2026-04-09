@@ -1,0 +1,74 @@
+{
+  "id": "synth_04",
+  "name": "Class Instances",
+  "complexity": "simple",
+  "diagram_type": "OWL",
+  "description": "Tests instance extraction with rdf:type arrows",
+  "base_uri": "http://example.org/instances#",
+  "namespace_prefixes": {},
+  "classes": [
+    {
+      "name": "City"
+    },
+    {
+      "name": "Country"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "locatedIn",
+      "domain": "City",
+      "range": "Country"
+    }
+  ],
+  "data_properties": [],
+  "instances": [
+    {
+      "name": "berlin",
+      "type_class": "City"
+    },
+    {
+      "name": "munich",
+      "type_class": "City"
+    },
+    {
+      "name": "germany",
+      "type_class": "Country"
+    }
+  ],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "berlin",
+      "to": "City",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "munich",
+      "to": "City",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "germany",
+      "to": "Country",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "berlin",
+      "to": "germany",
+      "label": "locatedIn",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "munich",
+      "to": "germany",
+      "label": "locatedIn",
+      "edge_type": "objectProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}

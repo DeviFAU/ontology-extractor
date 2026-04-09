@@ -1,0 +1,51 @@
+{
+  "id": "input",
+  "name": "PROV-O Figure 1 - Starting Point Classes",
+  "complexity": "simple",
+  "diagram_type": "PROV-O",
+  "description": "3 core PROV-O classes (Entity, Activity, Agent) with 7 object properties and 2 datatype properties. Responsibility arrows (wasAttributedTo, wasAssociatedWith, actedOnBehalfOf) shown in pink.",
+  "base_uri": "http://www.w3.org/ns/prov#",
+  "namespace_prefixes": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+
+  "classes": [
+    { "name": "prov:Entity" },
+    { "name": "prov:Activity" },
+    { "name": "prov:Agent" }
+  ],
+
+  "object_properties": [
+    { "name": "prov:wasDerivedFrom",    "domain": "prov:Entity",   "range": "prov:Entity"   },
+    { "name": "prov:wasAttributedTo",   "domain": "prov:Entity",   "range": "prov:Agent"    },
+    { "name": "prov:wasGeneratedBy",    "domain": "prov:Entity",   "range": "prov:Activity" },
+    { "name": "prov:used",              "domain": "prov:Activity", "range": "prov:Entity"   },
+    { "name": "prov:wasAssociatedWith", "domain": "prov:Activity", "range": "prov:Agent"    },
+    { "name": "prov:actedOnBehalfOf",   "domain": "prov:Agent",    "range": "prov:Agent"    },
+    { "name": "prov:wasInformedBy",     "domain": "prov:Activity", "range": "prov:Activity" }
+  ],
+
+  "data_properties": [
+    { "name": "prov:startedAtTime", "domain": "prov:Activity", "range": "xsd:dateTime", "datatype": "dateTime" },
+    { "name": "prov:endedAtTime",   "domain": "prov:Activity", "range": "xsd:dateTime", "datatype": "dateTime" }
+  ],
+
+  "instances": [],
+  "attribute_values": [],
+
+  "edges": [
+    { "from": "prov:Entity",   "to": "prov:Entity",   "label": "prov:wasDerivedFrom",    "edge_type": "objectProperty" },
+    { "from": "prov:Entity",   "to": "prov:Agent",    "label": "prov:wasAttributedTo",   "edge_type": "objectProperty" },
+    { "from": "prov:Entity",   "to": "prov:Activity", "label": "prov:wasGeneratedBy",    "edge_type": "objectProperty" },
+    { "from": "prov:Activity", "to": "prov:Entity",   "label": "prov:used",              "edge_type": "objectProperty" },
+    { "from": "prov:Activity", "to": "prov:Agent",    "label": "prov:wasAssociatedWith", "edge_type": "objectProperty" },
+    { "from": "prov:Agent",    "to": "prov:Agent",    "label": "prov:actedOnBehalfOf",   "edge_type": "objectProperty" },
+    { "from": "prov:Activity", "to": "prov:Activity", "label": "prov:wasInformedBy",     "edge_type": "objectProperty" },
+    { "from": "prov:Activity", "to": "xsd:dateTime",  "label": "prov:startedAtTime",     "edge_type": "dataProperty"   },
+    { "from": "prov:Activity", "to": "xsd:dateTime",  "label": "prov:endedAtTime",       "edge_type": "dataProperty"   }
+  ],
+
+  "restriction_axioms": [],
+  "data_assertions": []
+}

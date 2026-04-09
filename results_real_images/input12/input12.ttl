@@ -1,0 +1,99 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#Currency_relatedTo_Price> a owl:ObjectProperty ;
+    rdfs:label "Currency_relatedTo_Price"@en ;
+    rdfs:domain <http://example.org/ontology#Currency> ;
+    rdfs:range <http://example.org/ontology#Price> .
+
+<http://example.org/ontology#Euro> a owl:Class ;
+    rdfs:label "Euro"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Currency> .
+
+<http://example.org/ontology#USD> a owl:Class ;
+    rdfs:label "USD"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Currency> .
+
+<http://example.org/ontology#billTo> a owl:ObjectProperty ;
+    rdfs:label "billTo"@en ;
+    rdfs:domain <http://example.org/ontology#Buyer> ;
+    rdfs:range <http://example.org/ontology#Order> .
+
+<http://example.org/ontology#deliverTo> a owl:ObjectProperty ;
+    rdfs:label "deliverTo"@en ;
+    rdfs:domain <http://example.org/ontology#Order> ;
+    rdfs:range <http://example.org/ontology#Address> .
+
+<http://example.org/ontology#hasAddress> a owl:ObjectProperty ;
+    rdfs:label "hasAddress"@en ;
+    rdfs:domain <http://example.org/ontology#Business_Party> ;
+    rdfs:range <http://example.org/ontology#Address> .
+
+<http://example.org/ontology#hasCity> a owl:ObjectProperty ;
+    rdfs:label "hasCity"@en ;
+    rdfs:domain <http://example.org/ontology#Address> ;
+    rdfs:range <http://example.org/ontology#City> .
+
+<http://example.org/ontology#hasCountry> a owl:ObjectProperty ;
+    rdfs:label "hasCountry"@en ;
+    rdfs:domain <http://example.org/ontology#Country> ;
+    rdfs:range <http://example.org/ontology#Business_Party> .
+
+<http://example.org/ontology#hasCurrency> a owl:ObjectProperty ;
+    rdfs:label "hasCurrency"@en ;
+    rdfs:domain <http://example.org/ontology#Currency> ;
+    rdfs:range <http://example.org/ontology#Business_Party> .
+
+<http://example.org/ontology#hasId> a owl:ObjectProperty ;
+    rdfs:label "hasId"@en ;
+    rdfs:domain <http://example.org/ontology#OrderId> ;
+    rdfs:range <http://example.org/ontology#Order> .
+
+<http://example.org/ontology#hasItems> a owl:ObjectProperty ;
+    rdfs:label "hasItems"@en ;
+    rdfs:domain <http://example.org/ontology#Order> ;
+    rdfs:range <http://example.org/ontology#Item> .
+
+<http://example.org/ontology#hasSeller> a owl:ObjectProperty ;
+    rdfs:label "hasSeller"@en ;
+    rdfs:domain <http://example.org/ontology#Address>,
+        <http://example.org/ontology#Order> ;
+    rdfs:range <http://example.org/ontology#Seller> .
+
+<http://example.org/ontology#Buyer> a owl:Class ;
+    rdfs:label "Buyer"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Business_Party> .
+
+<http://example.org/ontology#City> a owl:Class ;
+    rdfs:label "City"@en .
+
+<http://example.org/ontology#Country> a owl:Class ;
+    rdfs:label "Country"@en .
+
+<http://example.org/ontology#Item> a owl:Class ;
+    rdfs:label "Item"@en .
+
+<http://example.org/ontology#OrderId> a owl:Class ;
+    rdfs:label "OrderId"@en .
+
+<http://example.org/ontology#Price> a owl:Class ;
+    rdfs:label "Price"@en .
+
+<http://example.org/ontology#Seller> a owl:Class ;
+    rdfs:label "Seller"@en ;
+    rdfs:subClassOf <http://example.org/ontology#Business_Party> .
+
+<http://example.org/ontology#Address> a owl:Class ;
+    rdfs:label "Address"@en .
+
+<http://example.org/ontology#Currency> a owl:Class ;
+    rdfs:label "Currency"@en .
+
+<http://example.org/ontology#Business_Party> a owl:Class ;
+    rdfs:label "Business Party"@en .
+
+<http://example.org/ontology#Order> a owl:Class ;
+    rdfs:label "Order"@en .
+

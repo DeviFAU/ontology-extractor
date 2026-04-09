@@ -1,0 +1,648 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Customer",
+        "to": "Program",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasProgram",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "Customer",
+        "to": "CustomerName",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "",
+        "confidence": "medium"
+      },
+      {
+        "id": "a3",
+        "from": "Program",
+        "to": "Design Item",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasDesignItem",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Program",
+        "to": "ProgramName",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "",
+        "confidence": "medium"
+      },
+      {
+        "id": "a5",
+        "from": "Design Item",
+        "to": "DFMEA",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasDFMEA",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "Design Item",
+        "to": "ProcessFlow",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasProcessFlow",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "Design Item",
+        "to": "PFMEA",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasPFMEA",
+        "confidence": "high"
+      },
+      {
+        "id": "a8",
+        "from": "Design Item",
+        "to": "ControlPlan",
+        "line_style": "solid",
+        "arrowhead_style": "solid-triangle",
+        "conclusion": "objectProperty",
+        "label": "hasControlPlan",
+        "confidence": "high"
+      },
+      {
+        "id": "a9",
+        "from": "Design Item",
+        "to": "PartNumber",
+        "line_style": "dashed",
+        "arrowhead_style": "chevron",
+        "conclusion": "dataProperty",
+        "label": "",
+        "confidence": "medium"
+      },
+      {
+        "id": "a10",
+        "from": "DFMEA",
+        "to": "DFMEACoreTeam",
+        "line_style": "solid",
+        "arrowhead_style": "none",
+        "conclusion": "dataProperty",
+        "label": "",
+        "confidence": "low"
+      },
+      {
+        "id": "a11",
+        "from": "PFMEA",
+        "to": "PFMEAKEYDate",
+        "line_style": "solid",
+        "arrowhead_style": "none",
+        "conclusion": "dataProperty",
+        "label": "",
+        "confidence": "low"
+      },
+      {
+        "id": "a12",
+        "from": "ControlPlan",
+        "to": "ControlPlanDateOriginal",
+        "line_style": "solid",
+        "arrowhead_style": "none",
+        "conclusion": "dataProperty",
+        "label": "",
+        "confidence": "low"
+      }
+    ],
+    "diagram_notes": "The diagram structure represents an ontology with various object and data properties, using solid lines for class relationships and dashed lines for data properties."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Customer",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Program",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Design Item",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "DFMEA",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "ProcessFlow",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "PFMEA",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "ControlPlan",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasProgram"
+      },
+      {
+        "id": "op2",
+        "name": "hasDesignItem"
+      },
+      {
+        "id": "op3",
+        "name": "hasDFMEA"
+      },
+      {
+        "id": "op4",
+        "name": "hasProcessFlow"
+      },
+      {
+        "id": "op5",
+        "name": "hasPFMEA"
+      },
+      {
+        "id": "op6",
+        "name": "hasControlPlan"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Customer",
+        "to": "Program",
+        "label": "hasProgram",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Program",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "Program",
+        "to": "Design Item",
+        "label": "hasDesignItem",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "Design Item",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "Design Item",
+        "to": "DFMEA",
+        "label": "hasDFMEA",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "DFMEA",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "Design Item",
+        "to": "ProcessFlow",
+        "label": "hasProcessFlow",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "ProcessFlow",
+        "confidence": "high"
+      },
+      {
+        "id": "e5",
+        "from": "Design Item",
+        "to": "PFMEA",
+        "label": "hasPFMEA",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "PFMEA",
+        "confidence": "high"
+      },
+      {
+        "id": "e6",
+        "from": "Design Item",
+        "to": "ControlPlan",
+        "label": "hasControlPlan",
+        "edge_type": "objectProperty",
+        "arrowhead_at": "ControlPlan",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Customer",
+        "property": "CustomerName",
+        "datatype": "string"
+      },
+      {
+        "class": "Program",
+        "property": "ProgramName",
+        "datatype": "string"
+      },
+      {
+        "class": "Design Item",
+        "property": "PartNumber",
+        "datatype": "string"
+      },
+      {
+        "class": "Design Item",
+        "property": "PartName",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEACoreTeam",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEADesignResponsibility",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEAModelYears",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEANumber",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEAOriginal_Date",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEA",
+        "datatype": "string"
+      },
+      {
+        "class": "PFMEA",
+        "property": "PFMEAEKYDate",
+        "datatype": "string"
+      },
+      {
+        "class": "PFMEA",
+        "property": "PFMEAOriginalDate",
+        "datatype": "string"
+      },
+      {
+        "class": "PFMEA",
+        "property": "PFMEAPreparedBY",
+        "datatype": "string"
+      },
+      {
+        "class": "PFMEA",
+        "property": "PFMEANumber",
+        "datatype": "string"
+      },
+      {
+        "class": "ControlPlan",
+        "property": "ControlPlanDateOriginal",
+        "datatype": "string"
+      },
+      {
+        "class": "ControlPlan",
+        "property": "ControlPlanKeyContactInfo",
+        "datatype": "string"
+      },
+      {
+        "class": "ControlPlan",
+        "property": "ControlPlanNumber",
+        "datatype": "string"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [
+    {
+      "id": "me1",
+      "from": "hasProgram",
+      "to": "Customer",
+      "label": "domain",
+      "edge_type": "dataProperty",
+      "arrowhead_at": "Customer",
+      "visual_evidence": "The arrow is black, horizontal, and the arrowhead is at the Customer node."
+    },
+    {
+      "id": "me2",
+      "from": "hasProgram",
+      "to": "Program",
+      "label": "range",
+      "edge_type": "dataProperty",
+      "arrowhead_at": "Program",
+      "visual_evidence": "The arrow is black, horizontal, and the arrowhead is at the Program node."
+    },
+    {
+      "id": "me3",
+      "from": "hasDesignItem",
+      "to": "Program",
+      "label": "domain",
+      "edge_type": "dataProperty",
+      "arrowhead_at": "Program",
+      "visual_evidence": "The arrow is black, horizontal, and the arrowhead is at the Program node."
+    },
+    {
+      "id": "me4",
+      "from": "hasDesignItem",
+      "to": "Design Item",
+      "label": "range",
+      "edge_type": "dataProperty",
+      "arrowhead_at": "Design Item",
+      "visual_evidence": "The arrow is black, horizontal, and the arrowhead is at the Design Item node."
+    },
+    {
+      "id": "me5",
+      "from": "PartNumber PartName",
+      "to": "Design Item",
+      "label": "instanceOf",
+      "edge_type": "dataProperty",
+      "arrowhead_at": "Design Item",
+      "visual_evidence": "The arrow is black, dashed, and the arrowhead is at the Design Item node."
+    }
+  ],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [
+      {
+        "from": "Design Item",
+        "to": "PartNumber",
+        "label": "PartNumber",
+        "edge_type": "dataProperty",
+        "visual_evidence": "direct dashed line from Design Item to PartNumber label"
+      }
+    ],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [
+      "Legend indicating symbol meanings"
+    ],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": "Diagram appears well-structured with all entities and relationships clearly represented."
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Customer",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Program",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Design Item",
+        "description": ""
+      },
+      {
+        "id": "c4",
+        "name": "DFMEA",
+        "description": ""
+      },
+      {
+        "id": "c5",
+        "name": "ProcessFlow",
+        "description": ""
+      },
+      {
+        "id": "c6",
+        "name": "PFMEA",
+        "description": ""
+      },
+      {
+        "id": "c7",
+        "name": "ControlPlan",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "hasProgram"
+      },
+      {
+        "id": "op2",
+        "name": "hasDesignItem"
+      },
+      {
+        "id": "op3",
+        "name": "hasDFMEA"
+      },
+      {
+        "id": "op4",
+        "name": "hasProcessFlow"
+      },
+      {
+        "id": "op5",
+        "name": "hasPFMEA"
+      },
+      {
+        "id": "op6",
+        "name": "hasControlPlan"
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "Customer",
+        "to": "Program",
+        "label": "hasProgram",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e2",
+        "from": "Program",
+        "to": "Design Item",
+        "label": "hasDesignItem",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e3",
+        "from": "Design Item",
+        "to": "DFMEA",
+        "label": "hasDFMEA",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e4",
+        "from": "Design Item",
+        "to": "ProcessFlow",
+        "label": "hasProcessFlow",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e5",
+        "from": "Design Item",
+        "to": "PFMEA",
+        "label": "hasPFMEA",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "e6",
+        "from": "Design Item",
+        "to": "ControlPlan",
+        "label": "hasControlPlan",
+        "edge_type": "objectProperty"
+      },
+      {
+        "id": "me1",
+        "from": "hasProgram",
+        "to": "Customer",
+        "label": "domain",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "me2",
+        "from": "hasProgram",
+        "to": "Program",
+        "label": "range",
+        "edge_type": "dataProperty"
+      },
+      {
+        "id": "p4_Design Item_PartNumber",
+        "from": "Design Item",
+        "to": "PartNumber",
+        "label": "PartNumber",
+        "edge_type": "dataProperty"
+      }
+    ],
+    "data_properties": [
+      {
+        "class": "Customer",
+        "property": "CustomerName",
+        "datatype": "string"
+      },
+      {
+        "class": "Program",
+        "property": "ProgramName",
+        "datatype": "string"
+      },
+      {
+        "class": "Design Item",
+        "property": "PartNumber",
+        "datatype": "string"
+      },
+      {
+        "class": "Design Item",
+        "property": "PartName",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEACoreTeam",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEADesignResponsibility",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEAModelYears",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEANumber",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEAOriginal_Date",
+        "datatype": "string"
+      },
+      {
+        "class": "DFMEA",
+        "property": "DFMEA",
+        "datatype": "string"
+      },
+      {
+        "class": "PFMEA",
+        "property": "PFMEAEKYDate",
+        "datatype": "string"
+      },
+      {
+        "class": "PFMEA",
+        "property": "PFMEAOriginalDate",
+        "datatype": "string"
+      },
+      {
+        "class": "PFMEA",
+        "property": "PFMEAPreparedBY",
+        "datatype": "string"
+      },
+      {
+        "class": "PFMEA",
+        "property": "PFMEANumber",
+        "datatype": "string"
+      },
+      {
+        "class": "ControlPlan",
+        "property": "ControlPlanDateOriginal",
+        "datatype": "string"
+      },
+      {
+        "class": "ControlPlan",
+        "property": "ControlPlanKeyContactInfo",
+        "datatype": "string"
+      },
+      {
+        "class": "ControlPlan",
+        "property": "ControlPlanNumber",
+        "datatype": "string"
+      }
+    ],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [
+      "Legend indicating symbol meanings"
+    ],
+    "completeness_assessment": "complete",
+    "completeness_notes": "Diagram appears well-structured with all entities and relationships clearly represented."
+  }
+}

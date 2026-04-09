@@ -1,0 +1,66 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/library> a owl:Ontology .
+
+<http://example.org/library#Article> a owl:Class ;
+    rdfs:label "Article"@en ;
+    rdfs:subClassOf <http://example.org/library#Work> .
+
+<http://example.org/library#hasGenre> a owl:ObjectProperty ;
+    rdfs:label "hasGenre"@en ;
+    rdfs:domain <http://example.org/library#Work> ;
+    rdfs:range <http://example.org/library#Genre> .
+
+<http://example.org/library#heldBy> a owl:ObjectProperty ;
+    rdfs:label "heldBy"@en ;
+    rdfs:domain <http://example.org/library#Work> ;
+    rdfs:range <http://example.org/library#Library> .
+
+<http://example.org/library#isbn> a owl:DatatypeProperty ;
+    rdfs:label "isbn"@en ;
+    rdfs:domain <http://example.org/library#Book> ;
+    rdfs:range xsd:string .
+
+<http://example.org/library#title> a owl:DatatypeProperty ;
+    rdfs:label "title"@en ;
+    rdfs:domain <http://example.org/library#Work> ;
+    rdfs:range xsd:string .
+
+<http://example.org/library#writtenBy> a owl:ObjectProperty ;
+    rdfs:label "writtenBy"@en ;
+    rdfs:domain <http://example.org/library#Work> ;
+    rdfs:range <http://example.org/library#Author> ;
+    owl:inverseOf <http://example.org/library#authored> .
+
+<http://example.org/library#yearPublished> a owl:DatatypeProperty ;
+    rdfs:label "yearPublished"@en ;
+    rdfs:domain <http://example.org/library#Work> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/library#Book> a owl:Class ;
+    rdfs:label "Book"@en ;
+    rdfs:subClassOf <http://example.org/library#Work> .
+
+<http://example.org/library#Genre> a owl:Class ;
+    rdfs:label "Genre"@en .
+
+<http://example.org/library#Library> a owl:Class ;
+    rdfs:label "Library"@en .
+
+<http://example.org/library#Person> a owl:Class ;
+    rdfs:label "Person"@en .
+
+<http://example.org/library#authored> a owl:ObjectProperty ;
+    rdfs:label "authored"@en ;
+    rdfs:domain <http://example.org/library#Author> ;
+    rdfs:range <http://example.org/library#Work> .
+
+<http://example.org/library#Author> a owl:Class ;
+    rdfs:label "Author"@en ;
+    rdfs:subClassOf <http://example.org/library#Person> .
+
+<http://example.org/library#Work> a owl:Class ;
+    rdfs:label "Work"@en .
+

@@ -1,0 +1,28 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/instances> a owl:Ontology .
+
+<http://example.org/instances#berlin> a <http://example.org/instances#City>,
+        owl:NamedIndividual ;
+    rdfs:label "berlin"@en .
+
+<http://example.org/instances#germany> a <http://example.org/instances#Country>,
+        owl:NamedIndividual ;
+    rdfs:label "germany"@en .
+
+<http://example.org/instances#locatedIn> a owl:ObjectProperty ;
+    rdfs:label "locatedIn"@en ;
+    rdfs:domain <http://example.org/instances#City> ;
+    rdfs:range <http://example.org/instances#Country> .
+
+<http://example.org/instances#munich> a <http://example.org/instances#City>,
+        owl:NamedIndividual ;
+    rdfs:label "munich"@en .
+
+<http://example.org/instances#Country> a owl:Class ;
+    rdfs:label "Country"@en .
+
+<http://example.org/instances#City> a owl:Class ;
+    rdfs:label "City"@en .
+

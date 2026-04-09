@@ -1,0 +1,281 @@
+{
+  "id": "input15",
+  "name": "Clinical Patient Instance Graph",
+  "complexity": "complex",
+  "diagram_type": "OWL",
+  "description": "Instance-level OWL diagram from a clinical ontology (ncit/ocrv namespaces). Legend: rectangle=Class, oval=Individual. Central individual: patient/307879. Classes: ncit:patient, ncit:surgery, ncit:birth year, ncit:census tract, ncit:county, ncit:single, ncit:diagnosis relation, ocrv:date of diagnosis, ncit:disease or disorder, ocrv:SVI socioeconomic status. One rdfs:subClassOf: malignant_breast_neoplasms/1749 → ncit:disease or disorder. Data assertion: census_tract/12073002303 ocrv:has svi 46.224 (double).",
+  "base_uri": "http://example.org/ontology#",
+  "namespace_prefixes": {
+    "ncit": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#",
+    "ocrv": "http://example.org/ocrv#",
+    "teo": "http://example.org/teo#",
+    "ro": "http://purl.obolibrary.org/obo/"
+  },
+  "classes": [
+    {
+      "name": "ncit:patient"
+    },
+    {
+      "name": "ncit:surgery"
+    },
+    {
+      "name": "ncit:birth year"
+    },
+    {
+      "name": "ncit:census tract"
+    },
+    {
+      "name": "ncit:county"
+    },
+    {
+      "name": "ncit:single"
+    },
+    {
+      "name": "ncit:diagnosis relation"
+    },
+    {
+      "name": "ocrv:date of diagnosis"
+    },
+    {
+      "name": "ncit:disease or disorder"
+    },
+    {
+      "name": "ocrv:SVI socioeconomic status"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "ocrv:has procedure",
+      "domain": "ncit:patient",
+      "range": "ncit:surgery"
+    },
+    {
+      "name": "ro:participates in",
+      "domain": "ncit:patient",
+      "range": "ncit:birth year"
+    },
+    {
+      "name": "teo:hasValidTime",
+      "domain": "ncit:birth year",
+      "range": "ocrv:date of diagnosis"
+    },
+    {
+      "name": "ocrv:lives in",
+      "domain": "ncit:patient",
+      "range": "ncit:census tract"
+    },
+    {
+      "name": "ocrv:has martial status",
+      "domain": "ncit:patient",
+      "range": "ncit:single"
+    },
+    {
+      "name": "ocrv:has death cause",
+      "domain": "ncit:patient",
+      "range": "ncit:disease or disorder"
+    },
+    {
+      "name": "ocrv:casually related to",
+      "domain": "ncit:disease or disorder",
+      "range": "ncit:disease or disorder"
+    },
+    {
+      "name": "ocrv:has diagnosis",
+      "domain": "ncit:patient",
+      "range": "ncit:diagnosis relation"
+    },
+    {
+      "name": "ocrv:has tumor type",
+      "domain": "ncit:diagnosis relation",
+      "range": "ncit:disease or disorder"
+    },
+    {
+      "name": "ocrv:has svi",
+      "domain": "ncit:census tract",
+      "range": "ocrv:SVI socioeconomic status"
+    }
+  ],
+  "data_properties": [],
+  "instances": [
+    {
+      "name": "patient/307879",
+      "type_class": "ncit:patient"
+    },
+    {
+      "name": "time_instant/1941",
+      "type_class": "ncit:birth year"
+    },
+    {
+      "name": "birth/307879",
+      "type_class": "ncit:birth year"
+    },
+    {
+      "name": "surgery/307879",
+      "type_class": "ncit:surgery"
+    },
+    {
+      "name": "census_tract/12073002303",
+      "type_class": "ncit:census tract"
+    },
+    {
+      "name": "county/31",
+      "type_class": "ncit:county"
+    },
+    {
+      "name": "marital_status/4",
+      "type_class": "ncit:single"
+    },
+    {
+      "name": "diagnosis_relation/3",
+      "type_class": "ncit:diagnosis relation"
+    },
+    {
+      "name": "time_instant/19860320",
+      "type_class": "ocrv:date of diagnosis"
+    },
+    {
+      "name": "cause_of_death/3",
+      "type_class": "ncit:disease or disorder"
+    },
+    {
+      "name": "malignant_breast_neoplasms/1749",
+      "type_class": "ncit:disease or disorder"
+    },
+    {
+      "name": "breast_adenocarcinoma/8500",
+      "type_class": "ncit:disease or disorder"
+    }
+  ],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "patient/307879",
+      "to": "ncit:patient",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "time_instant/1941",
+      "to": "ncit:birth year",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "surgery/307879",
+      "to": "ncit:surgery",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "census_tract/12073002303",
+      "to": "ncit:census tract",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "county/31",
+      "to": "ncit:county",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "marital_status/4",
+      "to": "ncit:single",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "diagnosis_relation/3",
+      "to": "ncit:diagnosis relation",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "time_instant/19860320",
+      "to": "ocrv:date of diagnosis",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "malignant_breast_neoplasms/1749",
+      "to": "ncit:disease or disorder",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "birth/307879",
+      "to": "time_instant/1941",
+      "label": "teo:hasValidTime",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "patient/307879",
+      "to": "surgery/307879",
+      "label": "ocrv:has procedure",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "patient/307879",
+      "to": "birth/307879",
+      "label": "ro:participates in",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "patient/307879",
+      "to": "census_tract/12073002303",
+      "label": "ocrv:lives in",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "patient/307879",
+      "to": "county/31",
+      "label": "ocrv:lives in",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "patient/307879",
+      "to": "marital_status/4",
+      "label": "ocrv:has martial status",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "patient/307879",
+      "to": "cause_of_death/3",
+      "label": "ocrv:has death cause",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "patient/307879",
+      "to": "diagnosis_relation/3",
+      "label": "ocrv:has diagnosis",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "cause_of_death/3",
+      "to": "malignant_breast_neoplasms/1749",
+      "label": "ocrv:casually related to",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "diagnosis_relation/3",
+      "to": "breast_adenocarcinoma/8500",
+      "label": "ocrv:has tumor type",
+      "edge_type": "objectProperty"
+    },
+    {
+      "from": "diagnosis_relation/3",
+      "to": "time_instant/19860320",
+      "label": "teo:hasValidTime",
+      "edge_type": "objectProperty"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": [
+    {
+      "individual": "census_tract/12073002303",
+      "property": "ocrv:has svi",
+      "value": "46.224",
+      "datatype": "double"
+    }
+  ]
+}

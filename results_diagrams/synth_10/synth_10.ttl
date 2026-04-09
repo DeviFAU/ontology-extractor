@@ -1,0 +1,67 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#dateOfBirth> a owl:DatatypeProperty ;
+    rdfs:label "dateOfBirth"@en ;
+    rdfs:domain <http://example.org/ontology#Patient> ;
+    rdfs:range xsd:date .
+
+<http://example.org/ontology#hasAllergy> a owl:ObjectProperty ;
+    rdfs:label "hasAllergy"@en ;
+    rdfs:domain <http://example.org/ontology#Patient> ;
+    rdfs:range <http://example.org/ontology#Allergy> .
+
+<http://example.org/ontology#hasDiagnosis> a owl:ObjectProperty ;
+    rdfs:label "hasDiagnosis"@en ;
+    rdfs:domain <http://example.org/ontology#Patient> ;
+    rdfs:range <http://example.org/ontology#Diagnosis> .
+
+<http://example.org/ontology#hasTreatment> a owl:ObjectProperty ;
+    rdfs:label "hasTreatment"@en ;
+    rdfs:domain <http://example.org/ontology#Diagnosis> ;
+    rdfs:range <http://example.org/ontology#Treatment> .
+
+<http://example.org/ontology#patientID> a owl:DatatypeProperty ;
+    rdfs:label "patientID"@en ;
+    rdfs:domain <http://example.org/ontology#Patient> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#prescribes> a owl:ObjectProperty ;
+    rdfs:label "prescribes"@en ;
+    rdfs:domain <http://example.org/ontology#Treatment> ;
+    rdfs:range <http://example.org/ontology#Medication> .
+
+<http://example.org/ontology#treatedBy> a owl:ObjectProperty ;
+    rdfs:label "treatedBy"@en ;
+    rdfs:domain <http://example.org/ontology#Patient> ;
+    rdfs:range <http://example.org/ontology#Doctor> .
+
+<http://example.org/ontology#worksAt> a owl:ObjectProperty ;
+    rdfs:label "worksAt"@en ;
+    rdfs:domain <http://example.org/ontology#Doctor> ;
+    rdfs:range <http://example.org/ontology#Hospital> .
+
+<http://example.org/ontology#Allergy> a owl:Class ;
+    rdfs:label "Allergy"@en .
+
+<http://example.org/ontology#Hospital> a owl:Class ;
+    rdfs:label "Hospital"@en .
+
+<http://example.org/ontology#Medication> a owl:Class ;
+    rdfs:label "Medication"@en .
+
+<http://example.org/ontology#Diagnosis> a owl:Class ;
+    rdfs:label "Diagnosis"@en .
+
+<http://example.org/ontology#Doctor> a owl:Class ;
+    rdfs:label "Doctor"@en .
+
+<http://example.org/ontology#Treatment> a owl:Class ;
+    rdfs:label "Treatment"@en .
+
+<http://example.org/ontology#Patient> a owl:Class ;
+    rdfs:label "Patient"@en .
+

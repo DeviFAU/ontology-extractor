@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/ontology#hasEngine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasEngine</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Engine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#drivenBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">drivenBy</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Driver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Bicycle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Bicycle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#License">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">License</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Engine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Engine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasWheel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasWheel</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Wheel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#drivesOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">drivesOn</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Road"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Car">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Car</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Vehicle"/>
+    <owl:disjointWith rdf:resource="http://example.org/ontology#Truck"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Wheel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Wheel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#modelYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">modelYear</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#maxSpeed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">maxSpeed</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Manufacturer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Manufacturer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#madeBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">madeBy</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Manufacturer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasBattery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasBattery</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#ElectricVehicle"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Battery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Vehicle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Vehicle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Truck">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Truck</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Driver">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Driver</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#ElectricVehicle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">ElectricVehicle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontology#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Battery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Battery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasLicense">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasLicense</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Driver"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#License"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#weight">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">weight</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Road">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Road</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

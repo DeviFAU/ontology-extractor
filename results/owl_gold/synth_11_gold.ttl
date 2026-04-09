@@ -1,0 +1,106 @@
+@prefix ns1: <http://example.org/building#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/building> a owl:Ontology .
+
+ns1:HumiditySensor a owl:Class ;
+    rdfs:label "HumiditySensor"@en ;
+    rdfs:subClassOf ns1:Sensor .
+
+ns1:LightController a owl:Class ;
+    rdfs:label "LightController"@en ;
+    rdfs:subClassOf ns1:Actuator .
+
+ns1:OccupancyZone a owl:Class ;
+    rdfs:label "OccupancyZone"@en ;
+    rdfs:subClassOf ns1:Zone .
+
+ns1:buildingA a ns1:Building,
+        owl:NamedIndividual ;
+    rdfs:label "buildingA"@en .
+
+ns1:containsSensor a owl:ObjectProperty ;
+    rdfs:label "containsSensor"@en ;
+    rdfs:domain ns1:Room ;
+    rdfs:range ns1:Sensor .
+
+ns1:controlledBy a owl:ObjectProperty ;
+    rdfs:label "controlledBy"@en ;
+    rdfs:domain ns1:Room ;
+    rdfs:range ns1:Actuator .
+
+ns1:feedsDataTo a owl:ObjectProperty ;
+    rdfs:label "feedsDataTo"@en ;
+    rdfs:domain ns1:Sensor ;
+    rdfs:range ns1:Actuator .
+
+ns1:floor1 a ns1:Floor,
+        owl:NamedIndividual ;
+    rdfs:label "floor1"@en .
+
+ns1:hasFloor a owl:ObjectProperty ;
+    rdfs:label "hasFloor"@en ;
+    rdfs:domain ns1:Building ;
+    rdfs:range ns1:Floor .
+
+ns1:hasRoom a owl:ObjectProperty ;
+    rdfs:label "hasRoom"@en ;
+    rdfs:domain ns1:Floor ;
+    rdfs:range ns1:Room .
+
+ns1:hvac1 a ns1:HVACUnit,
+        owl:NamedIndividual ;
+    rdfs:label "hvac1"@en .
+
+ns1:inZone a owl:ObjectProperty ;
+    rdfs:label "inZone"@en ;
+    rdfs:domain ns1:Room ;
+    rdfs:range ns1:Zone .
+
+ns1:room101 a ns1:Room,
+        owl:NamedIndividual ;
+    rdfs:label "room101"@en ;
+    ns1:roomNumber "101"^^xsd:string .
+
+ns1:roomNumber a owl:DatatypeProperty ;
+    rdfs:label "roomNumber"@en ;
+    rdfs:domain ns1:Room ;
+    rdfs:range xsd:string .
+
+ns1:sensorValue a owl:DatatypeProperty ;
+    rdfs:label "sensorValue"@en ;
+    rdfs:domain ns1:Sensor ;
+    rdfs:range xsd:double .
+
+ns1:tempSensor1 a ns1:TemperatureSensor,
+        owl:NamedIndividual ;
+    rdfs:label "tempSensor1"@en .
+
+ns1:HVACUnit a owl:Class ;
+    rdfs:label "HVACUnit"@en ;
+    rdfs:subClassOf ns1:Actuator .
+
+ns1:TemperatureSensor a owl:Class ;
+    rdfs:label "TemperatureSensor"@en ;
+    rdfs:subClassOf ns1:Sensor .
+
+ns1:Building a owl:Class ;
+    rdfs:label "Building"@en .
+
+ns1:Zone a owl:Class ;
+    rdfs:label "Zone"@en .
+
+ns1:Floor a owl:Class ;
+    rdfs:label "Floor"@en .
+
+ns1:Actuator a owl:Class ;
+    rdfs:label "Actuator"@en .
+
+ns1:Sensor a owl:Class ;
+    rdfs:label "Sensor"@en .
+
+ns1:Room a owl:Class ;
+    rdfs:label "Room"@en .
+

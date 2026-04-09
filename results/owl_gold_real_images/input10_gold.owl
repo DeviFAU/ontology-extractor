@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/ontology#PFMEANumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">PFMEANumber</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#PFMEA"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#ControlPlanDateOriginal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">ControlPlanDateOriginal</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#ControlPlan"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#DFMEANumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">DFMEANumber</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DFMEA"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasDFMEA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasDFMEA</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DesignItem"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#DFMEA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#ControlPlan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">ControlPlan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#DFMEAModelYears">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">DFMEAModelYears</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DFMEA"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#DesignItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">DesignItem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#CustomerName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">CustomerName</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Customer"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#PFMEAOriginalDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">PFMEAOriginalDate</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#PFMEA"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#PFMEAPreparedBY">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">PFMEAPreparedBY</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#PFMEA"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasControlPlan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasControlPlan</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DesignItem"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#ControlPlan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#PartNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">PartNumber</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DesignItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#ControlPlanNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">ControlPlanNumber</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#ControlPlan"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasPFMEA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasPFMEA</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DesignItem"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#PFMEA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#ControlPlanKeyContactInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">ControlPlanKeyContactInfo</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#ControlPlan"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasProcessFlow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasProcessFlow</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DesignItem"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#ProcessFlow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#DFMEADesignResponsibility">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">DFMEADesignResponsibility</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DFMEA"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#ProgramName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">ProgramName</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Program"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#PFMEAKEYDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">PFMEAKEYDate</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#PFMEA"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Customer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Customer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasDesignItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasDesignItem</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Program"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#DesignItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#DFMEAOriginal_Date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">DFMEAOriginal_Date</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DFMEA"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#PartName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">PartName</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DesignItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#DFMEACoreTeam">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">DFMEACoreTeam</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#DFMEA"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#hasProgram">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasProgram</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Customer"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Program"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#DFMEA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">DFMEA</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Program">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Program</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#ProcessFlow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">ProcessFlow</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#PFMEA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">PFMEA</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

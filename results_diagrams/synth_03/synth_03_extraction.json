@@ -1,0 +1,247 @@
+{
+  "pass0": {
+    "arrows": [
+      {
+        "id": "a1",
+        "from": "Author",
+        "to": "writes",
+        "line_style": "solid",
+        "arrowhead_style": "simple",
+        "conclusion": "objectProperty",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a2",
+        "from": "writes",
+        "to": "Book",
+        "line_style": "solid",
+        "arrowhead_style": "simple",
+        "conclusion": "objectProperty",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a3",
+        "from": "writes",
+        "to": "Author",
+        "line_style": "solid",
+        "arrowhead_style": "simple",
+        "conclusion": "objectProperty",
+        "label": "rdfs:domain",
+        "confidence": "high"
+      },
+      {
+        "id": "a4",
+        "from": "Book",
+        "to": "writes",
+        "line_style": "solid",
+        "arrowhead_style": "simple",
+        "conclusion": "objectProperty",
+        "label": "rdfs:range",
+        "confidence": "high"
+      },
+      {
+        "id": "a5",
+        "from": "Publisher",
+        "to": "publishes",
+        "line_style": "solid",
+        "arrowhead_style": "simple",
+        "conclusion": "objectProperty",
+        "label": "",
+        "confidence": "high"
+      },
+      {
+        "id": "a6",
+        "from": "publishes",
+        "to": "Book",
+        "line_style": "solid",
+        "arrowhead_style": "simple",
+        "conclusion": "objectProperty",
+        "label": "rdfs:range",
+        "confidence": "high"
+      },
+      {
+        "id": "a7",
+        "from": "publishes",
+        "to": "Publisher",
+        "line_style": "solid",
+        "arrowhead_style": "simple",
+        "conclusion": "objectProperty",
+        "label": "rdfs:domain",
+        "confidence": "high"
+      }
+    ],
+    "diagram_notes": "The diagram represents relationships between authors, books, and publishers using object properties with labeled domain and range annotations."
+  },
+  "pass1": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Author",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Book",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Publisher",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "writes",
+        "note": ""
+      },
+      {
+        "id": "op2",
+        "name": "publishes",
+        "note": ""
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "writes",
+        "to": "Author",
+        "label": "rdfs:domain",
+        "edge_type": "domain",
+        "arrowhead_at": "Author",
+        "confidence": "high"
+      },
+      {
+        "id": "e2",
+        "from": "writes",
+        "to": "Book",
+        "label": "rdfs:range",
+        "edge_type": "range",
+        "arrowhead_at": "Book",
+        "confidence": "high"
+      },
+      {
+        "id": "e3",
+        "from": "publishes",
+        "to": "Book",
+        "label": "rdfs:range",
+        "edge_type": "range",
+        "arrowhead_at": "Book",
+        "confidence": "high"
+      },
+      {
+        "id": "e4",
+        "from": "publishes",
+        "to": "Publisher",
+        "label": "rdfs:domain",
+        "edge_type": "domain",
+        "arrowhead_at": "Publisher",
+        "confidence": "high"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": []
+  },
+  "pass2_corrections": [],
+  "pass2_missed_edges": [],
+  "pass3": {
+    "confirmed_instances": [],
+    "reclassified_nodes": [],
+    "no_instances_present": true
+  },
+  "pass4": {
+    "missing_nodes": [],
+    "missing_edges": [],
+    "missing_restrictions": [],
+    "missing_data_assertions": [],
+    "annotations": [],
+    "namespace_info": "",
+    "overall_completeness": "complete",
+    "notes": ""
+  },
+  "final": {
+    "diagram_type": "OWL diagram",
+    "classes": [
+      {
+        "id": "c1",
+        "name": "Author",
+        "description": ""
+      },
+      {
+        "id": "c2",
+        "name": "Book",
+        "description": ""
+      },
+      {
+        "id": "c3",
+        "name": "Publisher",
+        "description": ""
+      }
+    ],
+    "object_properties": [
+      {
+        "id": "op1",
+        "name": "writes",
+        "note": ""
+      },
+      {
+        "id": "op2",
+        "name": "publishes",
+        "note": ""
+      }
+    ],
+    "instances": [],
+    "attribute_values": [],
+    "restriction_axioms": [],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "writes",
+        "to": "Author",
+        "label": "rdfs:domain",
+        "edge_type": "domain"
+      },
+      {
+        "id": "e2",
+        "from": "writes",
+        "to": "Book",
+        "label": "rdfs:range",
+        "edge_type": "range"
+      },
+      {
+        "id": "e3",
+        "from": "publishes",
+        "to": "Book",
+        "label": "rdfs:range",
+        "edge_type": "range"
+      },
+      {
+        "id": "e4",
+        "from": "publishes",
+        "to": "Publisher",
+        "label": "rdfs:domain",
+        "edge_type": "domain"
+      }
+    ],
+    "data_properties": [],
+    "data_assertions": [],
+    "cardinalities": [],
+    "complex_axioms": [],
+    "namespace_hints": "",
+    "ambiguities": [],
+    "annotations": [],
+    "completeness_assessment": "complete",
+    "completeness_notes": ""
+  }
+}

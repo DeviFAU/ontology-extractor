@@ -1,0 +1,87 @@
+@prefix bpo: <https://w3id.org/bpo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix seas: <https://w3id.org/seas/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology .
+
+<http://example.org/ontology#AttributeHeight> a owl:NamedIndividual,
+        bpo:RangedAttribute ;
+    rdfs:label "AttributeHeight"@en ;
+    schema1:maxValue 1.6e+02 ;
+    schema1:minValue 1.2e+02 ;
+    schema1:value 1.2e+02 ;
+    bpo:permittedStepSize 5e+00 .
+
+<http://example.org/ontology#AttributePrice> a owl:NamedIndividual,
+        bpo:Attribute ;
+    rdfs:label "AttributePrice"@en ;
+    schema1:value 8e+01 .
+
+<http://example.org/ontology#UEuro> a qudt:Unit,
+        owl:NamedIndividual ;
+    rdfs:label "UEuro"@en .
+
+<http://example.org/ontology#Ucm> a qudt:Unit,
+        owl:NamedIndividual ;
+    rdfs:label "Ucm"@en .
+
+<http://example.org/ontology#chair1> a owl:NamedIndividual,
+        bpo:Component ;
+    rdfs:label "chair1"@en .
+
+qudt:unit a owl:ObjectProperty ;
+    rdfs:label "unit"@en ;
+    rdfs:domain bpo:Attribute ;
+    rdfs:range qudt:Unit .
+
+schema1:maxValue a owl:DatatypeProperty ;
+    rdfs:label "maxValue"@en ;
+    rdfs:domain bpo:RangedAttribute ;
+    rdfs:range xsd:double .
+
+schema1:minValue a owl:DatatypeProperty ;
+    rdfs:label "minValue"@en ;
+    rdfs:domain bpo:RangedAttribute ;
+    rdfs:range xsd:double .
+
+schema1:value a owl:DatatypeProperty ;
+    rdfs:label "value"@en ;
+    rdfs:domain bpo:Attribute ;
+    rdfs:range xsd:double .
+
+bpo:hasAttribute a owl:ObjectProperty ;
+    rdfs:label "hasAttribute"@en ;
+    rdfs:domain bpo:Component ;
+    rdfs:range bpo:Attribute .
+
+bpo:permittedStepSize a owl:DatatypeProperty ;
+    rdfs:label "permittedStepSize"@en ;
+    rdfs:domain bpo:RangedAttribute ;
+    rdfs:range xsd:double .
+
+schema1:PropertyValue a owl:Class ;
+    rdfs:label "PropertyValue"@en .
+
+bpo:Component a owl:Class ;
+    rdfs:label "Component"@en ;
+    rdfs:subClassOf schema1:PropertyValue,
+        seas:Property .
+
+seas:Property a owl:Class ;
+    rdfs:label "Property"@en .
+
+qudt:Unit a owl:Class ;
+    rdfs:label "Unit"@en .
+
+bpo:Attribute a owl:Class ;
+    rdfs:label "Attribute"@en ;
+    rdfs:subClassOf schema1:PropertyValue .
+
+bpo:RangedAttribute a owl:Class ;
+    rdfs:label "RangedAttribute"@en ;
+    rdfs:subClassOf seas:Property .
+

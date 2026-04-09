@@ -1,0 +1,146 @@
+{
+  "id": "input5",
+  "name": "Academic Writing Ontology",
+  "complexity": "medium",
+  "diagram_type": "OWL",
+  "description": "OWL ontology with e: namespace. Classes: Person, Document, Thesis, ConferencePaper, Topic. Object properties: writes, author, about (declared as instances of owl:ObjectProperty). writes inverseOf author. rdfs:domain and rdfs:range explicitly shown. Instances: eetu (Thesis), semanticWeb (Topic), search (Topic).",
+  "base_uri": "http://e.org/ont#",
+  "namespace_prefixes": {
+    "e": "http://e.org/ont#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  },
+  "classes": [
+    {
+      "name": "e:Person"
+    },
+    {
+      "name": "e:Document"
+    },
+    {
+      "name": "e:Thesis"
+    },
+    {
+      "name": "e:ConferencePaper"
+    },
+    {
+      "name": "e:Topic"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "e:writes",
+      "domain": "e:Person",
+      "range": "e:Document"
+    },
+    {
+      "name": "e:author",
+      "domain": "e:Document",
+      "range": "e:Person"
+    },
+    {
+      "name": "e:about",
+      "domain": "e:Document",
+      "range": "e:Topic"
+    }
+  ],
+  "data_properties": [],
+  "instances": [
+    {
+      "name": "e:eetu",
+      "type_class": "e:Thesis"
+    },
+    {
+      "name": "e:semanticWeb",
+      "type_class": "e:Topic"
+    },
+    {
+      "name": "e:search",
+      "type_class": "e:Topic"
+    }
+  ],
+  "attribute_values": [],
+  "edges": [
+    {
+      "from": "e:Thesis",
+      "to": "e:Document",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "e:ConferencePaper",
+      "to": "e:Document",
+      "label": "rdfs:subClassOf",
+      "edge_type": "subClassOf"
+    },
+    {
+      "from": "e:writes",
+      "to": "owl:ObjectProperty",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "e:author",
+      "to": "owl:ObjectProperty",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "e:about",
+      "to": "owl:ObjectProperty",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "e:writes",
+      "to": "e:author",
+      "label": "owl:inverseOf",
+      "edge_type": "inverseOf"
+    },
+    {
+      "from": "e:author",
+      "to": "e:Document",
+      "label": "rdfs:domain",
+      "edge_type": "domain"
+    },
+    {
+      "from": "e:about",
+      "to": "e:Document",
+      "label": "rdfs:domain",
+      "edge_type": "domain"
+    },
+    {
+      "from": "e:author",
+      "to": "e:Person",
+      "label": "rdfs:range",
+      "edge_type": "range"
+    },
+    {
+      "from": "e:about",
+      "to": "e:Topic",
+      "label": "rdfs:range",
+      "edge_type": "range"
+    },
+    {
+      "from": "e:eetu",
+      "to": "e:Thesis",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "e:semanticWeb",
+      "to": "e:Topic",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    },
+    {
+      "from": "e:search",
+      "to": "e:Topic",
+      "label": "rdf:type",
+      "edge_type": "instanceOf"
+    }
+  ],
+  "restriction_axioms": [],
+  "data_assertions": []
+}
