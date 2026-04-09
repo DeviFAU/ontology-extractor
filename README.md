@@ -213,18 +213,3 @@ Install:
 pip install openai rdflib openpyxl
 ```
 
-Set your OpenAI API key:
-```bash
-export OPENAI_API_KEY="sk-..."   # Linux/Mac
-set OPENAI_API_KEY=sk-...        # Windows
-```
-
----
-
-## Next Steps
-
-- [ ] Collect real ontology diagram images (from papers, documentation, hand-drawn)
-- [ ] Manually create gold standard JSONs for real diagrams
-- [ ] Run extraction pipeline on real diagrams
-- [ ] Compare synthetic vs real performance
-- [ ] Supervisor review of evaluation methodology and scope
